@@ -137,6 +137,18 @@ section:hover {
   }
 }
 
+// Individual project styling
+.job {
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 10px $secondary-color;
+  }
+}
+
 // Individual Column styling
 .col-md-3{
     border: 1px solid $primary-color;
