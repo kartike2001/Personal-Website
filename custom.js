@@ -6,7 +6,7 @@ $(document).ready(function() {
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 1000, function(){  // Increase animation speed to 1000ms
-            window.location.hash = hash;
+                window.location.hash = hash;
             });
         } // End if
     });
