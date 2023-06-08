@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@mixin transition($args) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+  
+$primary-color: #1c1c1c;
+$secondary-color: #14a76c;
+$light-color: #f4f4f4;
+$dark-color: #333;
+$font-stack: 'Roboto', sans-serif;
+$bg-color: #0B0C10;
+$text-color: #C5C6C7;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-stack;
+  color: $light-color;
+  background: $primary-color;
+  overflow-x: hidden;
+}
+
+// Body styling
+body {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Navigation styling
+.navbar {
+  background-color: $primary-color !important;
+  a {
+    color: $secondary-color !important;
+    &:hover {
+      color: $text-color !important;
+    }
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='${secondary-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+
+// Hero Section styling
+header.hero {
+    padding: 5em 0;
+    background: url('rm373batch2-09.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+  
+    @include transition(all 0.5s ease);
+    
+    .container {
+      position: relative;
+      z-index: 2;
+  
+      .img-fluid {
+        border: 5px solid $secondary-color;
+        border-radius: 50%;
+        @include transition(all 0.3s ease);
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+      h1 {
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 1em 0;
+        @include transition(all 0.3s ease);
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+      p {
+        font-size: 1.2em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+  
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.6);
+    }
+  }
+
+// Section styling
+section {
+  padding: 2em 0;
+  h2 {
+    color: $secondary-color;
+    border-bottom: 2px solid $primary-color;
+    display: inline-block;
+  }
+  h5 {
+    color: $secondary-color;
+  }
+  a {
+    color: $secondary-color;
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+// Hidden class styling
+.hidden {
+  opacity: 0;
+  margin-left: -100px;
+}
+
+// Hover effect for the sections
+section:hover {
+  transition: transform 0.3s;
+  transform: scale(1.02);
+}
+
+// Individual project styling
+.project {
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 10px $secondary-color;
+  }
+}
+
+// Individual Column styling
+.col-md-3{
+    border: 1px solid $primary-color;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 10px $secondary-color;
+    }
+  }
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: -100px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 1s ease-in-out;
+}
