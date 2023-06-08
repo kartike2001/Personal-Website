@@ -109,6 +109,15 @@ section:hover {
   .col-md-3:hover {
     box-shadow: 0 0 10px #14a76c; }
 
+.job {
+  border: 1px solid #1c1c1c;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out; }
+  .job:hover {
+    box-shadow: 0 0 10px #14a76c; }
+
 @keyframes fadeIn {
   from {
     opacity: 0; }
