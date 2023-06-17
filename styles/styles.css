@@ -137,30 +137,30 @@ section:hover {
 }
 
 body.light .project {
-  border: 1px solid #333333;
-  box-shadow: 0 0 10px #333333;
+  border: 1px solid #2F6650;
+  box-shadow: 0 0 10px #2F6650;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .project:hover {
-  box-shadow: 0 0 10px #ef0505;
+  box-shadow: 0 0 10px #14a76c;
 }
 
 body.light .col-md-3 {
-  border: 1px solid #333333;
-  box-shadow: 0 0 10px #333333;
+  border: 1px solid #2F6650;
+  box-shadow: 0 0 10px #2F6650;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .col-md-3:hover {
-  box-shadow: 0 0 10px #ef0505;
+  box-shadow: 0 0 10px #14a76c;
 }
 
 body.light .job {
-  border: 1px solid #333333;
-  box-shadow: 0 0 10px #333333;
+  border: 1px solid #2F6650;
+  box-shadow: 0 0 10px #2F6650;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .job:hover {
-  box-shadow: 0 0 10px #ef0505;
+  box-shadow: 0 0 10px #14a76c;
 }
 
 @keyframes fadeIn {
@@ -190,44 +190,44 @@ body.light .job:hover {
 }
 
 body.light {
-  background-color: #f4f4f4;
-  color: #000000;
+  background-color: #E6F4EA;
+  color: #004d2f;
 }
 
 body.light .navbar {
-  background-color: #333333 !important;
+  background-color: #2F6650 !important;
 }
 body.light .navbar a {
-  color: #1D3557;
+  color: #013dff;
 }
 body.light .navbar a:hover {
   color: #7c0303;
 }
 
 body.light header.hero {
-  background: url("3274408.jpg") no-repeat center center fixed;
+  background: url("green.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #f4f4f4;
+  color: #E6F4EA;
   text-align: center;
 }
 body.light header.hero .container .img-fluid {
   border: 5px solid #000000;
 }
 body.light header.hero .container h1 {
-  color: #333333;
+  color: #E6F4EA;
 }
 body.light header.hero .container p {
-  color: #333333;
+  color: #E6F4EA;
 }
 
 body.light section h2 {
-  color: #333333;
+  color: black;
 }
 body.light section h5 {
-  color: #333333;
+  color: black;
 }
 body.light section a {
-  color: #1D3557;
+  color: #013dff;
 }
 body.light section a:hover {
   color: #7c0303;

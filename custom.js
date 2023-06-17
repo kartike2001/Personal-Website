@@ -47,6 +47,7 @@ $(document).ready(function() {
 
 const themeContainer = document.querySelector('.theme-container');
 const themeIcon = document.querySelector('#theme-icon');
+const KartikeImage = document.querySelector("#KartikeImage")
 
 // get saved theme from local storage
 let currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -56,8 +57,10 @@ if (currentTheme) {
     document.body.className = currentTheme;
     if (currentTheme === 'light') {
         themeIcon.src = "sun.png";
+        KartikeImage.src = "Kartike.jpg"
     } else {
         themeIcon.src = "moon.png";
+        KartikeImage.src = "Kartike2.jpg"
     }
 }
 const themeSwitch = document.getElementById('theme-icon');
@@ -75,6 +78,7 @@ themeSwitch.addEventListener('click', function() {
     body.style.transition = "all 0.5s ease-in-out";
 
     document.getElementById('theme-icon').setAttribute('src', theme === 'dark' ? 'sun.png' : 'moon.png');
+    document.getElementById('KartikeImage').setAttribute('src', theme === 'dark' ? 'Kartike.jpg' : 'Kartike2.jpg');
     // Saving to LocalStorage
     localStorage.setItem('theme', theme);
 });
@@ -84,9 +88,12 @@ window.onload = function() {
     if (theme === 'light') {
         body.classList.add('light');
         document.getElementById('theme-icon').setAttribute('src', 'moon.png');
+        document.getElementById('KartikeImage').setAttribute('src', 'Kartike2.jpg');
     }
     else if (theme === 'dark') {
         body.classList.add('dark');
         document.getElementById('theme-icon').setAttribute('src', 'sun.png');
+        document.getElementById('KartikeImage').setAttribute('src', 'Kartike.jpg');
+
     }
 };

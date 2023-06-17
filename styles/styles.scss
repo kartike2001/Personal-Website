@@ -20,12 +20,12 @@ $link-color-dark: #2efd7b; // Dark mode link color
 $hover-color-dark: #e08b14; // Dark mode hover color
 
 // Light Mode Variables
-$light-primary-color: #f4f4f4; // Light gray
-$light-secondary-color: #333333; // Dark gray
-$box-shadow-hover: #ef0505;
-$light-text-color: #000000; // Darker gray
-$link-color-light: #1D3557; // Light mode link color
-$hover-color-light: #7c0303; // Light mode hover color
+$light-primary-color: #E6F4EA; // Light greenish gray
+$light-secondary-color: #2F6650; // Dark greenish gray
+$box-shadow-hover: #14a76c; // Use your secondary color for shadow
+$light-text-color: #004d2f; // Darker green
+$link-color-light: #013dff; // Light mode link color
+$hover-color-light: #7c0303;
 
 // Root
 :root {
@@ -249,7 +249,7 @@ body.light .navbar {
 }
 
 body.light header.hero {
-  background: url('3274408.jpg') no-repeat center center fixed;
+  background: url('green.jpg') no-repeat center center fixed;
   background-size: cover;
   color: $light-primary-color;
   text-align: center;
@@ -259,20 +259,20 @@ body.light header.hero {
       border: 5px solid #000000;
     }
     h1 {
-      color: $light-secondary-color;
+      color: $light-primary-color;
     }
     p {
-      color: $light-secondary-color;
+      color: $light-primary-color;
     }
   }
 }
 
 body.light section {
   h2 {
-    color: $light-secondary-color;
+    color: black;
   }
   h5 {
-    color: $light-secondary-color;
+    color: black;
   }
   a {
     color: $link-color-light;
