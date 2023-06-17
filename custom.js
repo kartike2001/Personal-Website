@@ -44,3 +44,49 @@ $(document).ready(function() {
         }
     );
 });
+
+const themeContainer = document.querySelector('.theme-container');
+const themeIcon = document.querySelector('#theme-icon');
+
+// get saved theme from local storage
+let currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+// on initial load, set the theme from local storage
+if (currentTheme) {
+    document.body.className = currentTheme;
+    if (currentTheme === 'light') {
+        themeIcon.src = "sun.png";
+    } else {
+        themeIcon.src = "moon.png";
+    }
+}
+const themeSwitch = document.getElementById('theme-icon');
+const body = document.body;
+
+themeSwitch.addEventListener('click', function() {
+    body.classList.toggle('light');
+
+    let theme = 'dark';
+    if (body.classList.contains('light')) {
+        theme = 'light';
+    }
+
+    // Adding transition
+    body.style.transition = "all 0.5s ease-in-out";
+
+    document.getElementById('theme-icon').setAttribute('src', theme === 'dark' ? 'sun.png' : 'moon.png');
+    // Saving to LocalStorage
+    localStorage.setItem('theme', theme);
+});
+
+window.onload = function() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'light') {
+        body.classList.add('light');
+        document.getElementById('theme-icon').setAttribute('src', 'moon.png');
+    }
+    else if (theme === 'dark') {
+        body.classList.add('dark');
+        document.getElementById('theme-icon').setAttribute('src', 'sun.png');
+    }
+};

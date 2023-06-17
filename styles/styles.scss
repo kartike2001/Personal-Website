@@ -1,25 +1,41 @@
+// Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+// Mixins
 @mixin transition($args) {
-    -webkit-transition: $args;
-    -moz-transition: $args;
-    -ms-transition: $args;
-    -o-transition: $args;
-    transition: $args;
-  }
-  
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Dark Mode Variables
 $primary-color: #1c1c1c;
 $secondary-color: #14a76c;
-$light-color: #f4f4f4;
-$dark-color: #333;
 $font-stack: 'Roboto', sans-serif;
 $bg-color: #0B0C10;
-$text-color: #C5C6C7;
+$text-color: #fcfdff;
+$link-color-dark: #2efd7b; // Dark mode link color
+$hover-color-dark: #e08b14; // Dark mode hover color
+
+// Light Mode Variables
+$light-primary-color: #f4f4f4; // Light gray
+$light-secondary-color: #333333; // Dark gray
+$box-shadow-hover: #ef0505;
+$light-text-color: #000000; // Darker gray
+$link-color-light: #1D3557; // Light mode link color
+$hover-color-light: #7c0303; // Light mode hover color
+
+// Root
+:root {
+  --bs-dark: #212529;
+}
 
 html, body {
   padding: 0;
   margin: 0;
   font-family: $font-stack;
-  color: $light-color;
   background: $primary-color;
   overflow-x: hidden;
 }
@@ -38,51 +54,51 @@ body {
   background-color: $primary-color !important;
 
   a {
-    color: $secondary-color !important;
+    color: $link-color-dark;
 
     &:hover {
-      color: $text-color !important;
+      color: $hover-color-dark;
     }
   }
 }
 
 // Hero Section styling
 header.hero {
-    padding: 5em 0;
-    background: url('rm373batch2-09.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
+  padding: 5em 0;
+  background: url('rm373batch2-09.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
 
-    @include transition(all 0.5s ease);
+  @include transition(all 0.5s ease);
 
-    .container {
-      position: relative;
-      z-index: 2;
+  .container {
+    position: relative;
+    z-index: 2;
 
-      .img-fluid {
-        border: 5px solid $secondary-color;
-        border-radius: 50%;
-        @include transition(all 0.3s ease);
-        &:hover {
-          transform: scale(1.03);
-        }
-      }
-      h1 {
-        font-size: 2.5em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin: 1em 0;
-        @include transition(all 0.3s ease);
-        &:hover {
-          transform: scale(1.03);
-        }
-      }
-      p {
-        font-size: 1.2em;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    .img-fluid {
+      border: 5px solid $secondary-color;
+      border-radius: 50%;
+      @include transition(all 0.3s ease);
+      &:hover {
+        transform: scale(1.03);
       }
     }
+    h1 {
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin: 1em 0;
+      @include transition(all 0.3s ease);
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+    p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
   }
+}
 
 // Section styling
 section {
@@ -96,9 +112,10 @@ section {
     color: $secondary-color;
   }
   a {
-    color: $secondary-color;
+    color: $link-color-dark;
+
     &:hover {
-      color: $text-color;
+      color: $hover-color-dark;
     }
   }
 }
@@ -127,7 +144,19 @@ section:hover {
   }
 }
 
-// Individual project styling
+// Individual Column styling
+.col-md-3 {
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 10px $secondary-color;
+  }
+}
+
+// Individual Job styling
 .job {
   border: 1px solid $primary-color;
   padding: 1em;
@@ -139,31 +168,38 @@ section:hover {
   }
 }
 
-// Individual Column styling
-.col-md-3{
-    border: 1px solid $primary-color;
-    padding: 1em;
-    margin: 1em 0;
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease-in-out;
-    &:hover {
-      box-shadow: 0 0 10px $secondary-color;
-    }
-}
-
-// Individual Job styling
-.job{
-  border: 1px solid $primary-color;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+// Individual Project styling (Light Mode)
+body.light .project {
+  border: 1px solid $light-secondary-color;
+  box-shadow: 0 0 10px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
+
   &:hover {
-    box-shadow: 0 0 10px $secondary-color;
+    box-shadow: 0 0 10px $box-shadow-hover;
   }
 }
 
+// Individual Column styling (Light Mode)
+body.light .col-md-3 {
+  border: 1px solid $light-secondary-color;
+  box-shadow: 0 0 10px $light-secondary-color;
+  transition: box-shadow 0.3s ease-in-out;
 
+  &:hover {
+    box-shadow: 0 0 10px $box-shadow-hover;
+  }
+}
+
+// Individual Job styling (Light Mode)
+body.light .job {
+  border: 1px solid $light-secondary-color;
+  box-shadow: 0 0 10px $light-secondary-color;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px $box-shadow-hover;
+  }
+}
 
 // Animations
 @keyframes fadeIn {
@@ -192,4 +228,97 @@ section:hover {
 
 .slide-in {
   animation: slideIn 1s ease-in-out;
+}
+
+// Dark Mode Styling
+body.light {
+  background-color: $light-primary-color;
+  color: $light-text-color;
+}
+
+body.light .navbar {
+  background-color: $light-secondary-color !important;
+
+  a {
+    color: $link-color-light;
+
+    &:hover {
+      color: $hover-color-light;
+    }
+  }
+}
+
+body.light header.hero {
+  background: url('3274408.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: $light-primary-color;
+  text-align: center;
+
+  .container {
+    .img-fluid {
+      border: 5px solid #000000;
+    }
+    h1 {
+      color: $light-secondary-color;
+    }
+    p {
+      color: $light-secondary-color;
+    }
+  }
+}
+
+body.light section {
+  h2 {
+    color: $light-secondary-color;
+  }
+  h5 {
+    color: $light-secondary-color;
+  }
+  a {
+    color: $link-color-light;
+
+    &:hover {
+      color: $hover-color-light;
+    }
+  }
+}
+
+
+
+.theme-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.theme-container:hover {
+  opacity: 0.8;
+}
+
+@keyframes change {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+.change {
+  animation-name: change;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+#theme-icon {
+  width: 30px;  // Change this to the desired width
+  height: 30px;  // Change this to the desired height
 }

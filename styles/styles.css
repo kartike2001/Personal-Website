@@ -1,25 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+:root {
+  --bs-dark: #212529;
+}
+
 html, body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  color: #f4f4f4;
   background: #1c1c1c;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 body {
   font-family: "Roboto Mono", "Courier New", monospace;
   background-color: #0B0C10;
-  color: #C5C6C7;
+  color: #fcfdff;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .navbar {
-  background-color: #1c1c1c !important; }
-  .navbar a {
-    color: #14a76c !important; }
-    .navbar a:hover {
-      color: #C5C6C7 !important; }
+  background-color: #1c1c1c !important;
+}
+.navbar a {
+  color: #2efd7b;
+}
+.navbar a:hover {
+  color: #e08b14;
+}
 
 header.hero {
   padding: 5em 0;
@@ -31,108 +39,234 @@ header.hero {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-  header.hero .container {
-    position: relative;
-    z-index: 2; }
-    header.hero .container .img-fluid {
-      border: 5px solid #14a76c;
-      border-radius: 50%;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-      header.hero .container .img-fluid:hover {
-        transform: scale(1.03); }
-    header.hero .container h1 {
-      font-size: 2.5em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      margin: 1em 0;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-      header.hero .container h1:hover {
-        transform: scale(1.03); }
-    header.hero .container p {
-      font-size: 1.2em;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  transition: all 0.5s ease;
+}
+header.hero .container {
+  position: relative;
+  z-index: 2;
+}
+header.hero .container .img-fluid {
+  border: 5px solid #14a76c;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header.hero .container .img-fluid:hover {
+  transform: scale(1.03);
+}
+header.hero .container h1 {
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 1em 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header.hero .container h1:hover {
+  transform: scale(1.03);
+}
+header.hero .container p {
+  font-size: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
 section {
-  padding: 2em 0; }
-  section h2 {
-    color: #14a76c;
-    border-bottom: 2px solid #1c1c1c;
-    display: inline-block; }
-  section h5 {
-    color: #14a76c; }
-  section a {
-    color: #14a76c; }
-    section a:hover {
-      color: #C5C6C7; }
+  padding: 2em 0;
+}
+section h2 {
+  color: #14a76c;
+  border-bottom: 2px solid #1c1c1c;
+  display: inline-block;
+}
+section h5 {
+  color: #14a76c;
+}
+section a {
+  color: #2efd7b;
+}
+section a:hover {
+  color: #e08b14;
+}
 
 .hidden {
   opacity: 0;
-  margin-left: -100px; }
+  margin-left: -100px;
+}
 
 section:hover {
   transition: transform 0.3s;
-  transform: scale(1.02); }
+  transform: scale(1.02);
+}
 
 .project {
   border: 1px solid #1c1c1c;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
-  transition: box-shadow 0.3s ease-in-out; }
-  .project:hover {
-    box-shadow: 0 0 10px #14a76c; }
-
-.job {
-  border: 1px solid #1c1c1c;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
-  transition: box-shadow 0.3s ease-in-out; }
-  .job:hover {
-    box-shadow: 0 0 10px #14a76c; }
+  transition: box-shadow 0.3s ease-in-out;
+}
+.project:hover {
+  box-shadow: 0 0 10px #14a76c;
+}
 
 .col-md-3 {
   border: 1px solid #1c1c1c;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
-  transition: box-shadow 0.3s ease-in-out; }
-  .col-md-3:hover {
-    box-shadow: 0 0 10px #14a76c; }
+  transition: box-shadow 0.3s ease-in-out;
+}
+.col-md-3:hover {
+  box-shadow: 0 0 10px #14a76c;
+}
 
 .job {
   border: 1px solid #1c1c1c;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
-  transition: box-shadow 0.3s ease-in-out; }
-  .job:hover {
-    box-shadow: 0 0 10px #14a76c; }
+  transition: box-shadow 0.3s ease-in-out;
+}
+.job:hover {
+  box-shadow: 0 0 10px #14a76c;
+}
+
+body.light .project {
+  border: 1px solid #333333;
+  box-shadow: 0 0 10px #333333;
+  transition: box-shadow 0.3s ease-in-out;
+}
+body.light .project:hover {
+  box-shadow: 0 0 10px #ef0505;
+}
+
+body.light .col-md-3 {
+  border: 1px solid #333333;
+  box-shadow: 0 0 10px #333333;
+  transition: box-shadow 0.3s ease-in-out;
+}
+body.light .col-md-3:hover {
+  box-shadow: 0 0 10px #ef0505;
+}
+
+body.light .job {
+  border: 1px solid #333333;
+  box-shadow: 0 0 10px #333333;
+  transition: box-shadow 0.3s ease-in-out;
+}
+body.light .job:hover {
+  box-shadow: 0 0 10px #ef0505;
+}
 
 @keyframes fadeIn {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
-
+    opacity: 1;
+  }
+}
 .fade-in {
-  animation: fadeIn 1s ease-in-out; }
+  animation: fadeIn 1s ease-in-out;
+}
 
 @keyframes slideIn {
   from {
     margin-left: -100px;
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
     margin-left: 0;
-    opacity: 1; } }
-
+    opacity: 1;
+  }
+}
 .slide-in {
-  animation: slideIn 1s ease-in-out; }
+  animation: slideIn 1s ease-in-out;
+}
+
+body.light {
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+body.light .navbar {
+  background-color: #333333 !important;
+}
+body.light .navbar a {
+  color: #1D3557;
+}
+body.light .navbar a:hover {
+  color: #7c0303;
+}
+
+body.light header.hero {
+  background: url("3274408.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f4f4f4;
+  text-align: center;
+}
+body.light header.hero .container .img-fluid {
+  border: 5px solid #000000;
+}
+body.light header.hero .container h1 {
+  color: #333333;
+}
+body.light header.hero .container p {
+  color: #333333;
+}
+
+body.light section h2 {
+  color: #333333;
+}
+body.light section h5 {
+  color: #333333;
+}
+body.light section a {
+  color: #1D3557;
+}
+body.light section a:hover {
+  color: #7c0303;
+}
+
+.theme-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.theme-container:hover {
+  opacity: 0.8;
+}
+
+@keyframes change {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+.change {
+  animation-name: change;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+#theme-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */
