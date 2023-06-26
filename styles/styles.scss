@@ -20,10 +20,9 @@ $hover-color-dark: #e08b14; // Dark mode hover color
 $light-primary-color: #e6f4f3; // Light greenish gray
 $light-secondary-color: #8cbce1; // Dark greenish gray
 $box-shadow-hover: #0033ff; // Use your secondary color for shadow
-$light-text-color: #001b4d; // Darker green
-$link-color-light: #013dff; // Light mode link color
+$light-text-color: #003bb6; // Darker green
+$link-color-light: #007c03; // Light mode link color
 $hover-color-light: #7c0303;
-
 // Root
 :root {
   --bs-dark: #212529;
@@ -62,7 +61,7 @@ body {
 // Hero Section styling
 header.hero {
   padding: 5em 0;
-  background: url('Neon Green and Black Tech Virtual Background.gif');
+  background: url('Neon Green and Black Tech Virtual Background.gif') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -167,11 +166,10 @@ section:hover {
 
 // Individual Project styling (Light Mode)
 body.light .project {
-  border: 1px solid $primary-color;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+  border: 1px solid $light-secondary-color;
+  box-shadow: 0 0 10px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
+
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }
@@ -179,11 +177,10 @@ body.light .project {
 
 // Individual Column styling (Light Mode)
 body.light .col-md-3 {
-  border: 1px solid $primary-color;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+  border: 1px solid $light-secondary-color;
+  box-shadow: 0 0 10px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
+
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }
@@ -191,11 +188,10 @@ body.light .col-md-3 {
 
 // Individual Job styling (Light Mode)
 body.light .job {
-  border: 1px solid $primary-color;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+  border: 1px solid $light-secondary-color;
+  box-shadow: 0 0 10px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
+
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }
