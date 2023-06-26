@@ -8,19 +8,19 @@
 }
 
 // Dark Mode Variables
-$primary-color: #1c1c1c;
-$secondary-color: #14a76c;
+$primary-color: #1e1e1e;
+$secondary-color: #00fcfd;
 $font-stack: "Roboto Mono", "Courier New", monospace;
-$bg-color: #0B0C10;
+$bg-color: black;
 $text-color: #fcfdff;
-$link-color-dark: #2efd7b; // Dark mode link color
+$link-color-dark: #5aa7ff; // Dark mode link color
 $hover-color-dark: #e08b14; // Dark mode hover color
 
 // Light Mode Variables
-$light-primary-color: #E6F4EA; // Light greenish gray
-$light-secondary-color: #2F6650; // Dark greenish gray
-$box-shadow-hover: #14a76c; // Use your secondary color for shadow
-$light-text-color: #004d2f; // Darker green
+$light-primary-color: #e6f4f3; // Light greenish gray
+$light-secondary-color: #8cbce1; // Dark greenish gray
+$box-shadow-hover: #0033ff; // Use your secondary color for shadow
+$light-text-color: #001b4d; // Darker green
 $link-color-light: #013dff; // Light mode link color
 $hover-color-light: #7c0303;
 
@@ -51,10 +51,10 @@ body {
   background-color: $primary-color !important;
 
   a {
-    color: $link-color-dark;
+    color: $secondary-color!important;
 
     &:hover {
-      color: $hover-color-dark;
+      color: $hover-color-dark !important;
     }
   }
 }
@@ -62,7 +62,7 @@ body {
 // Hero Section styling
 header.hero {
   padding: 5em 0;
-  background: url('rm373batch2-09.jpg') no-repeat center center fixed;
+  background: url('Neon Green and Black Tech Virtual Background.gif');
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -167,10 +167,11 @@ section:hover {
 
 // Individual Project styling (Light Mode)
 body.light .project {
-  border: 1px solid $light-secondary-color;
-  box-shadow: 0 0 10px $light-secondary-color;
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
-
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }
@@ -178,10 +179,11 @@ body.light .project {
 
 // Individual Column styling (Light Mode)
 body.light .col-md-3 {
-  border: 1px solid $light-secondary-color;
-  box-shadow: 0 0 10px $light-secondary-color;
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
-
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }
@@ -189,10 +191,11 @@ body.light .col-md-3 {
 
 // Individual Job styling (Light Mode)
 body.light .job {
-  border: 1px solid $light-secondary-color;
-  box-shadow: 0 0 10px $light-secondary-color;
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
-
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }
@@ -237,16 +240,16 @@ body.light .navbar {
   background-color: $light-secondary-color !important;
 
   a {
-    color: $link-color-light;
+    color: black !important;
 
     &:hover {
-      color: $hover-color-light;
+      color: $hover-color-light !important;
     }
   }
 }
 
 body.light header.hero {
-  background: url('green.jpg') no-repeat center center fixed;
+  background: url('Untitled.gif');
   background-size: cover;
   color: $light-primary-color;
   text-align: center;

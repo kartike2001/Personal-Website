@@ -6,31 +6,31 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: "Roboto Mono", "Courier New", monospace;
-  background: #1c1c1c;
+  background: #1e1e1e;
   overflow-x: hidden;
 }
 
 body {
   font-family: "Roboto Mono", "Courier New", monospace;
-  background-color: #0B0C10;
+  background-color: black;
   color: #fcfdff;
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  background-color: #1c1c1c !important;
+  background-color: #1e1e1e !important;
 }
 .navbar a {
-  color: #2efd7b;
+  color: #00fcfd !important;
 }
 .navbar a:hover {
-  color: #e08b14;
+  color: #e08b14 !important;
 }
 
 header.hero {
   padding: 5em 0;
-  background: url("rm373batch2-09.jpg") no-repeat center center fixed;
+  background: url("Neon Green and Black Tech Virtual Background.gif");
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -45,7 +45,7 @@ header.hero .container {
   z-index: 2;
 }
 header.hero .container .img-fluid {
-  border: 5px solid #14a76c;
+  border: 5px solid #00fcfd;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -78,15 +78,15 @@ section {
   padding: 2em 0;
 }
 section h2 {
-  color: #14a76c;
-  border-bottom: 2px solid #1c1c1c;
+  color: #00fcfd;
+  border-bottom: 2px solid #1e1e1e;
   display: inline-block;
 }
 section h5 {
-  color: #14a76c;
+  color: #00fcfd;
 }
 section a {
-  color: #2efd7b;
+  color: #5aa7ff;
 }
 section a:hover {
   color: #e08b14;
@@ -103,63 +103,69 @@ section:hover {
 }
 
 .project {
-  border: 1px solid #1c1c1c;
+  border: 1px solid #1e1e1e;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 .project:hover {
-  box-shadow: 0 0 10px #14a76c;
+  box-shadow: 0 0 10px #00fcfd;
 }
 
 .col-md-3 {
-  border: 1px solid #1c1c1c;
+  border: 1px solid #1e1e1e;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 .col-md-3:hover {
-  box-shadow: 0 0 10px #14a76c;
+  box-shadow: 0 0 10px #00fcfd;
 }
 
 .job {
-  border: 1px solid #1c1c1c;
+  border: 1px solid #1e1e1e;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 .job:hover {
-  box-shadow: 0 0 10px #14a76c;
+  box-shadow: 0 0 10px #00fcfd;
 }
 
 body.light .project {
-  border: 1px solid #2F6650;
-  box-shadow: 0 0 10px #2F6650;
+  border: 1px solid #1e1e1e;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .project:hover {
-  box-shadow: 0 0 10px #14a76c;
+  box-shadow: 0 0 10px #0033ff;
 }
 
 body.light .col-md-3 {
-  border: 1px solid #2F6650;
-  box-shadow: 0 0 10px #2F6650;
+  border: 1px solid #1e1e1e;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .col-md-3:hover {
-  box-shadow: 0 0 10px #14a76c;
+  box-shadow: 0 0 10px #0033ff;
 }
 
 body.light .job {
-  border: 1px solid #2F6650;
-  box-shadow: 0 0 10px #2F6650;
+  border: 1px solid #1e1e1e;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .job:hover {
-  box-shadow: 0 0 10px #14a76c;
+  box-shadow: 0 0 10px #0033ff;
 }
 
 @keyframes fadeIn {
@@ -189,34 +195,34 @@ body.light .job:hover {
 }
 
 body.light {
-  background-color: #E6F4EA;
-  color: #004d2f;
+  background-color: #e6f4f3;
+  color: #001b4d;
 }
 
 body.light .navbar {
-  background-color: #2F6650 !important;
+  background-color: #8cbce1 !important;
 }
 body.light .navbar a {
-  color: #013dff;
+  color: black !important;
 }
 body.light .navbar a:hover {
-  color: #7c0303;
+  color: #7c0303 !important;
 }
 
 body.light header.hero {
-  background: url("green.jpg") no-repeat center center fixed;
+  background: url("Untitled.gif");
   background-size: cover;
-  color: #E6F4EA;
+  color: #e6f4f3;
   text-align: center;
 }
 body.light header.hero .container .img-fluid {
   border: 5px solid #000000;
 }
 body.light header.hero .container h1 {
-  color: #E6F4EA;
+  color: #e6f4f3;
 }
 body.light header.hero .container p {
-  color: #E6F4EA;
+  color: #e6f4f3;
 }
 
 body.light section h2 {
