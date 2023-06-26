@@ -30,7 +30,7 @@ body {
 
 header.hero {
   padding: 5em 0;
-  background: url("Neon Green and Black Tech Virtual Background.gif");
+  background: url("Neon Green and Black Tech Virtual Background.gif") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -136,10 +136,8 @@ section:hover {
 }
 
 body.light .project {
-  border: 1px solid #1e1e1e;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+  border: 1px solid #8cbce1;
+  box-shadow: 0 0 10px #8cbce1;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .project:hover {
@@ -147,10 +145,8 @@ body.light .project:hover {
 }
 
 body.light .col-md-3 {
-  border: 1px solid #1e1e1e;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+  border: 1px solid #8cbce1;
+  box-shadow: 0 0 10px #8cbce1;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .col-md-3:hover {
@@ -158,10 +154,8 @@ body.light .col-md-3:hover {
 }
 
 body.light .job {
-  border: 1px solid #1e1e1e;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+  border: 1px solid #8cbce1;
+  box-shadow: 0 0 10px #8cbce1;
   transition: box-shadow 0.3s ease-in-out;
 }
 body.light .job:hover {
@@ -196,7 +190,7 @@ body.light .job:hover {
 
 body.light {
   background-color: #e6f4f3;
-  color: #001b4d;
+  color: #003bb6;
 }
 
 body.light .navbar {
@@ -232,7 +226,7 @@ body.light section h5 {
   color: black;
 }
 body.light section a {
-  color: #013dff;
+  color: #007c03;
 }
 body.light section a:hover {
   color: #7c0303;
