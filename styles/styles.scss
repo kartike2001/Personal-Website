@@ -43,17 +43,30 @@ body {
   color: $text-color;
   margin: 0;
   padding: 0;
+  #resume-hero, #letters-hero {
+    background-color: $secondary-color;
+    color: $bg-color;
+    &:hover {
+      background-color: $hover-color-dark;
+      color: $bg-color;
+      animation: zoomIn 1s;
+    }
+  }
 }
 
 // Navigation styling
 .navbar {
   background-color: $primary-color !important;
+  perspective: 1000px;
 
   a {
     color: $secondary-color!important;
+    transform: translateZ(0);
+    transition: transform 0.3s;
 
     &:hover {
       color: $hover-color-dark !important;
+      transform: translateZ(20px);
     }
   }
 }
@@ -198,6 +211,16 @@ body.light .job {
 }
 
 // Animations
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -230,6 +253,15 @@ body.light .job {
 body.light {
   background-color: $light-primary-color;
   color: $light-text-color;
+  #resume-hero, #letters-hero {
+    background-color: $light-secondary-color;
+    color: black;
+    &:hover {
+      background-color: $hover-color-light;
+      color: $light-primary-color;
+      animation: zoomIn 1s;
+    }
+  }
 }
 
 body.light .navbar {
@@ -317,4 +349,16 @@ body.light section {
 #theme-icon {
   width: 30px;  // Change this to the desired width
   height: 30px;  // Change this to the desired height
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  @include transition(all 0.3s ease);
+  &:hover {
+    transform: scale(1.05);
+  }
 }

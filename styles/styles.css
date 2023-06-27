@@ -17,15 +17,28 @@ body {
   margin: 0;
   padding: 0;
 }
+body #resume-hero, body #letters-hero {
+  background-color: #00fcfd;
+  color: black;
+}
+body #resume-hero:hover, body #letters-hero:hover {
+  background-color: #e08b14;
+  color: black;
+  animation: zoomIn 1s;
+}
 
 .navbar {
   background-color: #1e1e1e !important;
+  perspective: 1000px;
 }
 .navbar a {
   color: #00fcfd !important;
+  transform: translateZ(0);
+  transition: transform 0.3s;
 }
 .navbar a:hover {
   color: #e08b14 !important;
+  transform: translateZ(20px);
 }
 
 header.hero {
@@ -162,6 +175,14 @@ body.light .job:hover {
   box-shadow: 0 0 10px #0033ff;
 }
 
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -191,6 +212,15 @@ body.light .job:hover {
 body.light {
   background-color: #e6f4f3;
   color: #003bb6;
+}
+body.light #resume-hero, body.light #letters-hero {
+  background-color: #8cbce1;
+  color: black;
+}
+body.light #resume-hero:hover, body.light #letters-hero:hover {
+  background-color: #7c0303;
+  color: #e6f4f3;
+  animation: zoomIn 1s;
 }
 
 body.light .navbar {
@@ -266,6 +296,22 @@ body.light section a:hover {
 #theme-icon {
   width: 30px;
   height: 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=styles.css.map */
