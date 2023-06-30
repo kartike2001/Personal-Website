@@ -15,7 +15,7 @@ $bg-color: black;
 $text-color: #fcfdff;
 $link-color-dark: #5aa7ff; // Dark mode link color
 $hover-color-dark: #e08b14; // Dark mode hover color
-$skills-color-dark: #b371ff;
+$skills-color-dark: #00ff34;
 
 // Light Mode Variables
 $light-primary-color: #e6f4f3; // Light greenish gray
@@ -24,7 +24,7 @@ $box-shadow-hover: #0033ff; // Use your secondary color for shadow
 $light-text-color: #003bb6; // Darker green
 $link-color-light: #007c03; // Light mode link color
 $hover-color-light: #7c0303;
-$skills-color-light: rgba(128, 104, 49, 0.96);
+$skills-color-light: rgba(91, 76, 39, 0.96);
 
 // Root
 :root {
@@ -171,11 +171,7 @@ section {
   margin-left: -100px;
 }
 
-// Hover effect for the sections
-section:hover {
-  transition: transform 0.3s;
-  transform: scale(1.02);
-}
+
 
 // Individual project styling
 .project {

@@ -1,11 +1,13 @@
 const themeIcon = document.querySelector('#theme-icon');
 const KartikeImage = document.querySelector("#KartikeImage")
 const body = document.body;
+
+// get saved theme from local storage
+let currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
-// get saved theme from local storage
-let currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
 // on initial load, set the theme from local storage
 if (currentTheme) {
@@ -33,7 +35,6 @@ $(document).ready(function() {
         } // End if
     });
 
-    $("#about").addClass("hidden").hide().fadeIn(500);
     $("#projects").addClass("hidden").hide().fadeIn(1000);
     $("#skills").addClass("hidden").hide().fadeIn(1500);
     $("#experience").addClass("hidden").hide().fadeIn(2000);
