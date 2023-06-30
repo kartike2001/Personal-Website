@@ -1,5 +1,6 @@
 const themeIcon = document.querySelector('#theme-icon');
 const KartikeImage = document.querySelector("#KartikeImage")
+const github = document.querySelector("#github")
 const body = document.body;
 
 // get saved theme from local storage
@@ -15,9 +16,11 @@ if (currentTheme) {
     if (currentTheme === 'light') {
         themeIcon.src = "moon.png";
         KartikeImage.src = "Kartike2.jpg"
+        github.src = "github-icon.png"
     } else {
         themeIcon.src = "sun.png";
         KartikeImage.src = "Kartike.jpg"
+        github.src = "githubwhite.png"
     }
 }
 const themeSwitch = document.getElementById('theme-icon');
@@ -64,11 +67,13 @@ themeSwitch.addEventListener('click', function() {
     // Adding transition
     if (theme === 'light') {
         body.classList.add('light');
+        document.getElementById('github').setAttribute('src', 'github-icon.png');
         document.getElementById('theme-icon').setAttribute('src', 'moon.png');
         document.getElementById('KartikeImage').setAttribute('src', 'Kartike2.jpg');
     }
     else if (theme === 'dark') {
         body.classList.add('dark');
+        document.getElementById('github').setAttribute('src', 'githubwhite.png');
         document.getElementById('theme-icon').setAttribute('src', 'sun.png');
         document.getElementById('KartikeImage').setAttribute('src', 'Kartike.jpg');
     }
