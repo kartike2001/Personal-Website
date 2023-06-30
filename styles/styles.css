@@ -6,7 +6,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: "Roboto Mono", "Courier New", monospace;
-  background: #1e1e1e;
+  background: black;
   overflow-x: hidden;
 }
 
@@ -18,7 +18,7 @@ body {
   padding: 0;
 }
 body #resume-hero, body #letters-hero {
-  background-color: #00fcfd;
+  background-color: rgb(0, 252, 253);
   color: black;
 }
 body #resume-hero:hover, body #letters-hero:hover {
@@ -28,17 +28,52 @@ body #resume-hero:hover, body #letters-hero:hover {
 }
 
 .navbar {
-  background-color: #1e1e1e !important;
+  background-color: black !important;
   perspective: 1000px;
 }
 .navbar a {
-  color: #00fcfd !important;
+  color: rgb(0, 252, 253) !important;
   transform: translateZ(0);
   transition: transform 0.3s;
 }
 .navbar a:hover {
   color: #e08b14 !important;
   transform: translateZ(20px);
+}
+
+.nav-item {
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+body.light .nav-item {
+  background-color: #8cbce1;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body.light .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-item.active {
+  background-color: #e08b14;
+  color: black;
 }
 
 header.hero {
@@ -58,7 +93,7 @@ header.hero .container {
   z-index: 2;
 }
 header.hero .container .img-fluid {
-  border: 5px solid #00fcfd;
+  border: 5px solid rgb(0, 252, 253);
   border-radius: 50%;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -91,12 +126,12 @@ section {
   padding: 2em 0;
 }
 section h2 {
-  color: #00fcfd;
-  border-bottom: 2px solid #1e1e1e;
+  color: rgb(0, 252, 253);
+  border-bottom: 2px solid black;
   display: inline-block;
 }
 section h5 {
-  color: #00fcfd;
+  color: rgb(0, 252, 253);
 }
 section a {
   color: #5aa7ff;
@@ -116,42 +151,83 @@ section:hover {
 }
 
 .project {
-  border: 1px solid #1e1e1e;
+  border: 1px solid black;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
+.project p {
+  color: #b371ff;
+}
 .project:hover {
-  box-shadow: 0 0 10px #00fcfd;
+  box-shadow: 0 0 10px rgb(0, 252, 253);
+}
+
+.tooltip .tooltip-inner {
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.tooltip .arrow::before {
+  border-top-color: black;
 }
 
 .col-md-3 {
-  border: 1px solid #1e1e1e;
+  border: 1px solid black;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 .col-md-3:hover {
-  box-shadow: 0 0 10px #00fcfd;
+  box-shadow: 0 0 10px rgb(0, 252, 253);
 }
 
-.job {
-  border: 1px solid #1e1e1e;
+.col-md-3 {
+  border: 1px solid black;
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
+.col-md-3:hover {
+  box-shadow: 0 0 10px rgb(0, 252, 253);
+}
+
+.col-md-3 {
+  border: 1px solid black;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.col-md-3:hover {
+  box-shadow: 0 0 10px rgb(0, 252, 253);
+}
+
+.job {
+  border: 1px solid black;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.job p {
+  color: #b371ff;
+}
 .job:hover {
-  box-shadow: 0 0 10px #00fcfd;
+  box-shadow: 0 0 10px rgb(0, 252, 253);
 }
 
 body.light .project {
   border: 1px solid #8cbce1;
   box-shadow: 0 0 10px #8cbce1;
   transition: box-shadow 0.3s ease-in-out;
+}
+body.light .project p {
+  color: rgba(128, 104, 49, 0.96);
 }
 body.light .project:hover {
   box-shadow: 0 0 10px #0033ff;
@@ -170,6 +246,9 @@ body.light .job {
   border: 1px solid #8cbce1;
   box-shadow: 0 0 10px #8cbce1;
   transition: box-shadow 0.3s ease-in-out;
+}
+body.light .job p {
+  color: rgba(128, 104, 49, 0.96);
 }
 body.light .job:hover {
   box-shadow: 0 0 10px #0033ff;

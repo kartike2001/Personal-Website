@@ -8,13 +8,14 @@
 }
 
 // Dark Mode Variables
-$primary-color: #1e1e1e;
-$secondary-color: #00fcfd;
+$primary-color: black;
+$secondary-color: rgb(0, 252, 253);
 $font-stack: "Roboto Mono", "Courier New", monospace;
 $bg-color: black;
 $text-color: #fcfdff;
 $link-color-dark: #5aa7ff; // Dark mode link color
 $hover-color-dark: #e08b14; // Dark mode hover color
+$skills-color-dark: #b371ff;
 
 // Light Mode Variables
 $light-primary-color: #e6f4f3; // Light greenish gray
@@ -23,6 +24,8 @@ $box-shadow-hover: #0033ff; // Use your secondary color for shadow
 $light-text-color: #003bb6; // Darker green
 $link-color-light: #007c03; // Light mode link color
 $hover-color-light: #7c0303;
+$skills-color-light: rgba(128, 104, 49, 0.96);
+
 // Root
 :root {
   --bs-dark: #212529;
@@ -69,6 +72,39 @@ body {
       transform: translateZ(20px);
     }
   }
+}
+
+.nav-item {
+  background-color: $primary-color; // Give a slight background color
+  border-radius: 5px; // Maintain the rounded corners
+  padding: 5px; // Add some space around your content
+  margin: 5px; // Add some space around your box
+
+  // Add transition for smooth hover effect
+  @include transition(all 0.3s ease);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.16); // Darken the background color slightly on hover
+  }
+}
+
+body.light .nav-item {
+  background-color: $light-secondary-color; // Lighten background color for light mode
+  border: none; // Remove border
+  padding: 5px; // Add some space around your content
+  margin: 5px; // Add some space around your box
+
+  // Add transition for smooth hover effect
+  @include transition(all 0.3s ease);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2); // Darken the background color slightly on hover
+  }
+}
+
+.nav-item.active {
+  background-color: $hover-color-dark; // Change to the desired background color
+  color: $bg-color; // Change to the desired text color
 }
 
 // Hero Section styling
@@ -148,6 +184,45 @@ section:hover {
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
+  p {
+    color: $skills-color-dark;
+  }
+  &:hover {
+    box-shadow: 0 0 10px $secondary-color;
+  }
+}
+.tooltip {
+  .tooltip-inner {
+    background-color: black; // Tooltip background color
+    color: white; // Tooltip text color
+    padding: .5em; // Padding inside the tooltip
+    border-radius: 5px; // Rounded corners
+  }
+
+  .arrow::before {
+    border-top-color: black; // Color of the tooltip arrow
+  }
+}
+
+.col-md-3 {
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px $secondary-color;
+  }
+}
+
+.col-md-3 {
+  border: 1px solid $primary-color;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+
   &:hover {
     box-shadow: 0 0 10px $secondary-color;
   }
@@ -172,6 +247,9 @@ section:hover {
   margin: 1em 0;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
+  p {
+    color: $skills-color-dark;
+  }
   &:hover {
     box-shadow: 0 0 10px $secondary-color;
   }
@@ -182,7 +260,9 @@ body.light .project {
   border: 1px solid $light-secondary-color;
   box-shadow: 0 0 10px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
-
+  p {
+    color: $skills-color-light;
+  }
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }
@@ -204,7 +284,9 @@ body.light .job {
   border: 1px solid $light-secondary-color;
   box-shadow: 0 0 10px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
-
+  p {
+    color: $skills-color-light;
+  }
   &:hover {
     box-shadow: 0 0 10px $box-shadow-hover;
   }

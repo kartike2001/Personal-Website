@@ -1,7 +1,9 @@
 const themeIcon = document.querySelector('#theme-icon');
 const KartikeImage = document.querySelector("#KartikeImage")
 const body = document.body;
-
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 // get saved theme from local storage
 let currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
@@ -48,21 +50,6 @@ $(document).ready(function() {
             }
         });
     });
-
-    $("section").hover(
-        function() {
-            $(this).css({
-                "transition": "transform 0.3s",
-                "transform": "scale(1.02)"
-            });
-        },
-        function() {
-            $(this).css({
-                "transition": "transform 0.3s",
-                "transform": "scale(1)"
-            });
-        }
-    );
 });
 
 themeSwitch.addEventListener('click', function() {
@@ -122,4 +109,3 @@ navLinks.forEach((navLink) => {
         this.style.transform = "scale(1)";
     });
 });
-
