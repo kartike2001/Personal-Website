@@ -1,48 +1,63 @@
+// Element references
 const themeIcon = document.querySelector('#theme-icon');
-const KartikeImage = document.querySelector("#KartikeImage")
-const github = document.querySelector("#github")
+const KartikeImage = document.querySelector("#KartikeImage");
+const github = document.querySelector("#github");
 const body = document.body;
 
 // get saved theme from local storage
-let currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+let theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+// Function to set the theme
+function setTheme(theme) {
+    const lightAssets = {icon: "moon.png", image: "Kartike2.jpg", github: "github-icon.png"};
+    const darkAssets = {icon: "sun.png", image: "Kartike.jpg", github: "githubwhite.png"};
+
+    const assets = theme === 'light' ? lightAssets : darkAssets;
+
+    body.className = theme;
+    themeIcon.src = assets.icon;
+    KartikeImage.src = assets.image;
+    github.src = assets.github;
+
+    // Saving to LocalStorage
+    localStorage.setItem('theme', theme);
+}
+
+// on initial load, set the theme from local storage
+if (theme) setTheme(theme);
+
+themeIcon.addEventListener('click', function() {
+    theme = body.classList.toggle('light') ? 'light' : 'dark';
+
+    setTheme(theme);
+});
+
+window.onload = function() {
+    theme = localStorage.getItem('theme');
+
+    if (theme) setTheme(theme);
+};
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
-});
 
-// on initial load, set the theme from local storage
-if (currentTheme) {
-    document.body.className = currentTheme;
-    if (currentTheme === 'light') {
-        themeIcon.src = "moon.png";
-        KartikeImage.src = "Kartike2.jpg"
-        github.src = "github-icon.png"
-    } else {
-        themeIcon.src = "sun.png";
-        KartikeImage.src = "Kartike.jpg"
-        github.src = "githubwhite.png"
-    }
-}
-const themeSwitch = document.getElementById('theme-icon');
-
-$(document).ready(function() {
+    // Smooth scroll
     $("a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             let hash = this.hash;
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 1000, function(){  // Increase animation speed to 1000ms
+            }, 1000, function() {
                 window.location.hash = hash;
             });
-        } // End if
+        }
     });
 
-    $("#projects").addClass("hidden").hide().fadeIn(1000);
-    $("#skills").addClass("hidden").hide().fadeIn(1500);
-    $("#experience").addClass("hidden").hide().fadeIn(2000);
-    $("#certifications").addClass("hidden").hide().fadeIn(2500);
-    $("#contact").addClass("hidden").hide().fadeIn(3000);
+    // Hide and FadeIn animations
+    ["#projects", "#skills", "#experience", "#certifications", "#contact"].forEach((id, i) => {
+        $(id).addClass("hidden").hide().fadeIn((i + 1) * 500);
+    });
 
     // Slide in sections when they enter the viewport.
     $(window).scroll(function() {
@@ -54,64 +69,21 @@ $(document).ready(function() {
             }
         });
     });
-});
 
-themeSwitch.addEventListener('click', function() {
-    body.classList.toggle('light');
-
-    let theme = 'dark';
-    if (body.classList.contains('light')) {
-        theme = 'light';
-    }
-
-    // Adding transition
-    if (theme === 'light') {
-        body.classList.add('light');
-        document.getElementById('github').setAttribute('src', 'github-icon.png');
-        document.getElementById('theme-icon').setAttribute('src', 'moon.png');
-        document.getElementById('KartikeImage').setAttribute('src', 'Kartike2.jpg');
-    }
-    else if (theme === 'dark') {
-        body.classList.add('dark');
-        document.getElementById('github').setAttribute('src', 'githubwhite.png');
-        document.getElementById('theme-icon').setAttribute('src', 'sun.png');
-        document.getElementById('KartikeImage').setAttribute('src', 'Kartike.jpg');
-    }
-    body.style.transition = "all 0.5s ease-in-out";
-    // Saving to LocalStorage
-    localStorage.setItem('theme', theme);
-});
-
-window.onload = function() {
-    const theme = localStorage.getItem('theme');
-    if (theme === 'light') {
-        body.classList.add('light');
-        document.getElementById('theme-icon').setAttribute('src', 'moon.png');
-        document.getElementById('KartikeImage').setAttribute('src', 'Kartike2.jpg');
-    }
-    else if (theme === 'dark') {
-        body.classList.add('dark');
-        document.getElementById('theme-icon').setAttribute('src', 'sun.png');
-        document.getElementById('KartikeImage').setAttribute('src', 'Kartike.jpg');
-
-    }
-};
-
-$(document).ready(function () {
-    $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-nav>li>b>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
-});
 
-// Apply 3D zoom effect on navbar items
-let navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach((navLink) => {
-    navLink.addEventListener("mouseover", function() {
-        this.style.transform = "scale(1.1)";
-        this.style.transition = "transform 0.3s";
-    });
 
-    navLink.addEventListener("mouseout", function() {
-        this.style.transform = "scale(1)";
+    let navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((navLink) => {
+        navLink.addEventListener("mouseover", function() {
+            this.style.transform = "scale(1.1)";
+            this.style.transition = "transform 0.3s";
+        });
+
+        navLink.addEventListener("mouseout", function() {
+            this.style.transform = "scale(1)";
+        });
     });
 });

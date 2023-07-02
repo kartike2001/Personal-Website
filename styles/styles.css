@@ -46,6 +46,7 @@ body #resume-hero:hover, body #letters-hero:hover {
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
+  text-align: center;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;

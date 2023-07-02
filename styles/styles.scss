@@ -79,7 +79,7 @@ body {
   border-radius: 5px; // Maintain the rounded corners
   padding: 5px; // Add some space around your content
   margin: 5px; // Add some space around your box
-
+  text-align: center;
   // Add transition for smooth hover effect
   @include transition(all 0.3s ease);
 
