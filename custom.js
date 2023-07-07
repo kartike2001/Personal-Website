@@ -55,7 +55,7 @@ $(document).ready(function(){
     });
 
     // Hide and FadeIn animations
-    ["#projects", "#skills", "#experience", "#certifications", "#contact"].forEach((id, i) => {
+    ["#projects", "#skills", "#experience", "#leadershipexperience", "#certifications", "#contact"].forEach((id, i) => {
         $(id).addClass("hidden").hide().fadeIn((i + 1) * 500);
     });
 
@@ -87,3 +87,14 @@ $(document).ready(function(){
         });
     });
 });
+$(document).ready(function() {
+    $('.collapse').on('show.bs.collapse', function () {
+        $(this).prev('h2').find('span').text('⇑');
+    });
+
+    $('.collapse').on('hide.bs.collapse', function () {
+        $(this).prev('h2').find('span').text('⇓');
+    });
+});
+
+

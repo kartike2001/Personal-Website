@@ -3,6 +3,7 @@
     "watch:scss": "node-sass -w styles/styles.scss styles/styles.css"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.10.5",
     "node-sass": "^9.0.0"
   }
 }

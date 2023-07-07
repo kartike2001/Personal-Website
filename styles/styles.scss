@@ -26,6 +26,10 @@ $link-color-light: #007c03; // Light mode link color
 $hover-color-light: #7c0303;
 $skills-color-light: rgba(91, 76, 39, 0.96);
 
+.section-content {
+  display: none;
+}
+
 // Root
 :root {
   --bs-dark: #212529;
@@ -150,7 +154,6 @@ section {
   padding: 2em 0;
   h2 {
     color: $secondary-color;
-    border-bottom: 2px solid $primary-color;
     display: inline-block;
   }
   h5 {
@@ -294,7 +297,7 @@ body.light .job {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
@@ -376,6 +379,7 @@ body.light header.hero {
 body.light section {
   h2 {
     color: black;
+    display: inline-block;
   }
   h5 {
     color: black;
@@ -437,6 +441,6 @@ body.light section {
   cursor: pointer;
   @include transition(all 0.3s ease);
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }

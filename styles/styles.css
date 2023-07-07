@@ -1,3 +1,7 @@
+.section-content {
+  display: none;
+}
+
 :root {
   --bs-dark: #212529;
 }
@@ -128,7 +132,6 @@ section {
 }
 section h2 {
   color: rgb(0, 252, 253);
-  border-bottom: 2px solid black;
   display: inline-block;
 }
 section h5 {
@@ -255,7 +258,7 @@ body.light .job:hover {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 @keyframes fadeIn {
@@ -326,6 +329,7 @@ body.light header.hero .container p {
 
 body.light section h2 {
   color: black;
+  display: inline-block;
 }
 body.light section h5 {
   color: black;
@@ -386,7 +390,7 @@ body.light section a:hover {
   transition: all 0.3s ease;
 }
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=styles.css.map */
