@@ -55,7 +55,7 @@ $(document).ready(function(){
     });
 
     // Hide and FadeIn animations
-    ["#projects", "#skills", "#experience", "#leadershipexperience", "#certifications", "#contact"].forEach((id, i) => {
+    ["#experience","#projects", "#skills", "#leadershipexperience", "#certifications", "#contact"].forEach((id, i) => {
         $(id).addClass("hidden").hide().fadeIn((i + 1) * 500);
     });
 
