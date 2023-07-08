@@ -88,12 +88,22 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function() {
-    $('.collapse').on('show.bs.collapse', function () {
-        $(this).prev('h2').find('span').text('⇑');
+    $('h2[data-toggle="collapse"]').on('click', function() {
+        var spanElem = $(this).find('span');
+        if(spanElem.text() == '⏶') {
+            spanElem.text('⏵');
+        } else {
+            spanElem.text('⏶');
+        }
     });
 
-    $('.collapse').on('hide.bs.collapse', function () {
-        $(this).prev('h2').find('span').text('⇓');
+    $('li[data-toggle="collapse"]').on('click', function() {
+        var spanElem = $(this).find('span');
+        if(spanElem.text() == '⇓') {
+            spanElem.text('⇑');
+        } else {
+            spanElem.text('⇓');
+        }
     });
 });
 

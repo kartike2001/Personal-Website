@@ -111,6 +111,14 @@ body.light .nav-item {
   color: $bg-color; // Change to the desired text color
 }
 
+.highlight {
+  opacity: 1;
+}
+
+.transparent  {
+  opacity: 0.5;
+}
+
 // Hero Section styling
 header.hero {
   padding: 5em 0;
@@ -187,19 +195,79 @@ section {
     color: $skills-color-dark;
   }
   &:hover {
-    box-shadow: 0 0 10px $secondary-color;
+    box-shadow: 0 0 20px $secondary-color;
   }
 }
-.tooltip {
-  .tooltip-inner {
-    background-color: black; // Tooltip background color
-    color: white; // Tooltip text color
-    padding: .5em; // Padding inside the tooltip
-    border-radius: 5px; // Rounded corners
+
+
+// Main section styling
+#skills {
+  background-color: $bg-color;
+  color: $text-color;
+
+  h2 {
+    color: $secondary-color;
   }
 
-  .arrow::before {
-    border-top-color: black; // Color of the tooltip arrow
+  h5 {
+    color: $secondary-color;
+  }
+
+  ul {
+    li {
+      color: $text-color;
+      &:hover {
+        color: $hover-color-dark;
+      }
+    }
+  }
+
+  a {
+    color: $link-color-dark;
+    &:hover {
+      color: $hover-color-dark;
+    }
+  }
+
+  .card {
+    background-color: $secondary-color;
+    color: $bg-color;
+  }
+
+
+  // Light mode
+  body.light & {
+    background-color: $light-primary-color;
+    color: $light-text-color;
+
+    h2 {
+      color: black;
+    }
+
+    h5 {
+      color: black;
+    }
+
+    ul {
+      li {
+        color: $light-text-color;
+        &:hover {
+          color: $hover-color-light;
+        }
+      }
+    }
+
+    a {
+      color: $link-color-light;
+      &:hover {
+        color: $hover-color-light;
+      }
+    }
+
+    .card {
+      background-color: $light-secondary-color;
+      color: black;
+    }
   }
 }
 
@@ -210,32 +278,23 @@ section {
   border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 
+  p {
+    color: $skills-color-dark;
+  }
+
   &:hover {
-    box-shadow: 0 0 10px $secondary-color;
+    box-shadow: 0 0 20px $secondary-color;
   }
 }
-
-.col-md-3 {
-  border: 1px solid $primary-color;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
+body.light .col-md-3{
+  border: 1px solid $light-secondary-color;
+  box-shadow: 0 0 20px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 0 10px $secondary-color;
+  p {
+    color: $skills-color-light;
   }
-}
-
-// Individual Column styling
-.col-md-3 {
-  border: 1px solid $primary-color;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
-  transition: box-shadow 0.3s ease-in-out;
   &:hover {
-    box-shadow: 0 0 10px $secondary-color;
+    box-shadow: 0 0 20px $box-shadow-hover;
   }
 }
 
@@ -250,44 +309,35 @@ section {
     color: $skills-color-dark;
   }
   &:hover {
-    box-shadow: 0 0 10px $secondary-color;
+    box-shadow: 0 0 20px $secondary-color;
   }
 }
 
 // Individual Project styling (Light Mode)
 body.light .project {
   border: 1px solid $light-secondary-color;
-  box-shadow: 0 0 10px $light-secondary-color;
+  box-shadow: 0 0 20px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
   p {
     color: $skills-color-light;
   }
   &:hover {
-    box-shadow: 0 0 10px $box-shadow-hover;
+    box-shadow: 0 0 20px $box-shadow-hover;
   }
 }
 
-// Individual Column styling (Light Mode)
-body.light .col-md-3 {
-  border: 1px solid $light-secondary-color;
-  box-shadow: 0 0 10px $light-secondary-color;
-  transition: box-shadow 0.3s ease-in-out;
 
-  &:hover {
-    box-shadow: 0 0 10px $box-shadow-hover;
-  }
-}
 
 // Individual Job styling (Light Mode)
 body.light .job {
   border: 1px solid $light-secondary-color;
-  box-shadow: 0 0 10px $light-secondary-color;
+  box-shadow: 0 0 20px $light-secondary-color;
   transition: box-shadow 0.3s ease-in-out;
   p {
     color: $skills-color-light;
   }
   &:hover {
-    box-shadow: 0 0 10px $box-shadow-hover;
+    box-shadow: 0 0 20px $box-shadow-hover;
   }
 }
 
