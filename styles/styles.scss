@@ -222,6 +222,13 @@ section {
     }
   }
 
+  p{
+    color: $text-color !important;
+    &:hover {
+      color: $hover-color-dark !important;
+    }
+  }
+
   a {
     color: $link-color-dark;
     &:hover {
@@ -230,7 +237,7 @@ section {
   }
 
   .card {
-    background-color: rgb(192, 255, 255);
+    background-color: $secondary-color;
     color: $bg-color;
   }
 

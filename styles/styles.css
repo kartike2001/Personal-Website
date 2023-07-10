@@ -190,6 +190,12 @@ section a:hover {
 #skills ul li:hover {
   color: #e08b14;
 }
+#skills p {
+  color: #fcfdff !important;
+}
+#skills p:hover {
+  color: #e08b14 !important;
+}
 #skills a {
   color: #5aa7ff;
 }
@@ -197,7 +203,7 @@ section a:hover {
   color: #e08b14;
 }
 #skills .card {
-  background-color: rgb(192, 255, 255);
+  background-color: rgb(0, 252, 253);
   color: black;
 }
 #skills .col-md-6 {
