@@ -214,6 +214,7 @@ section {
   }
 
   ul {
+    list-style: none;
     li {
       color: $text-color;
       &:hover {
@@ -230,10 +231,43 @@ section {
   }
 
   .card {
-    background-color: $secondary-color;
+    background-color: rgb(192, 255, 255);
     color: $bg-color;
   }
 
+  .col-md-6 {
+    border: 1px solid $primary-color;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+
+    p {
+      color: $skills-color-dark;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px $secondary-color;
+    }
+  }
+
+  .col-md-12 {
+    border: 1px solid $primary-color;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+
+    p {
+      color: $skills-color-dark;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px $secondary-color;
+    }
+  }
 
   // Light mode
   body.light & {
@@ -249,6 +283,7 @@ section {
     }
 
     ul {
+      list-style: none;
       li {
         color: $light-text-color;
         &:hover {
@@ -265,38 +300,49 @@ section {
     }
 
     .card {
-      background-color: $light-secondary-color;
+      background-color: #cadcea;
       color: black;
+    }
+
+
+    .col-md-12 {
+      border: 1px solid $light-secondary-color;
+      box-shadow: 0 0 20px $light-secondary-color;
+      transition: box-shadow 0.3s ease-in-out;
+      text-align: center;
+
+      p {
+        color: $skills-color-light;
+      }
+
+      &:hover {
+        box-shadow: 0 0 20px $box-shadow-hover;
+      }
+    }
+
+    .col-md-6 {
+      border: 1px solid $light-secondary-color;
+      box-shadow: 0 0 20px $light-secondary-color;
+      transition: box-shadow 0.3s ease-in-out;
+      text-align: center;
+
+      p {
+        color: $skills-color-light;
+      }
+
+      &:hover {
+        box-shadow: 0 0 20px $box-shadow-hover;
+      }
     }
   }
 }
 
-.col-md-3 {
-  border: 1px solid $primary-color;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
-  transition: box-shadow 0.3s ease-in-out;
 
-  p {
-    color: $skills-color-dark;
-  }
 
-  &:hover {
-    box-shadow: 0 0 20px $secondary-color;
-  }
-}
-body.light .col-md-3{
-  border: 1px solid $light-secondary-color;
-  box-shadow: 0 0 20px $light-secondary-color;
-  transition: box-shadow 0.3s ease-in-out;
-  p {
-    color: $skills-color-light;
-  }
-  &:hover {
-    box-shadow: 0 0 20px $box-shadow-hover;
-  }
-}
+
+
+
+
 
 // Individual Job styling
 .job {

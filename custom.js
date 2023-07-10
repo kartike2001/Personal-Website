@@ -48,7 +48,7 @@ $(document).ready(function(){
             let hash = this.hash;
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 1000, function() {
+            }, 500, function() {
                 window.location.hash = hash;
             });
         }
@@ -90,7 +90,7 @@ $(document).ready(function(){
 $(document).ready(function() {
     $('h2[data-toggle="collapse"]').on('click', function() {
         var spanElem = $(this).find('span');
-        if(spanElem.text() == '⏶') {
+        if(spanElem.text() === '⏶') {
             spanElem.text('⏵');
         } else {
             spanElem.text('⏶');
@@ -99,12 +99,23 @@ $(document).ready(function() {
 
     $('li[data-toggle="collapse"]').on('click', function() {
         var spanElem = $(this).find('span');
-        if(spanElem.text() == '⇓') {
+        if(spanElem.text() === '⇓') {
             spanElem.text('⇑');
         } else {
             spanElem.text('⇓');
         }
     });
+
+    // Added functionality for 'show.bs.collapse' and 'hide.bs.collapse' events
+    $('li[data-toggle="collapse"]').on('show.bs.collapse', function() {
+        var skillName = $(this).text().trim().toLowerCase();  // get skill name and convert it to lowercase
+        $('.highlight').removeClass('highlight');  // remove any existing highlights
+        $('#experience, #projects').css('opacity', 0.5);  // apply transparency to all divs in "experience" and "projects" sections
+        // search for skill in "experience" and "projects" sections, ignoring case
+        $('#experience, #projects').filter(function() {
+            return $(this).text().toLowerCase().indexOf(skillName) > -1;  // convert div content to lowercase before comparison
+        }).addClass('highlight').css('opacity', '');  // add "highlight" class and reset transparency for divs containing skill
+    }).on('hide.bs.collapse', function() {
+        $('#experience, #projects').removeClass('highlight').css('opacity', '');  // remove "highlight" class and reset transparency when skill is collapsed
+    });
 });
-
-
