@@ -334,7 +334,7 @@ body.light #resume-hero:hover, body.light #letters-hero:hover {
 }
 
 body.light .navbar {
-  background-color: #8cbce1 !important;
+  background: #8cbce1 !important;
 }
 body.light .navbar a {
   color: black !important;
