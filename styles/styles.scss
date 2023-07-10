@@ -7,6 +7,7 @@
   transition: $args;
 }
 
+
 // Dark Mode Variables
 $primary-color: black;
 $secondary-color: rgb(0, 252, 253);
@@ -222,20 +223,6 @@ section {
     }
   }
 
-  p{
-    color: $text-color !important;
-    &:hover {
-      color: $hover-color-dark !important;
-    }
-  }
-
-  a {
-    color: $link-color-dark;
-    &:hover {
-      color: $hover-color-dark;
-    }
-  }
-
   .card {
     background-color: $secondary-color;
     color: $bg-color;
@@ -249,9 +236,13 @@ section {
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
 
-    p {
-      color: $skills-color-dark;
+    p{
+      color: $text-color !important;
+      &:hover {
+        color: $hover-color-dark !important;
+      }
     }
+
 
     &:hover {
       box-shadow: 0 0 20px $secondary-color;
@@ -266,8 +257,11 @@ section {
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
 
-    p {
-      color: $skills-color-dark;
+    p{
+      color: $text-color !important;
+      &:hover {
+        color: $hover-color-dark !important;
+      }
     }
 
     &:hover {
@@ -288,22 +282,6 @@ section {
       color: black;
     }
 
-    ul {
-      list-style: none;
-      li {
-        color: $light-text-color;
-        &:hover {
-          color: $hover-color-light;
-        }
-      }
-    }
-
-    a {
-      color: $link-color-light;
-      &:hover {
-        color: $hover-color-light;
-      }
-    }
 
     .card {
       background-color: #cadcea;
@@ -316,9 +294,11 @@ section {
       box-shadow: 0 0 20px $light-secondary-color;
       transition: box-shadow 0.3s ease-in-out;
       text-align: center;
-
-      p {
-        color: $skills-color-light;
+      p{
+        color: $light-text-color !important;
+        &:hover {
+          color: $hover-color-light !important;
+        }
       }
 
       &:hover {
@@ -331,9 +311,11 @@ section {
       box-shadow: 0 0 20px $light-secondary-color;
       transition: box-shadow 0.3s ease-in-out;
       text-align: center;
-
-      p {
-        color: $skills-color-light;
+      p{
+        color: $light-text-color !important;
+        &:hover {
+          color: $hover-color-light !important;
+        }
       }
 
       &:hover {
@@ -403,34 +385,6 @@ body.light .job {
   }
 }
 
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes slideIn {
-  from {
-    margin-left: -100px;
-    opacity: 0;
-  }
-  to {
-    margin-left: 0;
-    opacity: 1;
-  }
-}
-
-.slide-in {
-  animation: slideIn 1s ease-in-out;
-}
 
 // Dark Mode Styling
 body.light {
@@ -550,4 +504,9 @@ body.light section {
   &:hover {
     transform: scale(1.02);
   }
+}
+
+[data-aos="zoom-in"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
