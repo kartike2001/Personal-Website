@@ -39,21 +39,6 @@ window.onload = function() {
 };
 
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-
-    // Smooth scroll
-    $("a").on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            let hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 500, function() {
-                window.location.hash = hash;
-            });
-        }
-    });
-
     // Hide and FadeIn animations
     ["#experience","#projects", "#skills", "#leadershipexperience", "#certifications", "#contact"].forEach((id, i) => {
         $(id).addClass("hidden").hide().fadeIn((i + 1) * 500);
