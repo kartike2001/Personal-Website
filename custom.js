@@ -93,3 +93,33 @@ $(document).ready(function() {
         }
     });
 });
+
+const subtitles = [
+    'Computer Science Major',
+    'Peer Mentor',
+    'Head Teaching Assistant',
+    'Resident Advisor',
+    'Student Engagement Ambassador'
+];
+let subtitleIndex = 0;
+let charIndex = -1;
+const subtitleElement = document.querySelector('.lead');
+let isDeleting = false;
+
+const typeNextChar = () => {
+    if (isDeleting && charIndex === -1) {
+        isDeleting = false;
+        subtitleIndex = (subtitleIndex + 1) % subtitles.length;
+        setTimeout(typeNextChar, 1000); // Adjust this for pause between typing and deleting
+    } else if (!isDeleting && charIndex === subtitles[subtitleIndex].length - 1) {
+        isDeleting = true;
+        setTimeout(typeNextChar, 1000); // Adjust this for pause between typing and deleting
+    } else {
+        charIndex += isDeleting ? -1 : 1;
+        const text = subtitles[subtitleIndex].substring(0, charIndex + 1);
+        subtitleElement.textContent = text + (isDeleting ? '' : ''); // Add cursor
+        setTimeout(typeNextChar, isDeleting ? 40 : 50); // Adjust typing and deleting speed here
+    }
+};
+
+setTimeout(typeNextChar, 1000);

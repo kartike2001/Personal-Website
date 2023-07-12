@@ -7,6 +7,70 @@
   transition: $args;
 }
 
+@mixin glitch-effect($color1, $color2) {
+  &::before, &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #00edf5;
+  }
+
+  &::before {
+    text-shadow: -2px 0 $color1;
+    animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+  }
+
+  &::after {
+    text-shadow: -2px 0 $color2;
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+}
+
+@mixin glitch-effect2($color1, $color2) {
+  &::before, &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #0033ff;
+  }
+
+  &::before {
+    text-shadow: -2px 0 $color1;
+    animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+  }
+
+  &::after {
+    text-shadow: -2px 0 $color2;
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+}
+
+@keyframes cursorBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes glitch-anim {
+  0% {clip: rect(44px, 9999px, 56px, 0);}
+  5% {clip: rect(63px, 9999px, 70px, 0);}
+  10% {clip: rect(89px, 9999px, 90px, 0);}
+  100% {clip: rect(0px, 9999px, 90px, 0);}
+}
+
+@keyframes glitch-anim-2 {
+  0% {clip: rect(25px, 9999px, 30px, 0);}
+  5% {clip: rect(33px, 9999px, 38px, 0);}
+  10% {clip: rect(20px, 9999px, 28px, 0);}
+  100% {clip: rect(20px, 9999px, 90px, 0);}
+}
+
 
 // Dark Mode Variables
 $primary-color: black;
@@ -26,6 +90,7 @@ $light-text-color: #003bb6; // Darker green
 $link-color-light: #007c03; // Light mode link color
 $hover-color-light: #7c0303;
 $skills-color-light: rgba(91, 76, 39, 0.96);
+
 
 .section-content {
   display: none;
@@ -146,13 +211,24 @@ header.hero {
       font-size: 2.5em;
       text-shadow: 2px 2px 4px rgba(0, 237, 245, 0.50);
       margin: 1em 0;
-      &:hover {
-        transform: scale(1.03);
-      }
+      position: relative;
+      @include glitch-effect(blue, red);
     }
     p {
       font-size: 1.2em;
       text-shadow: 1px 1px 2px rgb(0, 237, 245, 0.50);
+    }
+    .lead{
+      min-height: 1.5em; // Assuming your font-size is 1.2em for this element
+      font-weight: bold;
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 2px solid white; // Change this to the color of your text
+        border-right: 2px solid transparent;
+        animation: cursorBlink 1s infinite;
+      }
     }
   }
 }
@@ -433,12 +509,25 @@ body.light header.hero {
       border: 5px solid black;
     }
     h1 {
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.45);
       color: black;
+      position: relative;
+      @include glitch-effect2(#0eabf6, red);
     }
     p {
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.45);
       color: black;
+    }
+    .lead {
+      min-height: 1.5em; // Assuming your font-size is 1.2em for this element
+      font-weight: bold;
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 2px solid black; // Change this to the color of your text
+        border-right: 2px solid transparent;
+        animation: cursorBlink 1s infinite;
+      }
     }
   }
 }
