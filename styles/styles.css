@@ -37,6 +37,16 @@
     clip: rect(20px, 9999px, 90px, 0);
   }
 }
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .section-content {
   display: none;
 }
@@ -97,6 +107,9 @@ body #resume-hero:hover, body #letters-hero:hover {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.nav-item:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
 .nav-item:hover {
   background-color: rgba(255, 255, 255, 0.16);
 }
@@ -112,6 +125,9 @@ body.light .nav-item {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+body.light .nav-item:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 body.light .nav-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -119,6 +135,7 @@ body.light .nav-item:hover {
 .nav-item.active {
   background-color: #e08b14;
   color: black;
+  pointer-events: none;
 }
 
 .highlight {
@@ -158,7 +175,7 @@ header.hero .container .img-fluid:hover {
   transform: scale(1.03);
 }
 header.hero .container h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   text-shadow: 2px 2px 4px rgba(0, 237, 245, 0.5);
   margin: 1em 0;
   position: relative;
@@ -181,11 +198,11 @@ header.hero .container h1::after {
   animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 header.hero .container p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-shadow: 1px 1px 2px rgba(0, 237, 245, 0.5);
 }
 header.hero .container .lead {
-  min-height: 1.5em;
+  min-height: 1.8em;
   font-weight: bold;
 }
 header.hero .container .lead:after {
@@ -450,7 +467,7 @@ body.light header.hero .container p {
   color: black;
 }
 body.light header.hero .container .lead {
-  min-height: 1.5em;
+  min-height: 1.8em;
   font-weight: bold;
 }
 body.light header.hero .container .lead:after {

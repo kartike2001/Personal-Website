@@ -1,13 +1,26 @@
-// Element references
+// DOM selections
 const themeIcon = document.querySelector('#theme-icon');
 const KartikeImage = document.querySelector("#KartikeImage");
 const github = document.querySelector("#github");
 const body = document.body;
+const navLinks = document.querySelectorAll(".nav-link");
+const subtitleElement = document.querySelector('.lead');
+const sections = document.querySelectorAll('section');
+let theme = localStorage.getItem('theme') || null;
 
-// get saved theme from local storage
-let theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+// Variables
+const subtitles = [
+    'Computer Science Major',
+    'Peer Mentor',
+    'Head Teaching Assistant',
+    'Resident Advisor',
+    'Student Engagement Ambassador'
+];
+let subtitleIndex = 0;
+let charIndex = -1;
+let isDeleting = false;
 
-// Function to set the theme
+// Set Theme
 function setTheme(theme) {
     const lightAssets = {icon: "moon.png", image: "Kartike2.jpg", github: "github-icon.png"};
     const darkAssets = {icon: "sun.png", image: "Kartike.jpg", github: "githubwhite.png"};
@@ -19,48 +32,54 @@ function setTheme(theme) {
     KartikeImage.src = assets.image;
     github.src = assets.github;
 
-    // Saving to LocalStorage
     localStorage.setItem('theme', theme);
 }
 
-// on initial load, set the theme from local storage
+// Set initial theme
 if (theme) setTheme(theme);
 
+// Toggle Theme
 themeIcon.addEventListener('click', function() {
     theme = body.classList.toggle('light') ? 'light' : 'dark';
-
     setTheme(theme);
 });
 
+// Apply theme on window load
 window.onload = function() {
     theme = localStorage.getItem('theme');
-
     if (theme) setTheme(theme);
 };
 
-$(document).ready(function(){
-    // Hide and FadeIn animations
-    ["#experience","#projects", "#skills", "#leadershipexperience", "#certifications", "#contact"].forEach((id, i) => {
-        $(id).addClass("hidden").hide().fadeIn((i + 1) * 500);
-    });
-
-    // Slide in sections when they enter the viewport.
-    $(window).scroll(function() {
-        $(".hidden").each(function() {
-            let top_of_object = $(this).offset().top;
-            let bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > top_of_object) {
-                $(this).animate({"opacity":"1","margin-left":"0px"},1000);
+// Intersection Observer
+function createObserver() {
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.intersectionRatio > 0) {
+                entry.target.style.animation = `fade-in 1s ${entry.target.dataset.delay} forwards ease-out`;
             }
         });
     });
+    return observer;
+}
 
+// Apply observer to all sections
+function applyObserver(observer) {
+    sections.forEach((section) => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(50px)';
+        observer.observe(section);
+    });
+}
+
+// Collapse Navbar on click
+function collapseNavbar() {
     $('.navbar-nav>li>b>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
+}
 
-
-    let navLinks = document.querySelectorAll(".nav-link");
+// Add mouseover and mouseout events to navLinks
+function addMouseEventsToNavLinks() {
     navLinks.forEach((navLink) => {
         navLink.addEventListener("mouseover", function() {
             this.style.transform = "scale(1.1)";
@@ -71,55 +90,45 @@ $(document).ready(function(){
             this.style.transform = "scale(1)";
         });
     });
-});
-$(document).ready(function() {
+}
+
+// Toggle collapse on click
+function toggleCollapse() {
     $('h2[data-toggle="collapse"]').on('click', function() {
         var spanElem = $(this).find('span');
-        if(spanElem.text() === '⏶') {
-            spanElem.text('⏵');
-        } else {
-            spanElem.text('⏶');
-        }
+        spanElem.text(spanElem.text() === '⏶' ? '⏵' : '⏶');
     });
 
     $('p[data-toggle="collapse"]').on('click', function() {
         var spanElem = $(this).find('span');
-        if(spanElem.text() === '⇓') {
-            spanElem.text('⇑');
-            $(this).css('font-weight', 'bold');
-        } else {
-            spanElem.text('⇓');
-            $(this).css('font-weight', 'normal');
-        }
+        spanElem.text(spanElem.text() === '⇓' ? '⇑' : '⇓');
+        $(this).css('font-weight', spanElem.text() === '⇑' ? 'bold' : 'normal');
     });
-});
+}
 
-const subtitles = [
-    'Computer Science Major',
-    'Peer Mentor',
-    'Head Teaching Assistant',
-    'Resident Advisor',
-    'Student Engagement Ambassador'
-];
-let subtitleIndex = 0;
-let charIndex = -1;
-const subtitleElement = document.querySelector('.lead');
-let isDeleting = false;
-
-const typeNextChar = () => {
+// Typing animation for subtitles
+function typeNextChar() {
     if (isDeleting && charIndex === -1) {
         isDeleting = false;
         subtitleIndex = (subtitleIndex + 1) % subtitles.length;
-        setTimeout(typeNextChar, 1000); // Adjust this for pause between typing and deleting
+        setTimeout(typeNextChar, 1000);
     } else if (!isDeleting && charIndex === subtitles[subtitleIndex].length - 1) {
         isDeleting = true;
-        setTimeout(typeNextChar, 1000); // Adjust this for pause between typing and deleting
+        setTimeout(typeNextChar, 1000);
     } else {
         charIndex += isDeleting ? -1 : 1;
         const text = subtitles[subtitleIndex].substring(0, charIndex + 1);
-        subtitleElement.textContent = text + (isDeleting ? '' : ''); // Add cursor
-        setTimeout(typeNextChar, isDeleting ? 40 : 50); // Adjust typing and deleting speed here
+        subtitleElement.textContent = text + (isDeleting ? '' : '');
+        setTimeout(typeNextChar, isDeleting ? 40 : 50);
     }
 };
+
+$(document).ready(function(){
+    let observer = createObserver();
+    applyObserver(observer);
+    collapseNavbar();
+    addMouseEventsToNavLinks();
+    toggleCollapse();
+});
 
 setTimeout(typeNextChar, 1000);

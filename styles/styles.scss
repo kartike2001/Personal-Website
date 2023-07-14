@@ -71,6 +71,10 @@
   100% {clip: rect(20px, 9999px, 90px, 0);}
 }
 
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
 
 // Dark Mode Variables
 $primary-color: black;
@@ -152,7 +156,9 @@ body {
   margin: 5px; // Add some space around your box
   text-align: center;
   @include transition(all 0.3s ease);
-
+  &:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.16); // Darken the background color slightly on hover
+  }
   &:hover {
     background-color: rgba(255, 255, 255, 0.16); // Darken the background color slightly on hover
   }
@@ -166,7 +172,9 @@ body.light .nav-item {
 
   // Add transition for smooth hover effect
   @include transition(all 0.3s ease);
-
+  &:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.2); // Darken the background color slightly on hover
+  }
   &:hover {
     background-color: rgba(255, 255, 255, 0.2); // Darken the background color slightly on hover
   }
@@ -175,6 +183,7 @@ body.light .nav-item {
 .nav-item.active {
   background-color: $hover-color-dark; // Change to the desired background color
   color: $bg-color; // Change to the desired text color
+  pointer-events: none; // Disable hover and click events
 }
 
 .highlight {
@@ -208,18 +217,18 @@ header.hero {
       }
     }
     h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       text-shadow: 2px 2px 4px rgba(0, 237, 245, 0.50);
       margin: 1em 0;
       position: relative;
       @include glitch-effect(blue, red);
     }
     p {
-      font-size: 1.2em;
+      font-size: 1.5em;
       text-shadow: 1px 1px 2px rgb(0, 237, 245, 0.50);
     }
     .lead{
-      min-height: 1.5em; // Assuming your font-size is 1.2em for this element
+      min-height: 1.8em;
       font-weight: bold;
       &:after {
         content: '';
@@ -518,7 +527,7 @@ body.light header.hero {
       color: black;
     }
     .lead {
-      min-height: 1.5em; // Assuming your font-size is 1.2em for this element
+      min-height: 1.8em;
       font-weight: bold;
       &:after {
         content: '';
