@@ -37,16 +37,6 @@
     clip: rect(20px, 9999px, 90px, 0);
   }
 }
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 .section-content {
   display: none;
 }
@@ -215,6 +205,8 @@ header.hero .container .lead:after {
 }
 
 section {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
   position: relative;
   padding: 2em 0;
 }
@@ -230,6 +222,10 @@ section a {
 }
 section a:hover {
   color: #e08b14;
+}
+
+section.animate {
+  opacity: 1;
 }
 
 section::before {

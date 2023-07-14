@@ -50,27 +50,6 @@ window.onload = function() {
     if (theme) setTheme(theme);
 };
 
-// Intersection Observer
-function createObserver() {
-    let observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.intersectionRatio > 0) {
-                entry.target.style.animation = `fade-in 1s ${entry.target.dataset.delay} forwards ease-out`;
-            }
-        });
-    });
-    return observer;
-}
-
-// Apply observer to all sections
-function applyObserver(observer) {
-    sections.forEach((section) => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(50px)';
-        observer.observe(section);
-    });
-}
-
 // Collapse Navbar on click
 function collapseNavbar() {
     $('.navbar-nav>li>b>a').on('click', function(){
@@ -122,6 +101,37 @@ function typeNextChar() {
         setTimeout(typeNextChar, isDeleting ? 40 : 50);
     }
 };
+
+// Create observer
+function createObserver() {
+    let options = {
+        root: null, // relative to the viewport
+        rootMargin: "0px", // margin around the root
+        threshold: 0.1 // trigger when 10% of the target is visible
+    };
+
+    let observer = new IntersectionObserver(handleIntersect, options);
+
+    return observer;
+}
+
+// Observer callback
+function handleIntersect(entries, observer) {
+    entries.forEach((entry) => {
+        // If the element is in viewport
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // Stop observing the current target
+        }
+    });
+}
+
+// Apply observer to all sections
+function applyObserver(observer) {
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+}
 
 $(document).ready(function(){
     let observer = createObserver();

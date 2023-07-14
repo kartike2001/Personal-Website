@@ -71,11 +71,6 @@
   100% {clip: rect(20px, 9999px, 90px, 0);}
 }
 
-@keyframes fade-in {
-  0% { opacity: 0; transform: translateY(50px); }
-  100% { opacity: 1; transform: translateY(0px); }
-}
-
 // Dark Mode Variables
 $primary-color: black;
 $secondary-color: rgb(0, 252, 253);
@@ -244,6 +239,8 @@ header.hero {
 
 // Section styling
 section {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
   position: relative;
   padding: 2em 0;
   h2 {
@@ -259,6 +256,10 @@ section {
       color: $hover-color-dark;
     }
   }
+}
+
+section.animate {
+  opacity: 1;
 }
 
 section::before {
