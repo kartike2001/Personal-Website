@@ -240,9 +240,12 @@ section::before {
     box-shadow: 0 0 20px $secondary-color;
   }
 }
+#about{
+  h6{
+    font-weight: 1px;
+  }
+}
 
-
-// Main section styling
 #skills {
   background-color: $bg-color;
   color: $text-color;
@@ -284,8 +287,6 @@ section::before {
         color: $hover-color-dark !important;
       }
     }
-
-
     &:hover {
       box-shadow: 0 0 20px $secondary-color;
     }
@@ -366,13 +367,6 @@ section::before {
     }
   }
 }
-
-
-
-
-
-
-
 
 // Individual Job styling
 .job {
