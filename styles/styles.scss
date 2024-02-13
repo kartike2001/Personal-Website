@@ -565,3 +565,12 @@ body.light section {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  header.hero {
+    padding: 7em 0 7em;
+    .container .img-fluid {
+      transform: scale(2);
+    }
+  }
+}
