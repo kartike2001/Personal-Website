@@ -10,11 +10,11 @@ let theme = localStorage.getItem('theme') || null;
 
 // Variables
 const subtitles = [
-    'Computer Science Major. ',
-    'Peer Mentor. ',
     'Head Teaching Assistant. ',
+    'Full Stack Developer. ',
+    "ML/AI Developer. ",
     'Resident Advisor. ',
-    'Student Engagement Ambassador. '
+    'Peer Mentor. '
 ];
 let subtitleIndex = 0;
 let charIndex = -1;
