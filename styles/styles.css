@@ -408,10 +408,10 @@ body.light header.hero .container h1 {
   color: black;
   position: relative;
   letter-spacing: -1px;
-  text-shadow: 2px 2px 4px rgb(143, 131, 234);
+  text-shadow: 2px 2px 4px rgb(110, 111, 241);
 }
 body.light header.hero .container p {
-  text-shadow: 1px 1px 2px rgb(143, 131, 234);
+  text-shadow: 2px 2px 4px rgb(110, 111, 241);
   color: black;
 }
 body.light header.hero .container .lead {
