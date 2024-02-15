@@ -1,514 +1,776 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
 
-  <!-- Custom CSS -->
-  <link href="styles/styles.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles/styles.css" rel="stylesheet">
 
-  <title>Kartike Chaurasia</title>
+    <title>Kartike Chaurasia</title>
 </head>
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item" data-section="about">
-        <b><a class="nav-link" href="#about">About</a></b>
-      </li>
-      <li class="nav-item" data-section="experience">
-        <b><a class="nav-link" href="#experience">Experience</a></b>
-      </li>
-      <li class="nav-item" data-section="projects">
-        <b><a class="nav-link" href="#projects">Projects</a></b>
-      </li>
-      <li class="nav-item" data-section="skills">
-        <b><a class="nav-link" href="#skills">Skills</a></b>
-      </li>
-      <li class="nav-item" data-section="leadershipexperience">
-        <b><a class="nav-link" href="#leadershipexperience">Leadership</a></b>
-      </li>
-      <li class="nav-item" data-section="certifications">
-        <b><a class="nav-link" href="#certifications">Certifications</a></b>
-      </li>
-      <li class="nav-item" data-section="contact">
-        <b><a class="nav-link" href="#contact">Contact</a></b>
-      </li>
-    </ul>
-    <div class="ml-auto">
-      <a href="https://github.com/kartike2001" target="_blank">
-        <img id="github" src="githubwhite.png" alt="GitHub" width="30" height="30">
-      </a>
-      <a href="https://www.linkedin.com/in/kartike2001/" target="_blank">
-        <img src="linkedin-icon.png" alt="LinkedIn" width="30" height="30">
-      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item" data-section="skills">
+                <b><a class="nav-link" href="#skills">Skills</a></b>
+            </li>
+            <li class="nav-item" data-section="about">
+                <b><a class="nav-link" href="#about">About</a></b>
+            </li>
+            <li class="nav-item" data-section="experience">
+                <b><a class="nav-link" href="#experience">Experience</a></b>
+            </li>
+            <li class="nav-item" data-section="projects">
+                <b><a class="nav-link" href="#projects">Projects</a></b>
+            </li>
+            <li class="nav-item" data-section="leadershipexperience">
+                <b><a class="nav-link" href="#leadershipexperience">Leadership</a></b>
+            </li>
+            <li class="nav-item" data-section="certifications">
+                <b><a class="nav-link" href="#certifications">Certifications</a></b>
+            </li>
+            <li class="nav-item" data-section="contact">
+                <b><a class="nav-link" href="#contact">Contact</a></b>
+            </li>
+        </ul>
+        <div class="ml-auto">
+            <a href="https://github.com/kartike2001" target="_blank">
+                <img id="github" src="githubwhite.png" alt="GitHub" width="30" height="30">
+            </a>
+            <a href="https://www.linkedin.com/in/kartike2001/" target="_blank">
+                <img src="linkedin-icon.png" alt="LinkedIn" width="30" height="30">
+            </a>
+        </div>
     </div>
-  </div>
 </nav>
 
 <!-- Hero Section -->
 <header class="hero bg-primary text-white text-center">
-  <div class="container">
-    <img id="KartikeImage" src="Kartike.jpg" alt="Kartike Chaurasia" class="img-fluid rounded-circle w-25 mb-4 lazy">
-    <h1 class="glitch" data-text="KARTIKE CHAURASIA">KARTIKE CHAURASIA</h1>
-    <p class="lead"></p>
-    <a id="resume-hero" class="btn btn-light animated-link" href="Kartike Chaurasia Resume.pdf" target="_blank"><b>Resume</b></a>
-    <a id="letters-hero" class="btn btn-light animated-link" href="LORs.pdf" target="_blank"><b>Letters of Recommendation</b></a>
-  </div>
+    <div class="container">
+        <img id="KartikeImage" src="Kartike.jpg" alt="Kartike Chaurasia"
+             class="img-fluid rounded-circle w-25 mb-4 lazy">
+        <h1 class="glitch" data-text="KARTIKE CHAURASIA">KARTIKE CHAURASIA</h1>
+        <p class="lead"></p>
+        <a id="resume-hero" class="btn btn-light animated-link" href="Kartike Chaurasia Resume.pdf" target="_blank"><b>Resume</b></a>
+        <a id="letters-hero" class="btn btn-light animated-link" href="LORs.pdf" target="_blank"><b>Letters of
+            Recommendation</b></a>
+    </div>
 </header>
 
 <!-- About Section -->
 <section id="about" class="py-5" data-delay="0.05s">
-  <div class="container">
-    <h2 data-toggle="collapse" href="#collapseAbout" role="presentation" aria-expanded="true" aria-controls="collapseAbout">About Me <span>⏶</span></h2>
-    <div class="collapse show" id="collapseAbout">
-      <p>I'm Kartike, a final year Computer Science student at the University at Buffalo, recognized for academic excellence as a Tau Beta Pi member, the esteemed Engineering Honors Society, an honor only extended to the top eighth of the junior class, underlining my commitment to academic excellence<br><br>
-        My software development passion grew during my Qarik Group internship, honing my technical skills. As the Head Teaching Assistant for Data Structures and Algorithms, I demonstrate my teaching aptitude while supporting students. I've restructured programming assignments, developed automated testing systems, and led tutorials<br><br>
-        Apart from technology, I am dedicated to community engagement and leadership. As a Resident Advisor and Student Engagement Ambassador, I foster an ideal learning environment and connect students with opportunities. I've been involved in organizing leadership conferences and have also had the privilege of presenting at the prestigious LEAD UB Conference<br><br>
-      </p>
-      <div class="row">
-        <div class="col-md-6">
-          <h5><b>Awards:</b></h5>
-          <ul>
-            <li>Matthew Grappone Memorial Award</li>
-            <li>Professor Charles M. Fogel Scholarship</li>
-            <li>David M. Benenson Memorial Scholarship</li>
-            <li>2022 Leaders in Excellence Award</li>
-            <li>2022 Emerging Student Leader – Nominee</li>
-            <li>2023 Innovative Student Leader Award</li>
-          </ul>
+    <div class="container">
+        <h2 data-toggle="collapse" href="#collapseAbout" role="presentation" aria-expanded="true"
+            aria-controls="collapseAbout">About Me <span>⏶</span></h2>
+        <div class="collapse show" id="collapseAbout">
+            <p>I'm Kartike, a final year Computer Science student at the University at Buffalo, recognized for academic
+                excellence as a Tau Beta Pi member, the esteemed Engineering Honors Society, an honor only extended to
+                the top eighth of the junior class, underlining my commitment to academic excellence<br><br>
+                My software development passion grew during my Qarik Group internship, honing my technical skills. As
+                the Head Teaching Assistant for Data Structures and Algorithms, I demonstrate my teaching aptitude while
+                supporting students. I've restructured programming assignments, developed automated testing systems, and
+                led tutorials<br><br>
+                Apart from technology, I am dedicated to community engagement and leadership. As a Resident Advisor and
+                Student Engagement Ambassador, I foster an ideal learning environment and connect students with
+                opportunities. I've been involved in organizing leadership conferences and have also had the privilege
+                of presenting at the prestigious LEAD UB Conference<br><br>
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><b>Awards:</b></h5>
+                    <ul>
+                        <li>Matthew Grappone Memorial Award</li>
+                        <li>Professor Charles M. Fogel Scholarship</li>
+                        <li>David M. Benenson Memorial Scholarship</li>
+                        <li>2022 Leaders in Excellence Award</li>
+                        <li>2022 Emerging Student Leader – Nominee</li>
+                        <li>2023 Innovative Student Leader Award</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5><b>Education:</b></h5>
+                    <h6>University at Buffalo: May 2024<br></h6>
+                    <p>
+                        Bachelor of Science in Computer Science<br>
+                        Concentration in Artificial Intelligence<br>
+                        Minor in Mathematics
+                    </p>
+                    <ul>
+                        <li>GPA: 3.83/4.00</li>
+                        <li>Tau Beta Pi - Engineering Honors Society</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
         </div>
-        <div class="col-md-6">
-          <h5><b>Education:</b></h5>
-          <h6>University at Buffalo: May 2024<br></h6>
-          <p>
-            Bachelor of Science in Computer Science<br>
-            Concentration in Artificial Intelligence<br>
-            Minor in Mathematics
-          </p>
-          <ul>
-            <li>GPA: 3.83/4.00</li>
-            <li>Tau Beta Pi - Engineering Honors Society</li>
-          </ul>
-        </div>
-      </div>
-      <br>
     </div>
-  </div>
+</section>
+
+<section id="skills" class="py-5" data-delay="0.05s">
+    <div class="container">
+        <h2 data-toggle="collapse" href="#collapseSkills" role="presentation" aria-expanded="true"
+            aria-controls="collapseSkills">Skills <span>⏶</span></h2>
+        <div class="collapse show" id="collapseSkills">
+            <div class="row">
+                <div class="col-md-6 skill">
+                    <h5>Programming Languages:</h5>
+                    <p data-toggle="collapse" href="#javaInfo" aria-expanded="false" aria-controls="javaInfo"
+                       onclick="toggleSkillSelection('Java')">Java <span>⇓</span></p>
+                    <div class="collapse" id="javaInfo">
+                        <div class="card card-body">Used in Class/Projects: Algorithms and Complexity CSE331, Gamifying
+                            Learning
+                        </div>
+                    </div>
+                    <p data-toggle="collapse" href="#scalaInfo" aria-expanded="false" aria-controls="scalaInfo" onclick="toggleSkillSelection('Scala')">Scala
+                        <span>⇓</span></p>
+                    <div class="collapse" id="scalaInfo">
+                        <div class="card card-body">Used in Class/Experience: Introduction to Computer Science II
+                            CSE116, Head Teaching Assistant
+                        </div>
+                    </div>
+                    <p data-toggle="collapse" href="#jsInfo" aria-expanded="false" aria-controls="jsInfo" onclick="toggleSkillSelection('JavaScript')">JavaScript
+                        <span>⇓</span></p>
+                    <div class="collapse" id="jsInfo">
+                        <div class="card card-body">Used in Class/Projects: Introduction to Computer Science I CSE115,
+                            UBay, NEXT-LEVEL
+                        </div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#pythonInfo" aria-expanded="false" aria-controls="pythonInfo" onclick="toggleSkillSelection('Python')">Python
+                        <span>⇓</span></p>
+                    <div class="collapse" id="pythonInfo">
+                        <div class="card card-body">Used in Projects: Stock Predictor, Handwritten Digit Classifier,
+                            Intergalactic Planet Explorer, Face Detection and Clustering, Machine Learning Optimization,
+                            NEXT-LEVEL, UBay
+                        </div>
+                    </div>
+                    <p data-toggle="collapse" href="#cInfo" aria-expanded="false" aria-controls="cInfo">C <span>⇓</span>
+                    </p>
+                    <div class="collapse" id="cInfo">
+                        <div class="card card-body">Used in Class: Systems Programming CSE220</div>
+                    </div>
+                    <p data-toggle="collapse" href="#goInfo" aria-expanded="false" aria-controls="goInfo" onclick="toggleSkillSelection('Golang')">Go/Golang
+                        <span>⇓</span></p>
+                    <div class="collapse" id="goInfo">
+                        <div class="card card-body">Used in Class/Internship: Distributed Systems CSE486, Qarik Group
+                        </div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#htmlcssInfo" aria-expanded="false" aria-controls="htmlcssInfo" onclick="toggleSkillSelection('HTML/CSS')">
+                        HTML/CSS <span>⇓</span></p>
+                    <div class="collapse" id="htmlcssInfo">
+                        <div class="card card-body">Used in Projects: NEXT-LEVEL, UBay, Personal Portfolio</div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 skill">
+                    <h5>Web Development:</h5>
+                    <p data-toggle="collapse" href="#ginInfo" aria-expanded="false" aria-controls="ginInfo" onclick="toggleSkillSelection('Gin')">Gin
+                        <span>⇓</span></p>
+                    <div class="collapse" id="ginInfo">
+                        <div class="card card-body">Used in Internship: Qarik Group</div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#fastApiInfo" aria-expanded="false" aria-controls="fastApiInfo" onclick="toggleSkillSelection('FastAPI')">
+                        FastAPI <span>⇓</span></p>
+                    <div class="collapse" id="fastApiInfo">
+                        <div class="card card-body">Used in Projects: UBay</div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#fastApiInfo" aria-expanded="false" aria-controls="fastApiInfo" onclick="toggleSkillSelection('Flask')">
+                        Flask <span>⇓</span></p>
+                    <div class="collapse" id="flask">
+                        <div class="card card-body">Used in Projects: NEXT-LEVEL</div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#reactInfo" aria-expanded="false" aria-controls="reactInfo" onclick="toggleSkillSelection('ReactJS')">ReactJS
+                        <span>⇓</span></p>
+                    <div class="collapse" id="reactInfo">
+                        <div class="card card-body">Used in Projects: UBay,</div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#bootstrapInfo" aria-expanded="false" aria-controls="bootstrapInfo" onclick="toggleSkillSelection('Bootstrap')">
+                        Bootstrap <span>⇓</span></p>
+                    <div class="collapse" id="bootstrapInfo">
+                        <div class="card card-body">Used in Project/Internship: UBay, Qarik Group</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 skill">
+                    <h5>Databases:</h5>
+                    <p data-toggle="collapse" href="#mongodbInfo" aria-expanded="false" aria-controls="mongodbInfo" onclick="toggleSkillSelection('MongoDB')">
+                        MongoDB <span>⇓</span></p>
+                    <div class="collapse" id="mongodbInfo">
+                        <div class="card card-body">Used in Projects: NEXT-LEVEL</div>
+                    </div>
+                    <p>MySQL</p>
+                    <p data-toggle="collapse" href="#postgresqlInfo" aria-expanded="false"
+                       aria-controls="postgresqlInfo" onclick="toggleSkillSelection('PostgreSQL')">PostgreSQL <span>⇓</span></p>
+                    <div class="collapse" id="postgresqlInfo">
+                        <div class="card card-body">Used in Project/Internship: UBay, Qarik Group</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 skill">
+                    <h5>Development Tools/Version Control:</h5>
+
+                    <p data-toggle="collapse" href="#gitInfo" aria-expanded="false" aria-controls="gitInfo" onclick="toggleSkillSelection('Git')">Git
+                        <span>⇓</span></p>
+                    <div class="collapse" id="gitInfo">
+                        <div class="card card-body">Used across all Projects and Work Experiences</div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#linuxInfo" aria-expanded="false" aria-controls="linuxInfo" onclick="toggleSkillSelection('Linux/Unix')">
+                        Linux/Unix <span>⇓</span></p>
+                    <div class="collapse" id="linuxInfo">
+                        <div class="card card-body">Used in Class/Experience: Systems Programming CSE220, Systems Administration CSE411, Head Teaching Assistant
+                        </div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#dockerInfo" aria-expanded="false" aria-controls="dockerInfo" onclick="toggleSkillSelection('Docker')">Docker
+                        <span>⇓</span></p>
+                    <div class="collapse" id="dockerInfo">
+                        <div class="card card-body">Used in Projects/Internship: NEXT-LEVEL, UBay, Qarik Group</div>
+                    </div>
+
+                    <p data-toggle="collapse" href="#postmanInfo" aria-expanded="false" aria-controls="postmanInfo" onclick="toggleSkillSelection('Postman')">
+                        Postman <span>⇓</span></p>
+                    <div class="collapse" id="postmanInfo">
+                        <div class="card card-body">Used in Projects/Internship: NEXT-LEVEL, UBay, Qarik Group</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 skill">
+                    <h5>Computer Science Concepts:</h5>
+
+                    <p data-toggle="collapse" href="#mlInfo" aria-expanded="false" aria-controls="mlInfo" onclick="toggleSkillSelection('Machine Learning Algorithms')">Machine
+                        Learning Algorithms <span>⇓</span></p>
+                    <div class="collapse" id="mlInfo">
+                        <div class="card card-body">Used in Projects: Stock Predictor, Machine Learning Optimization,
+                            Handwritten Digit Classifier
+                        </div>
+                    </div>
+                    <p data-toggle="collapse" href="#dlInfo" aria-expanded="false" aria-controls="dlInfo" onclick="toggleSkillSelection('Deep Learning')">Deep Learning
+                        <span>⇓</span></p>
+                    <div class="collapse" id="dlInfo">
+                        <div class="card card-body">Used in Projects: Handwritten Digit Classifier</div>
+                    </div>
+                    <p data-toggle="collapse" href="#rlInfo" aria-expanded="false" aria-controls="rlInfo" onclick="toggleSkillSelection('Reinforcement Learning')">Reinforcement
+                        Learning <span>⇓</span></p>
+                    <div class="collapse" id="rlInfo">
+                        <div class="card card-body">Used in Projects: Intergalactic Planet Explorer</div>
+                    </div>
+                    <p data-toggle="collapse" href="#dsInfo" aria-expanded="false" aria-controls="dsInfo" onclick="toggleSkillSelection('Data Structures')">Data
+                        Structures <span>⇓</span></p>
+                    <div class="collapse" id="dsInfo">
+                        <div class="card card-body">Used in Experience: Head Teaching Assistant</div>
+                    </div>
+                    <p data-toggle="collapse" href="#algoInfo" aria-expanded="false" aria-controls="dsInfo" onclick="toggleSkillSelection('Algorithms')">Algorithms
+                        <span>⇓</span></p>
+                    <div class="collapse" id="algoInfo">
+                        <div class="card card-body">Used in Class/Experience: Algorithms and Complexity CSE331, Head
+                            Teaching Assistant
+                        </div>
+                    </div>
+                    <p data-toggle="collapse" href="#cvinfo" aria-expanded="false" aria-controls="cvinfo" onclick="toggleSkillSelection('Computer Vision')">Computer
+                        Vision <span>⇓</span></p>
+                    <div class="collapse" id="cvinfo">
+                        <div class="card card-body">Used in Class/Projects: Computer Vision and Image Processing CSE473,
+                            Face Detection and Clustering
+                        </div>
+                    </div>
+                    <p data-toggle="collapse" href="#distributedInfo" aria-expanded="false"
+                       aria-controls="distributedInfo">Distributed Systems <span>⇓</span></p>
+                    <div class="collapse" id="distributedInfo">
+                        <div class="card card-body">Used in Class: Distributed Systems CSE486</div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 skill">
+                    <h5>Soft Skills:</h5>
+                    <p>Peer Mentoring</p>
+                    <p>Community Outreach</p>
+                    <p>Networking</p>
+                    <p>Leadership</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Languages:</h5>
+                    <p>Bengali (Professional Working)</p>
+                    <p>German (Limited Working)</p>
+                    <p>Hindi (Native or Bilingual)</p>
+                    <p>English (Full Professional)</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Experience Section -->
 <section id="experience" class="py-5" data-delay="0.05s">
-  <div class="container">
-    <h2 data-toggle="collapse" href="#collapseExperience" role="presentation" aria-expanded="true" aria-controls="collapseExperience">Relevant Work Experience <span>⏶</span></h2>
-    <div class="collapse show" id="collapseExperience">
-      <div class="job">
-        <h5>Head Teaching Assistant: Data Structures & Algorithms, University at Buffalo (Aug 2022 – Present)</h5>
-        <p><b>Skills Used:</b> Java, Scala, JSON, Python, Automated Testing, Build Automation, Debugging, Troubleshooting, Communication</p>
-        <ul>
-          <li>Restructured all programming assignments from Scala to Java, and authored programming assignment documentation,ensuring clarity of instructions and curriculum's relevance and accessibility for the students</li>
-          <li>Developed an automated testing system using Python and Java, which streamlined the evaluation process programming assignments, integrated Makefile for build automation and utilized JSON for test result storage</li>
-          <li>Lead 10 hours of weekly tutorials, effectively enhancing comprehension and mastery of data structures and algorithms for over 40 students, contributing to an overall improvement in class average</li>
-          <li>Conduct comprehensive weekly reviews and provide personalized instruction, debugging, and troubleshooting assistance</li>
-          <li>Analyze and collaboratively grade assignments for an expansive cohort of 300 students, upholding stringent academic standards and ensuring timely feedback</li>
-        </ul>
-      </div>
-      <br>
-      <div class="job">
-        <h5>Full Stack Web Developer: NEXT-LEVEL: Leadership Conference, University at Buffalo (Aug 2022 – Present)</h5>
-        <a href="https://github.com/kartike2001/NextLevel" target="_blank">GitHub Link</a>
-        <p><b>Skills Used:</b> Bootstarp, Python, Javascript, PostgreSQL, Git, MongoDB, ADA Compliance</p>
-        <h6>Technical</h6>
-        <ul>
-          <li>Implemented a TCP Handler using python to manage network communications for the application, a database via MongoDB, and an ADA compliant product for gamifying leadership conference</li>
-          <li>Added account login and registration features where upon task completion during the conference: teams were awarded points to a live scoreboard, reducing manual calculations and work up to 90% compared to last year’s conference</li>
-          <li>Created a real-time leaderboard using web sockets that displayed the points earned by each team, incentivizing friendly competition and fostering a sense of community among conference attendees</li>
-          <li>Started as a volunteer and was subsequently promoted to a part-time position due to exceptional performance and valuable contributions</li>
-        </ul>
-        <br>
-        <h6>Organization</h6>
-        <ul>
-          <li>Coordinated and worked in a team of 4 to successfully plan and execute the Next Level Leadership Mentoring Experience for 60+ UB student leaders</li>
-          <li>Developed and implemented a gamified conference format, incorporating interactive activities and guest mentors to engage participants and facilitate skill-building</li>
-          <li>Achieved a high level of participant satisfaction, as evidenced by post-event surveys rating the experience as "excellent" by over 90% of participants</li>
-        </ul>
-      </div>
-      <br>
-      <div class="job">
-        <h5>Software Engineer Intern, Qarik Group (Jun 2022 – Aug 2022)</h5>
-        <p><b>Skills Used:</b> Software Development, Teamwork, UI/UX Design, ReactJS, Docker, Golang, Gin, PostgreSQL</p>
-        <ul>
-          <li>Engineered the UI/UX for Genesis UI, a Docker based web application, a versatile deployment framework for systems deployment across various infrastructure clouds using BOSH, and simplifying the deployment</li>
-          <li>Worked within a team of 4 to streamline the deployment, scaling, and upgrading of systems like Cloud Foundry across multiple cloud infrastructures, enhancing the security and efficiency of web application components</li>
-          <li>Enhanced user satisfaction and accessibility by adding functionalities using ReactJS to the UI/UX of the web application and creating a user-friendly guide outlining the prerequisites and steps for deploying Genesis Kits</li>
-          <li>Developed backend APIs in Golang using Gin web framework to store, update deployments in PostgreSQL database container, adding functionalities using React.js and implemented seamless deployment data integration using GitHub API</li>
-        </ul>
-      </div>
-      <br>
+    <div class="container">
+        <h2 data-toggle="collapse" href="#collapseExperience" role="presentation" aria-expanded="true"
+            aria-controls="collapseExperience">Relevant Work Experience <span>⏶</span></h2>
+        <div class="collapse show" id="collapseExperience">
+            <div class="project"
+                 data-skills="Java, Scala, JSON, Python, Automated Testing, Build Automation, Debugging, Troubleshooting, Communication, Data Structures, Algorithms, Linux/Unix">
+                <h5>Head Teaching Assistant: Data Structures & Algorithms, University at Buffalo (Aug 2022 –
+                    Present)</h5>
+                <p><b>Skills Used:</b> Java, Scala, JSON, Python, Automated Testing, Build Automation, Debugging,
+                    Troubleshooting, Communication, Linux/Unix</p>
+                <ul>
+                    <li>Restructured all programming assignments from Scala to Java, and authored programming assignment
+                        documentation,ensuring clarity of instructions and curriculum's relevance and accessibility for
+                        the students
+                    </li>
+                    <li>Developed an automated testing system using Python and Java, which streamlined the evaluation
+                        process programming assignments, integrated Makefile for build automation and utilized JSON for
+                        test result storage
+                    </li>
+                    <li>Lead 10 hours of weekly tutorials, effectively enhancing comprehension and mastery of data
+                        structures and algorithms for over 40 students, contributing to an overall improvement in class
+                        average
+                    </li>
+                    <li>Conduct comprehensive weekly reviews and provide personalized instruction, debugging, and
+                        troubleshooting assistance
+                    </li>
+                    <li>Analyze and collaboratively grade assignments for an expansive cohort of 300 students, upholding
+                        stringent academic standards and ensuring timely feedback
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Bootstrap, Python, Javascript, PostgreSQL, Git, MongoDB, ADA Compliance, HTML/CSS, Docker, Postman, Flask">
+                <h5>Full Stack Web Developer: NEXT-LEVEL: Leadership Conference, University at Buffalo (Aug 2022 –
+                    Present)</h5>
+                <a href="https://github.com/kartike2001/NextLevel" target="_blank">GitHub Link</a>
+                <p><b>Skills Used:</b> Bootstrap, Python, Javascript, PostgreSQL, Git, MongoDB, ADA Compliance, HTML/CSS, Docker</p>
+                <h6>Technical</h6>
+                <ul>
+                    <li>
+                        Engineered a Python-based TCP Handler that handles incoming requests and MongoDB. Developed ADA-compliant HTML and CSS using JavaScript, applying software development principles and Agile methodologies.
+                    </li>
+                    <li>
+                        Reengineered the entire backend system to Flask, facilitating a smoother transition of codebase management to a sophomore colleague, significantly streamlining the process for future development efforts.
+                    </li>
+                    <li>
+                        Automated team point allocation through a login and registration system, upon successful task completion for 100+ users.
+                    </li>
+                    <li>
+                        Leveraged AJAX Polling to create a live scoreboard, reducing workload by up to 90% compared to the prior conference.
+                    </li>
+                    <li>
+                        Initially joined as a volunteer but transitioned to a part-time role based on performance and contributions.
+                    </li>
+                </ul>
+                <br>
+                <h6>Organization</h6>
+                <ul>
+                    <li>Coordinated and worked in a team of 4 to successfully plan and execute the Next Level Leadership
+                        Mentoring Experience for 60+ UB student leaders
+                    </li>
+                    <li>Developed and implemented a gamified conference format, incorporating interactive activities and
+                        guest mentors to engage participants and facilitate skill-building
+                    </li>
+                    <li>Achieved a high level of participant satisfaction, as evidenced by post-event surveys rating the
+                        experience as "excellent" by over 90% of participants
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Software Development, Teamwork, UI/UX Design, ReactJS, Docker, Golang, Gin, HTML/CSS, PostgreSQL, Bootstrap, Postman">
+                <h5>Software Engineer Intern, Qarik Group (Jun 2022 – Aug 2022)</h5>
+                <p><b>Skills Used:</b> Software Development, Teamwork, UI/UX Design, ReactJS, Docker, Golang, Gin, HTML/CSS, Bootstrap,
+                    PostgreSQL</p>
+                <ul>
+                    <li>Engineered the UI/UX for Genesis UI, a Docker based web application, a versatile deployment
+                        framework for systems deployment across various infrastructure clouds using BOSH, and
+                        simplifying the deployment
+                    </li>
+                    <li>Worked within a team of 4 to streamline the deployment, scaling, and upgrading of systems like
+                        Cloud Foundry across multiple cloud infrastructures, enhancing the security and efficiency of
+                        web application components
+                    </li>
+                    <li>Enhanced user satisfaction and accessibility by adding functionalities using ReactJS to the
+                        UI/UX of the web application and creating a user-friendly guide outlining the prerequisites and
+                        steps for deploying Genesis Kits
+                    </li>
+                    <li>Developed backend APIs in Golang using Gin web framework to store, update deployments in
+                        PostgreSQL database container, adding functionalities using React.js and implemented seamless
+                        deployment data integration using GitHub API
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Projects Section -->
 <section id="projects" class="py-5" data-delay="0.05s">
-  <div class="container">
-    <h2 data-toggle="collapse" href="#collapseProjects" role="presentation" aria-expanded="true" aria-controls="collapseProjects">Projects <span>⏶</span></h2>
-    <div class="collapse show" id="collapseProjects">
-      <div class="project">
-        <h5>UBay: Ecommerce Website for University at Buffalo</h5>
-        <a href="https://github.com/kartike2001/312_hooligans" target="_blank">GitHub Link</a>
-        <p><b>Skills Used:</b> React JS, FastAPI, Bootstrap, Sass for CSS, Python, JavaScript, PostgreSQL, Git</p>
-        <ul>
-          <li>Led a team of 4 to develop an eCommerce platform for University at Buffalo stakeholders using React.js, FastAPI Python-based framework, Sass for CSS, and PostgreSQL for the database</li>
-          <li>Designed a secure user account authorization system employing bcrypt library and implemented session cookies</li>
-          <li>Devised an auction feature using web sockets with real-time bid tracking for highest bidder when an auction ends</li>
-        </ul>
-      </div>
-      <br>
-      <div class="project">
-        <h5>Stock Predictor</h5>
-        <a href="https://github.com/kartike2001/StockPricePredictor" target="_blank">GitHub Link</a>
-        <p><b>Skills Used:</b> Python, Machine Learning Algorithms, Git</p>
-        <ul>
-          <li>Implemented a Random Forest Regressor model and utilized the yfinance library for data from Yahoo Finance API</li>
-          <li>Optimized the Random Forest model using GridSearchCV for hyperparameter tuning, identifying the best parameters from given ranges for the number of estimators, maximum features, minimum samples split, and bootstrap option</li>
-          <li>The model achieved a Mean Absolute error of 0.975, Mean Squared Error of 1.763, and a Root Mean Squared Error of 1.328, indicating a relatively accurate performance in predicting the stock closing prices</li>
-        </ul>
-      </div>
-      <br>
-      <div class="project">
-        <h5>Face Detection and Clustering</h5>
-        <p><b>Skills Used:</b> Python, Git, Computer Vision</p>
-        <ul>
-          <li>Developed an end-to-end Python application using PyTorch and the face_recognition library for accurate face detection and clustering in images, where each image may contain one or more faces</li>
-          <li>Engineered a function to extract face encodings by first detecting faces in an image and then computing a 128-dimensional vector for each face using face recognition's face encoding method</li>
-          <li>Implemented a K-Means clustering algorithm from scratch to cluster faces based on their encodings, enhancing model versatility by dynamically accepting any number of clusters (K) as input</li>
-          <li>Optimized face detection by transferring image tensor operations to GPU if available, substantially accelerating computational speed and boosting overall model performance</li>
-        </ul>
-      </div>
-      <br>
-      <div class="project">
-        <h5>Intergalactic Planet Explorer: Reinforcement Learning</h5>
-        <a href="https://github.com/kartike2001/IntergalacticPlanetExplorer" target="_blank">GitHub Link</a>
-        <p><b>Skills Used:</b> Python, Reinforcement Learning, Git</p>
-        <ul>
-          <li>Developed a grid-based environment, 'IntergalacticPlanetExplorer', as a subclass of the gym.Env class from OpenAI Gym library in Python</li>
-          <li>Implemented SARSA and Q-learning algorithms, two reinforcement learning methods using Q-tables to estimate action values for each state-action pair, effectively navigating the agent through the grid environment</li>
-          <li>Ensured safety accurately designing the action space, state space, and reward table to encourage safe and effective navigation, and preventing the agent from going out of bounds in the grid</li>
-          <li>Conducted an extensive analysis of the SARSA and Q-learning methods using various hyperparameters. Optimized the learning process by tuning the discount factor, epsilon decay rate, and number of episodes for training</li>
-        </ul>
-      </div>
-      <br>
-      <div class="project">
-        <h5>Machine Learning Optimization</h5>
-        <a href="https://github.com/kartike2001/MachineLearningOptimization" target="_blank">GitHub Link</a>
-        <p><b>Skills Used:</b> Python, Machine Learning Algorithms, Git</p>
-        <ul>
-          <li>Constructed a machine learning model using Python to optimize and predict flight pricing based on a dataset encompassing 300,153 entries across 11 categories</li>
-          <li>Enhanced the model's performance through systematic optimization of hyperparameters: learning rate and max iterations, achieving a peak accuracy of 95.52%</li>
-          <li>Applied logistic regression by implementing it from scratch to interpret feature influence on pricing outcomes, managing large datasets efficiently and incorporating regularization to avoid overfitting</li>
-          <li>Employed Ordinary Least Squares (OLS) method for its computational efficiency, while addressing its sensitivity to outliers and performance issues with multiple dependent variable sets</li>
-          <li>Utilized ridge regression to increase model stability, reduce risk of overfitting, and handle multicollinearity</li>
-        </ul>
-      </div>
-      <br>
-      <div class="project">
-        <h5>Handwritten Digit Classifier</h5>
-        <a href="https://github.com/kartike2001/MNIST" target="_blank">GitHub Link</a>
-        <p><b>Skills Used:</b> Python, Deep Learning, Git</p>
-        <ul>
-          <li>Developed a Convolutional Neural Network (CNN) in PyTorch to classify handwritten digits from the MNIST dataset, attaining an accuracy of 99% on the validation set</li>
-          <li>Implemented data augmentation, including random rotation, to enhance model robustness and ability to generalize from training to unseen data</li>
-          <li>Employed the Adadelta optimization algorithm for adaptive learning rate, coupled with learning rate scheduling to enhance convergence during training</li>
-          <li>Utilized early stopping in the model training process to prevent overfitting, improving model efficiency and generalization capabilities by stopping training when validation loss ceased to decrease over four epochs</li>
-        </ul>
-      </div>
-      <br>
-      <div class="project">
-        <h5>Gamifying Learning: UB Hackathon</h5>
-        <a href="https://github.com/kartike2001/Hackathon" target="_blank">GitHub Link</a>
-        <p><b>Skills Used:</b> Java, Git</p>
-        <ul>
-          <li>Composed a simple quiz game operating on Java NetBeans aimed at increasing knowledge by teaching the capitals of different countries</li>
-          <li>Implemented a gamification approach where players were given 5 random countries, earning 5 points for each correctly answered capital</li>
-        </ul>
-      </div>
-      <br>
+    <div class="container">
+        <h2 data-toggle="collapse" href="#collapseProjects" role="presentation" aria-expanded="true"
+            aria-controls="collapseProjects">Projects <span>⏶</span></h2>
+        <div class="collapse show" id="collapseProjects">
+            <div class="project"
+                 data-skills="ReactJS, FastAPI, Bootstrap, Sass for CSS, Python, JavaScript, PostgreSQL, Git, HTML/CSS, Bootstrap, Postman">
+                <h5>UBay: Ecommerce Website for University at Buffalo</h5>
+                <a href="https://github.com/kartike2001/312_hooligans" target="_blank">GitHub Link</a>
+                <p><b>Skills Used:</b> ReactJS, FastAPI, Bootstrap, Sass for CSS, Python, JavaScript, PostgreSQL, Git, HTML/CSS, Bootstrap
+                </p>
+                <ul>
+                    <li>Led a team of 4 to develop an eCommerce platform for University at Buffalo stakeholders using
+                        React.js, FastAPI Python-based framework, Sass for CSS, and PostgreSQL for the database
+                    </li>
+                    <li>Designed a secure user account authorization system employing bcrypt library and implemented
+                        session cookies
+                    </li>
+                    <li>Devised an auction feature using web sockets with real-time bid tracking for highest bidder when
+                        an auction ends
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Python, Machine Learning Algorithms, Git">
+                <h5>Stock Predictor</h5>
+                <a href="https://github.com/kartike2001/StockPricePredictor" target="_blank">GitHub Link</a>
+                <p><b>Skills Used:</b> Python, Machine Learning Algorithms, Git</p>
+                <ul>
+                    <li>Implemented a Random Forest Regressor model and utilized the yfinance library for data from
+                        Yahoo Finance API
+                    </li>
+                    <li>Optimized the Random Forest model using GridSearchCV for hyperparameter tuning, identifying the
+                        best parameters from given ranges for the number of estimators, maximum features, minimum
+                        samples split, and bootstrap option
+                    </li>
+                    <li>The model achieved a Mean Absolute error of 0.975, Mean Squared Error of 1.763, and a Root Mean
+                        Squared Error of 1.328, indicating a relatively accurate performance in predicting the stock
+                        closing prices
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Python, Git, Computer Vision, Machine Learning Algorithms">
+                <h5>Face Detection and Clustering</h5>
+                <p><b>Skills Used:</b> Python, Git, Computer Vision, Machine Learning Algorithms</p>
+                <ul>
+                    <li>Developed an end-to-end Python application using PyTorch and the face_recognition library for
+                        accurate face detection and clustering in images, where each image may contain one or more faces
+                    </li>
+                    <li>Engineered a function to extract face encodings by first detecting faces in an image and then
+                        computing a 128-dimensional vector for each face using face recognition's face encoding method
+                    </li>
+                    <li>Implemented a K-Means clustering algorithm from scratch to cluster faces based on their
+                        encodings, enhancing model versatility by dynamically accepting any number of clusters (K) as
+                        input
+                    </li>
+                    <li>Optimized face detection by transferring image tensor operations to GPU if available,
+                        substantially accelerating computational speed and boosting overall model performance
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Python, Reinforcement Learning, Git, Machine Learning Algorithms">
+                <h5>Intergalactic Planet Explorer: Reinforcement Learning</h5>
+                <a href="https://github.com/kartike2001/IntergalacticPlanetExplorer" target="_blank">GitHub Link</a>
+                <p><b>Skills Used:</b> Python, Reinforcement Learning, Git, Machine Learning Algorithms</p>
+                <ul>
+                    <li>Developed a grid-based environment, 'IntergalacticPlanetExplorer', as a subclass of the gym.Env
+                        class from OpenAI Gym library in Python
+                    </li>
+                    <li>Implemented SARSA and Q-learning algorithms, two reinforcement learning methods using Q-tables
+                        to estimate action values for each state-action pair, effectively navigating the agent through
+                        the grid environment
+                    </li>
+                    <li>Ensured safety accurately designing the action space, state space, and reward table to encourage
+                        safe and effective navigation, and preventing the agent from going out of bounds in the grid
+                    </li>
+                    <li>Conducted an extensive analysis of the SARSA and Q-learning methods using various
+                        hyperparameters. Optimized the learning process by tuning the discount factor, epsilon decay
+                        rate, and number of episodes for training
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Python, Machine Learning Algorithms, Git">
+                <h5>Machine Learning Optimization</h5>
+                <a href="https://github.com/kartike2001/MachineLearningOptimization" target="_blank">GitHub Link</a>
+                <p><b>Skills Used:</b> Python, Machine Learning Algorithms, Git</p>
+                <ul>
+                    <li>Constructed a machine learning model using Python to optimize and predict flight pricing based
+                        on a dataset encompassing 300,153 entries across 11 categories
+                    </li>
+                    <li>Enhanced the model's performance through systematic optimization of hyperparameters: learning
+                        rate and max iterations, achieving a peak accuracy of 95.52%
+                    </li>
+                    <li>Applied logistic regression by implementing it from scratch to interpret feature influence on
+                        pricing outcomes, managing large datasets efficiently and incorporating regularization to avoid
+                        overfitting
+                    </li>
+                    <li>Employed Ordinary Least Squares (OLS) method for its computational efficiency, while addressing
+                        its sensitivity to outliers and performance issues with multiple dependent variable sets
+                    </li>
+                    <li>Utilized ridge regression to increase model stability, reduce risk of overfitting, and handle
+                        multicollinearity
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Python, Deep Learning, Git, Machine Learning Algorithms">
+                <h5>Handwritten Digit Classifier</h5>
+                <a href="https://github.com/kartike2001/MNIST" target="_blank">GitHub Link</a>
+                <p><b>Skills Used:</b> Python, Deep Learning, Git, Machine Learning Algorithms</p>
+                <ul>
+                    <li>Developed a Convolutional Neural Network (CNN) in PyTorch to classify handwritten digits from
+                        the MNIST dataset, attaining an accuracy of 99% on the validation set
+                    </li>
+                    <li>Implemented data augmentation, including random rotation, to enhance model robustness and
+                        ability to generalize from training to unseen data
+                    </li>
+                    <li>Employed the Adadelta optimization algorithm for adaptive learning rate, coupled with learning
+                        rate scheduling to enhance convergence during training
+                    </li>
+                    <li>Utilized early stopping in the model training process to prevent overfitting, improving model
+                        efficiency and generalization capabilities by stopping training when validation loss ceased to
+                        decrease over four epochs
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project" data-skills="Java, Git">
+                <h5>Gamifying Learning: UB Hackathon</h5>
+                <a href="https://github.com/kartike2001/Hackathon" target="_blank">GitHub Link</a>
+                <p><b>Skills Used:</b> Java, Git</p>
+                <ul>
+                    <li>Composed a simple quiz game operating on Java NetBeans aimed at increasing knowledge by teaching
+                        the capitals of different countries
+                    </li>
+                    <li>Implemented a gamification approach where players were given 5 random countries, earning 5
+                        points for each correctly answered capital
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
     </div>
-  </div>
-</section>
-
-<section id="skills" class="py-5" data-delay="0.05s">
-  <div class="container">
-    <h2 data-toggle="collapse" href="#collapseSkills" role="presentation" aria-expanded="true" aria-controls="collapseSkills">Skills <span>⏶</span></h2>
-    <div class="collapse show" id="collapseSkills">
-      <div class="row">
-        <div class="col-md-6 skill">
-          <h5>Programming Languages:</h5>
-          <p data-toggle="collapse" href="#javaInfo" aria-expanded="false" aria-controls="javaInfo">Java <span>⇓</span></p>
-          <div class="collapse" id="javaInfo">
-            <div class="card card-body">Used in Class/Projects: Algorithms and Complexity CSE331, Gamifying Learning</div>
-          </div>
-          <p data-toggle="collapse" href="#scalaInfo" aria-expanded="false" aria-controls="scalaInfo">Scala <span>⇓</span></p>
-          <div class="collapse" id="scalaInfo">
-            <div class="card card-body">Used in Class/Experience: Introduction to Computer Science II CSE116, Head Teaching Assistant</div>
-          </div>
-          <p data-toggle="collapse" href="#jsInfo" aria-expanded="false" aria-controls="jsInfo">JavaScript <span>⇓</span></p>
-          <div class="collapse" id="jsInfo">
-            <div class="card card-body">Used in Class/Projects: Introduction to Computer Science I CSE115, UBay, NEXT-LEVEL</div>
-          </div>
-
-          <p data-toggle="collapse" href="#pythonInfo" aria-expanded="false" aria-controls="pythonInfo">Python <span>⇓</span></p>
-          <div class="collapse" id="pythonInfo">
-            <div class="card card-body">Used in Projects: Stock Predictor, Handwritten Digit Classifier, Intergalactic Planet Explorer, Face Detection and Clustering, Machine Learning Optimization, NEXT-LEVEL, UBay</div>
-          </div>
-          <p data-toggle="collapse" href="#cInfo" aria-expanded="false" aria-controls="cInfo">C <span>⇓</span></p>
-          <div class="collapse" id="cInfo">
-            <div class="card card-body">Used in Class: Systems Programming CSE220</div>
-          </div>
-          <p data-toggle="collapse" href="#goInfo" aria-expanded="false" aria-controls="goInfo">Go/Golang <span>⇓</span></p>
-          <div class="collapse" id="goInfo">
-            <div class="card card-body">Used in Class/Internship: Distributed Systems CSE486, Qarik Group</div>
-          </div>
-
-          <p data-toggle="collapse" href="#htmlcssInfo" aria-expanded="false" aria-controls="htmlcssInfo">HTML/CSS <span>⇓</span></p>
-          <div class="collapse" id="htmlcssInfo">
-            <div class="card card-body">Used in Projects: NEXT-LEVEL, UBay, Personal Portfolio</div>
-          </div>
-
-        </div>
-
-        <div class="col-md-6 skill">
-          <h5>Web Development:</h5>
-          <p data-toggle="collapse" href="#ginInfo" aria-expanded="false" aria-controls="ginInfo">Gin <span>⇓</span></p>
-          <div class="collapse" id="ginInfo">
-            <div class="card card-body">Used in Internship: Qarik Group</div>
-          </div>
-
-          <p data-toggle="collapse" href="#fastApiInfo" aria-expanded="false" aria-controls="fastApiInfo">FastAPI <span>⇓</span></p>
-          <div class="collapse" id="fastApiInfo">
-            <div class="card card-body">Used in Projects: UBay</div>
-          </div>
-
-          <p data-toggle="collapse" href="#reactInfo" aria-expanded="false" aria-controls="reactInfo">React.js <span>⇓</span></p>
-          <div class="collapse" id="reactInfo">
-            <div class="card card-body">Used in Projects: UBay</div>
-          </div>
-
-          <p data-toggle="collapse" href="#bootstrapInfo" aria-expanded="false" aria-controls="bootstrapInfo">Bootstrap <span>⇓</span></p>
-          <div class="collapse" id="bootstrapInfo">
-            <div class="card card-body">Used in Projects: NEXT-LEVEL, UBay</div>
-          </div>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 skill">
-          <h5>Databases:</h5>
-          <p data-toggle="collapse" href="#mongodbInfo" aria-expanded="false" aria-controls="mongodbInfo">MongoDB <span>⇓</span></p>
-          <div class="collapse" id="mongodbInfo">
-            <div class="card card-body">Used in Projects: NEXT-LEVEL</div>
-          </div>
-          <p>MySQL</p>
-          <p data-toggle="collapse" href="#postgresqlInfo" aria-expanded="false" aria-controls="postgresqlInfo">PostgreSQL <span>⇓</span></p>
-          <div class="collapse" id="postgresqlInfo">
-            <div class="card card-body">Used in Project/Internship: UBay, Qarik Group</div>
-          </div>
-        </div>
-
-        <div class="col-md-6 skill">
-          <h5>Development Tools/Version Control:</h5>
-
-          <p data-toggle="collapse" href="#gitInfo" aria-expanded="false" aria-controls="gitInfo">Git <span>⇓</span></p>
-          <div class="collapse" id="gitInfo">
-            <div class="card card-body">Used across all Projects and Work Experiences</div>
-          </div>
-
-          <p data-toggle="collapse" href="#linuxInfo" aria-expanded="false" aria-controls="linuxInfo">Linux/Unix <span>⇓</span></p>
-          <div class="collapse" id="linuxInfo">
-            <div class="card card-body">Used in Class: Systems Programming CSE220, Systems Administration CSE411</div>
-          </div>
-
-          <p data-toggle="collapse" href="#dockerInfo" aria-expanded="false" aria-controls="dockerInfo">Docker <span>⇓</span></p>
-          <div class="collapse" id="dockerInfo">
-            <div class="card card-body">Used in Projects/Internship: NEXT-LEVEL, UBay, Qarik Group</div>
-          </div>
-
-          <p data-toggle="collapse" href="#postmanInfo" aria-expanded="false" aria-controls="postmanInfo">Postman <span>⇓</span></p>
-          <div class="collapse" id="postmanInfo">
-            <div class="card card-body">Used in Projects/Internship: NEXT-LEVEL, UBay, Qarik Group</div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 skill">
-          <h5>Computer Science Concepts:</h5>
-
-          <p data-toggle="collapse" href="#mlInfo" aria-expanded="false" aria-controls="mlInfo">Machine Learning Algorithms <span>⇓</span></p>
-          <div class="collapse" id="mlInfo">
-            <div class="card card-body">Used in Projects: Stock Predictor, Machine Learning Optimization, Handwritten Digit Classifier</div>
-          </div>
-          <p data-toggle="collapse" href="#dlInfo" aria-expanded="false" aria-controls="dlInfo">Deep Learning <span>⇓</span></p>
-          <div class="collapse" id="dlInfo">
-            <div class="card card-body">Used in Projects: Handwritten Digit Classifier</div>
-          </div>
-          <p data-toggle="collapse" href="#rlInfo" aria-expanded="false" aria-controls="rlInfo">Reinforcement Learning <span>⇓</span></p>
-          <div class="collapse" id="rlInfo">
-            <div class="card card-body">Used in Projects: Intergalactic Planet Explorer</div>
-          </div>
-          <p data-toggle="collapse" href="#dsInfo" aria-expanded="false" aria-controls="dsInfo">Data Structures <span>⇓</span></p>
-          <div class="collapse" id="dsInfo">
-            <div class="card card-body">Used in Experience: Head Teaching Assistant</div>
-          </div>
-          <div class="collapse" id="algoInfo">
-            <div class="card card-body">Used in Class/Experience: Algorithms and Complexity CSE331, Head Teaching Assistant</div>
-          </div>
-          <p data-toggle="collapse" href="#cvinfo" aria-expanded="false" aria-controls="cvinfo">Computer Vision <span>⇓</span></p>
-          <div class="collapse" id="cvinfo">
-            <div class="card card-body">Used in Class/Projects: Computer Vision and Image Processing CSE473, Face Detection and Clustering</div>
-          </div>
-          <p data-toggle="collapse" href="#distributedInfo" aria-expanded="false" aria-controls="distributedInfo">Distributed Systems <span>⇓</span></p>
-          <div class="collapse" id="distributedInfo">
-            <div class="card card-body">Used in Class: Distributed Systems CSE486</div>
-          </div>
-
-        </div>
-        <div class="col-md-6 skill">
-          <h5>Soft Skills:</h5>
-          <p>Peer Mentoring</p>
-          <p>Community Outreach</p>
-          <p>Networking</p>
-          <p>Leadership</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h5>Languages:</h5>
-          <p>Bengali (Professional Working)</p>
-          <p>German (Limited Working)</p>
-          <p>Hindi (Native or Bilingual)</p>
-          <p>English (Full Professional)</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 
 <section id="leadershipexperience" class="py-5" data-delay="0.05s">
-  <div class="container">
-    <h2 data-toggle="collapse" href="#collapseLeadershipExperience" role="presentation" aria-expanded="true" aria-controls="collapseLeadershipExperience">Leadership Experience <span>⏶</span></h2>
-    <div class="collapse show" id="collapseLeadershipExperience">
-      <div class="job">
-        <h5>Resident Advisor, University at Buffalo (Aug 2022 – Present)</h5>
-        <p><b>Skills Used:</b> Leadership, Management, Communication, Organization, Conflict Resolution, Event Planning</p>
-        <ul>
-          <li>Managed all administrative tasks including budgeting, maintenance requests, incident reports, and resident check-ins for a dormitory housing 200+ students, reducing administrative errors</li>
-          <li>Initiated and implemented 15+ student engagement programs each semester, including specific programs on diversity, personal growth, and academics for 23 first-year students, successfully boosting community integration and enhancing career readiness</li>
-        </ul>
-      </div>
-      <br>
+    <div class="container">
+        <h2 data-toggle="collapse" href="#collapseLeadershipExperience" role="presentation" aria-expanded="true"
+            aria-controls="collapseLeadershipExperience">Leadership Experience <span>⏶</span></h2>
+        <div class="collapse show" id="collapseLeadershipExperience">
+            <div class="project">
+                <h5>Resident Advisor, University at Buffalo (Aug 2022 – Present)</h5>
+                <p><b>Skills Used:</b> Leadership, Management, Communication, Organization, Conflict Resolution, Event
+                    Planning</p>
+                <ul>
+                    <li>Managed all administrative tasks including budgeting, maintenance requests, incident reports,
+                        and resident check-ins for a dormitory housing 200+ students, reducing administrative errors
+                    </li>
+                    <li>Initiated and implemented 15+ student engagement programs each semester, including specific
+                        programs on diversity, personal growth, and academics for 23 first-year students, successfully
+                        boosting community integration and enhancing career readiness
+                    </li>
+                </ul>
+            </div>
+            <br>
 
-      <div class="job">
-        <h5>Student Engagement Ambassador, University at Buffalo (Aug 2021 – Aug 2023)</h5>
-        <p><b>Skills Used:</b> Leadership, Mentoring, Communication, Event Planning, Public Speaking</p>
-        <ul>
-          <li>Consistently mentor and advise a group of 12 - 20 students per semester, successfully fostering their personal and academic development and increasing campus engagement</li>
-          <li>Represented the student body as a panelist alongside the Vice President of the University at Buffalo in various alumni engagements, effectively showcasing the dynamism and talent within our community and bolstering the university's reputation</li>
-          <li>Orchestrated multiple university-wide events aimed at fostering community and stimulating student engagement, resulting in an overall participation increase</li>
-          <li>Act as a conduit between the student body and university administration, relaying student concerns and suggestions, thus contributing to a increase in student satisfaction with administrative responsiveness</li>
-        </ul>
-      </div>
-      <br>
-      <div class="job">
-        <h5>Computer Science and Engineering Peer Mentor, University at Buffalo (Sep 2022 – Jan 2023)</h5>
-        <p><b>Skills Used:</b> Mentoring, Communication, Problem-Solving, Organization</p>
-        <ul>
-          <li>Actively mentored 2 first-year undergraduate students, facilitating their smooth transition into university life and the Computer Science & Engineering program. This personalized guidance effectively boosted the students' academic performance and confidence, with reporting a significant improvement in their first semester's grades</li>
-          <li>Provided comprehensive assistance with course selection and scheduling, leveraging personal experience and department resources. This support led to a streamlined academic path for each mentee and maximized their learning outcomes</li>
-        </ul>
-      </div>
-      <br>
-      <div class="job">
-        <h5>Turnover Assistant: Student Project Manager, University at Buffalo (May 2021 – Jun 2022)</h5>
-        <p><b>Skills Used:</b> Project Management, Collaboration, Communication, Organization</p>
-        <ul>
-          <li>Collaborated effectively with 5 Complex Directors and Campus Living Professionals, ensuring a seamless turnover of on-campus apartments and enhancing operational efficiency</li>
-          <li>Administered, escorted, and facilitated access for over 10 third-party contractors working in apartments, ensuring all work was completed in adherence to university guidelines and standards</li>
-          <li>Communicated, maintained, and assisted with key checks and work orders for over 800 apartments, providing prompt updates to Complex Directors and ensuring timely completion of all tasks</li>
-        </ul>
-      </div>
-      <br>
-      <div class="job">
-        <h5>Athlete Tutor, University at Buffalo (Nov 2021 – May 2022)</h5>
-        <p><b>Skills Used:</b> Tutoring, Communication, Adaptability, Computer Science Fundamentals, Calculus</p>
-        <ul>
-          <li>Provided one-on-one tutoring to a group of 10 student-athletes, focusing on fundamental concepts in Computer Science and Calculus, including programming fundamentals, object-oriented programming, inheritance, polymorphism, derivatives, and integrals</li>
-          <li>Successfully contributed to a 100% pass rate among all the students tutored, demonstrating effective teaching methods and a thorough understanding of the subject matter</li>
-          <li>Implemented a variety of teaching techniques tailored to each student's learning style, leading to increased comprehension and improved grades for the student-athletes tutored</li>
-        </ul>
-      </div>
-      <br>
+            <div class="project">
+                <h5>Student Engagement Ambassador, University at Buffalo (Aug 2021 – Aug 2023)</h5>
+                <p><b>Skills Used:</b> Leadership, Mentoring, Communication, Event Planning, Public Speaking</p>
+                <ul>
+                    <li>Consistently mentor and advise a group of 12 - 20 students per semester, successfully fostering
+                        their personal and academic development and increasing campus engagement
+                    </li>
+                    <li>Represented the student body as a panelist alongside the Vice President of the University at
+                        Buffalo in various alumni engagements, effectively showcasing the dynamism and talent within our
+                        community and bolstering the university's reputation
+                    </li>
+                    <li>Orchestrated multiple university-wide events aimed at fostering community and stimulating
+                        student engagement, resulting in an overall participation increase
+                    </li>
+                    <li>Act as a conduit between the student body and university administration, relaying student
+                        concerns and suggestions, thus contributing to a increase in student satisfaction with
+                        administrative responsiveness
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project">
+                <h5>Computer Science and Engineering Peer Mentor, University at Buffalo (Sep 2022 – Jan 2023)</h5>
+                <p><b>Skills Used:</b> Mentoring, Communication, Problem-Solving, Organization</p>
+                <ul>
+                    <li>Actively mentored 2 first-year undergraduate students, facilitating their smooth transition into
+                        university life and the Computer Science & Engineering program. This personalized guidance
+                        effectively boosted the students' academic performance and confidence, with reporting a
+                        significant improvement in their first semester's grades
+                    </li>
+                    <li>Provided comprehensive assistance with course selection and scheduling, leveraging personal
+                        experience and department resources. This support led to a streamlined academic path for each
+                        mentee and maximized their learning outcomes
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project">
+                <h5>Turnover Assistant: Student Project Manager, University at Buffalo (May 2021 – Jun 2022)</h5>
+                <p><b>Skills Used:</b> Project Management, Collaboration, Communication, Organization</p>
+                <ul>
+                    <li>Collaborated effectively with 5 Complex Directors and Campus Living Professionals, ensuring a
+                        seamless turnover of on-campus apartments and enhancing operational efficiency
+                    </li>
+                    <li>Administered, escorted, and facilitated access for over 10 third-party contractors working in
+                        apartments, ensuring all work was completed in adherence to university guidelines and standards
+                    </li>
+                    <li>Communicated, maintained, and assisted with key checks and work orders for over 800 apartments,
+                        providing prompt updates to Complex Directors and ensuring timely completion of all tasks
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="project">
+                <h5>Athlete Tutor, University at Buffalo (Nov 2021 – May 2022)</h5>
+                <p><b>Skills Used:</b> Tutoring, Communication, Adaptability, Computer Science Fundamentals, Calculus
+                </p>
+                <ul>
+                    <li>Provided one-on-one tutoring to a group of 10 student-athletes, focusing on fundamental concepts
+                        in Computer Science and Calculus, including programming fundamentals, object-oriented
+                        programming, inheritance, polymorphism, derivatives, and integrals
+                    </li>
+                    <li>Successfully contributed to a 100% pass rate among all the students tutored, demonstrating
+                        effective teaching methods and a thorough understanding of the subject matter
+                    </li>
+                    <li>Implemented a variety of teaching techniques tailored to each student's learning style, leading
+                        to increased comprehension and improved grades for the student-athletes tutored
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
     </div>
-  </div>
 </section>
 
 
 <!-- Certifications Section -->
 <section id="certifications" class="py-5" data-delay="0.05s">
-  <div class="container">
-    <h2 data-toggle="collapse" href="#collapseCertifications" role="presentation" aria-expanded="true" aria-controls="collapseCertifications">Certificates and Badges <span>⏶</span></h2>
-    <div class="collapse show" id="collapseCertifications">
-      <ul>
-        <li><a href="https://drive.google.com/file/d/19tjWEOranVqm1eQJ1FXQREX1KvuJcZUb/view">UB Experience Certificate</a></li>
-        <li><a href="https://drive.google.com/file/d/1bQPW4Nzwhba7RjZ5bdwlih86ZDZcgTE7/view">Leadership Certificate</a></li>
-        <li><a href="https://courses.edx.org/certificates/914ec74a35564b939b6da4f2bdff3d6f">edX Verified Certificate for Programming for Everybody (Getting Started with Python)</a></li>
-        <li><a href="https://courses.edx.org/certificates/9c302c2094664b85bb123fa074fdea5c">edX Verified Certificate for C Programming: Getting Started</a></li>
-        <li><a href="https://www.credly.com/badges/644879a2-fc24-416d-8511-644f82eceeaa?source=linked_in_profile">UB Here to Career: Collaborator</a></li>
-        <li><a href="https://www.credly.com/badges/ad770cc2-e89c-41b9-a5b8-d86c8b17d652?source=linked_in_profile">UB Here to Career: Change Agent</a></li>
-        <li><a href="https://www.credly.com/badges/da5e1574-12a7-4cee-a67c-dfd7fa3c50d3?source=linked_in_profile">UB Here to Career: Growth Mindset</a></li>
-        <li><a href="https://www.credly.com/badges/6b1ecdce-4548-4727-9cb4-dfe5189ceadf/linked_in_profile">UB Here to Career: Achievement</a></li>
-      </ul>
-      <br>
+    <div class="container">
+        <h2 data-toggle="collapse" href="#collapseCertifications" role="presentation" aria-expanded="true"
+            aria-controls="collapseCertifications">Certificates and Badges <span>⏶</span></h2>
+        <div class="collapse show" id="collapseCertifications">
+            <ul>
+                <li><a href="https://drive.google.com/file/d/19tjWEOranVqm1eQJ1FXQREX1KvuJcZUb/view">UB Experience
+                    Certificate</a></li>
+                <li><a href="https://drive.google.com/file/d/1bQPW4Nzwhba7RjZ5bdwlih86ZDZcgTE7/view">Leadership
+                    Certificate</a></li>
+                <li><a href="https://courses.edx.org/certificates/914ec74a35564b939b6da4f2bdff3d6f">edX Verified
+                    Certificate for Programming for Everybody (Getting Started with Python)</a></li>
+                <li><a href="https://courses.edx.org/certificates/9c302c2094664b85bb123fa074fdea5c">edX Verified
+                    Certificate for C Programming: Getting Started</a></li>
+                <li>
+                    <a href="https://www.credly.com/badges/644879a2-fc24-416d-8511-644f82eceeaa?source=linked_in_profile">UB
+                        Here to Career: Collaborator</a></li>
+                <li>
+                    <a href="https://www.credly.com/badges/ad770cc2-e89c-41b9-a5b8-d86c8b17d652?source=linked_in_profile">UB
+                        Here to Career: Change Agent</a></li>
+                <li>
+                    <a href="https://www.credly.com/badges/da5e1574-12a7-4cee-a67c-dfd7fa3c50d3?source=linked_in_profile">UB
+                        Here to Career: Growth Mindset</a></li>
+                <li><a href="https://www.credly.com/badges/6b1ecdce-4548-4727-9cb4-dfe5189ceadf/linked_in_profile">UB
+                    Here to Career: Achievement</a></li>
+            </ul>
+            <br>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="py-5" data-delay="0.05s">
-  <div class="container">
-    <h2 data-toggle="collapse" href="#collapseContact" role="presentation" aria-expanded="true" aria-controls="collapseContact">Contact Me <span>⏶</span></h2>
-    <div class="collapse show" id="collapseContact">
-      <ul>
-        <li>Phone Number: 7169073496</li>
-        <li>Email: <a href="mailto:kartikec@buffalo.edu">kartikec@buffalo.edu</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/kartike2001/" target="_blank">Kartike Chaurasia</a></li>
-        <li>GitHub: <a href="https://github.com/kartike2001" target="_blank">kartike2001</a></li>
-      </ul>
-      <br>
+    <div class="container">
+        <h2 data-toggle="collapse" href="#collapseContact" role="presentation" aria-expanded="true"
+            aria-controls="collapseContact">Contact Me <span>⏶</span></h2>
+        <div class="collapse show" id="collapseContact">
+            <ul>
+                <li>Phone Number: 7169073496</li>
+                <li>Email: <a href="mailto:kartikec@buffalo.edu">kartikec@buffalo.edu</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/kartike2001/" target="_blank">Kartike Chaurasia</a>
+                </li>
+                <li>GitHub: <a href="https://github.com/kartike2001" target="_blank">kartike2001</a></li>
+            </ul>
+            <br>
+        </div>
     </div>
-  </div>
 </section>
 
 
 <div class="theme-container shadow-dark">
-  <img id="theme-icon" src="sun.png" alt="ERR">
+    <img id="theme-icon" src="sun.png" alt="ERR">
 </div>
 <!-- Optional JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="custom.js"></script>
+<script>
+    let selectedSkills = {};
+
+    function toggleSkillSelection(skill) {
+        // Toggle the selection state of the skill
+        if (selectedSkills[skill]) {
+            delete selectedSkills[skill]; // Remove skill from selection if already selected
+        } else {
+            selectedSkills[skill] = true; // Add skill to selection if not already selected
+        }
+
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        // Determine if any skills are selected
+        const anySelected = Object.keys(selectedSkills).length > 0;
+        let firstRelevantProject = null; // Keep track of the first relevant project
+
+        document.querySelectorAll('.project').forEach(project => {
+            const skillsAttribute = project.getAttribute('data-skills');
+            const skills = skillsAttribute ? skillsAttribute.split(',') : [];
+            const hasSkillsListed = skills.length > 0;
+
+            if (anySelected && hasSkillsListed) {
+                // If any skills are selected and the project has skills listed, make projects/jobs transparent unless they match one of the selected skills
+                const isRelevant = skills.some(skill => selectedSkills[skill.trim()]);
+                project.style.opacity = isRelevant ? '1' : '0.3';
+
+                if (isRelevant && !firstRelevantProject) {
+                    firstRelevantProject = project;
+                }
+            } else {
+                project.style.opacity = '1';
+            }
+        });
+
+        if (firstRelevantProject) {
+            firstRelevantProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+</script>
 </body>
 </html>
