@@ -18,7 +18,7 @@ interface Props {
  */
 export default function SectionHeading({ cmd, arg, open, onToggle, badge }: Props) {
   const full = arg ? `${cmd} ${arg}` : cmd
-  const { ref, typed, done } = useTypeOnVisible<HTMLButtonElement>(full)
+  const { ref, typed, done } = useTypeOnVisible(full)
 
   const cmdPart = typed.slice(0, cmd.length)
   const argPart = typed.length > cmd.length ? typed.slice(cmd.length) : ''

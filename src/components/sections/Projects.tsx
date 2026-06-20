@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Section from '../common/Section'
 import SectionHeading from '../common/SectionHeading'
 import { projects } from '../../data'
@@ -19,7 +19,10 @@ export default function Projects({ selectedSkills, onMatchCount }: Props) {
   }))
 
   const visibleCount = filtered.filter(f => f.visible).length
-  setTimeout(() => onMatchCount(visibleCount), 0)
+
+  useEffect(() => {
+    onMatchCount(visibleCount)
+  }, [onMatchCount, visibleCount])
 
   return (
     <Section id="projects">

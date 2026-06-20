@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState, ReactNode } from 'react'
+import { ReactNode } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { Element } from 'react-scroll'
 
 interface Props {
   id: string
@@ -7,32 +9,20 @@ interface Props {
 }
 
 export default function Section({ id, children, className = '' }: Props) {
-  const ref = useRef<HTMLElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.unobserve(el)
-        }
-      },
-      { threshold: 0.08 },
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
+  const { ref, inView } = useInView({
+    threshold: 0.08,
+    triggerOnce: true,
+  })
 
   return (
-    <section
-      id={id}
-      ref={ref}
-      className={`section py-12 px-4 ${visible ? 'visible' : ''} ${className}`}
-    >
-      <div className="max-w-4xl mx-auto">{children}</div>
-    </section>
+    <Element name={id}>
+      <section
+        id={id}
+        ref={ref}
+        className={`section py-12 px-4 ${inView ? 'visible' : ''} ${className}`}
+      >
+        <div className="max-w-4xl mx-auto">{children}</div>
+      </section>
+    </Element>
   )
 }

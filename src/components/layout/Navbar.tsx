@@ -1,4 +1,10 @@
 import { useState } from 'react'
+import { Link, animateScroll } from 'react-scroll'
+import {
+  SECTION_SCROLL_DURATION,
+  SECTION_SCROLL_OFFSET,
+  SECTION_SCROLL_SMOOTH,
+} from '../../config/scroll'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -13,17 +19,11 @@ const NAV_LINKS = [
 ]
 
 interface Props {
-  activeSection: string
   theme: 'dark' | 'light'
 }
 
-export default function Navbar({ activeSection, theme }: Props) {
+export default function Navbar({ theme }: Props) {
   const [open, setOpen] = useState(false)
-
-  const handleNavClick = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    setOpen(false)
-  }
 
   return (
     <nav
@@ -33,7 +33,12 @@ export default function Navbar({ activeSection, theme }: Props) {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14 gap-3">
         {/* Wordmark */}
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() =>
+            animateScroll.scrollToTop({
+              duration: SECTION_SCROLL_DURATION,
+              smooth: SECTION_SCROLL_SMOOTH,
+            })
+          }
           className="wordmark hidden sm:inline-flex hover:opacity-90 transition-opacity"
           aria-label="Back to top"
         >
@@ -55,12 +60,18 @@ export default function Navbar({ activeSection, theme }: Props) {
         <ul className="hidden md:flex items-center gap-0.5">
           {NAV_LINKS.map(({ label, id }) => (
             <li key={id}>
-              <button
-                onClick={() => handleNavClick(id)}
-                className={`nav-link-hacker font-bold text-sm ${activeSection === id ? 'active-section' : ''}`}
+              <Link
+                to={id}
+                spy
+                isDynamic
+                smooth={SECTION_SCROLL_SMOOTH}
+                offset={SECTION_SCROLL_OFFSET}
+                duration={SECTION_SCROLL_DURATION}
+                activeClass="active-section"
+                className="nav-link-hacker font-bold text-sm"
               >
                 {label}
-              </button>
+              </Link>
             </li>
           ))}
         </ul>
@@ -90,12 +101,19 @@ export default function Navbar({ activeSection, theme }: Props) {
           <ul className="flex flex-col gap-1 pt-2">
             {NAV_LINKS.map(({ label, id }) => (
               <li key={id}>
-                <button
-                  onClick={() => handleNavClick(id)}
-                  className={`nav-link-hacker text-sm w-full text-left ${activeSection === id ? 'active-section' : ''}`}
+                <Link
+                  to={id}
+                  spy
+                  isDynamic
+                  smooth={SECTION_SCROLL_SMOOTH}
+                  offset={SECTION_SCROLL_OFFSET}
+                  duration={SECTION_SCROLL_DURATION}
+                  activeClass="active-section"
+                  className="nav-link-hacker text-sm w-full text-left"
+                  onClick={() => setOpen(false)}
                 >
                   {label}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>

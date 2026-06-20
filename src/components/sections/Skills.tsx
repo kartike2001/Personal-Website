@@ -1,7 +1,13 @@
 import { useState } from 'react'
+import { scroller } from 'react-scroll'
 import Section from '../common/Section'
 import SectionHeading from '../common/SectionHeading'
 import { skillCategories } from '../../data'
+import {
+  SECTION_SCROLL_DURATION,
+  SECTION_SCROLL_OFFSET,
+  SECTION_SCROLL_SMOOTH,
+} from '../../config/scroll'
 
 interface Props {
   selectedSkills: Set<string>
@@ -65,7 +71,11 @@ export default function Skills({ selectedSkills, onToggleSkill, onClear }: Props
             className="underline hover:no-underline"
             style={{ color: 'var(--accent)' }}
             onClick={() =>
-              document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              scroller.scrollTo('experience', {
+                duration: SECTION_SCROLL_DURATION,
+                smooth: SECTION_SCROLL_SMOOTH,
+                offset: SECTION_SCROLL_OFFSET,
+              })
             }
           >
             jump to matches ↓

@@ -7,7 +7,7 @@ export default function Contact() {
   const [open, setOpen] = useState(true)
 
   return (
-    <Section id="contact">
+    <Section id="contact" className="min-h-[100svh]">
       <SectionHeading cmd="./contact" open={open} onToggle={() => setOpen(o => !o)} />
 
       {open && (

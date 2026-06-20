@@ -400,7 +400,7 @@ a:hover { color: var(--hover); }
   position: relative;
   width: var(--avatar-size);
   height: var(--avatar-size);
-  border-radius: 50%;
+  border-radius: 4px;
   border: 1px solid var(--border);
   box-shadow: var(--glow);
   overflow: hidden;

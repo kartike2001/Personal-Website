@@ -50,9 +50,9 @@ export default function Hero({ theme }: Props) {
           </div>
 
           <div className="terminal-body">
-            <div className="flex flex-col-reverse sm:flex-row sm:items-start gap-6 sm:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(12rem,16rem)] sm:items-center gap-6 sm:gap-10">
               {/* boot log */}
-              <div className="flex-1 min-w-0">
+              <div className="min-w-0 text-left">
                 <p className="boot-line" style={{ animationDelay: '0.2s' }}>
                   <span className="tprompt">kartike@portfolio</span>
                   <span className="tpath">:~/about$</span> <span className="tcmd">whoami</span>
@@ -97,7 +97,7 @@ export default function Hero({ theme }: Props) {
 
               {/* avatar — framed as a file preview */}
               <figure
-                className="boot-line shrink-0 self-center sm:self-start"
+                className="boot-line row-start-1 sm:row-auto justify-self-center"
                 style={{ animationDelay: '0.4s', margin: 0 }}
               >
                 <ScrambleImage
