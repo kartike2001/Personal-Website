@@ -12,11 +12,8 @@ export default function FilterBar({ selectedSkills, onToggleSkill, onClear, matc
 
   return (
     <div
-      className="filter-bar navbar-shell fixed left-0 right-0 z-40 flex flex-wrap items-center gap-2 px-4 py-2 text-sm"
-      style={{
-        top: '56px',
-        background: 'color-mix(in srgb, var(--surface) 92%, transparent)',
-      }}
+      className="filter-bar navbar-shell flex flex-wrap items-center gap-2 px-4 py-2 text-sm"
+      style={{ background: 'color-mix(in srgb, var(--surface) 92%, transparent)' }}
     >
       <span style={{ color: 'var(--prompt)', fontWeight: 700 }}>$ grep</span>
 

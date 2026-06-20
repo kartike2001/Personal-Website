@@ -20,6 +20,7 @@ export default function Section({ id, children, className = '' }: Props) {
         id={id}
         ref={ref}
         className={`section py-12 px-4 ${inView ? 'visible' : ''} ${className}`}
+        style={{ scrollMarginTop: '164px' }}
       >
         <div className="max-w-4xl mx-auto">{children}</div>
       </section>

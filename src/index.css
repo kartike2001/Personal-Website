@@ -656,6 +656,11 @@ a:hover { color: var(--hover); }
   border-bottom: 1px solid var(--border-soft);
   transition: background-color 0.4s ease, border-color 0.4s ease;
 }
+.top-chrome {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+}
 .filter-bar {
   box-shadow: 0 10px 30px -24px rgba(0, 0, 0, 0.85);
 }
@@ -728,12 +733,14 @@ a:hover { color: var(--hover); }
   pointer-events: none;
 }
 
-main,
+main {
+  position: relative;
+  z-index: 2;
+}
 .navbar-shell,
 .filter-bar,
 .theme-toggle,
 .scroll-progress {
-  position: relative;
   z-index: 2;
 }
 @media (max-width: 768px) { .scroll-readout { display: none; } }

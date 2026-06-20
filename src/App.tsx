@@ -18,6 +18,8 @@ export default function App() {
   const [selectedSkills, setSelectedSkills] = useState<Set<string>>(new Set())
   const [expMatchCount, setExpMatchCount] = useState(0)
   const [projMatchCount, setProjMatchCount] = useState(0)
+  const filterActive = selectedSkills.size > 0
+  const chromeOffset = filterActive ? '112px' : '56px'
 
   const toggleSkill = useCallback((key: string) => {
     setSelectedSkills(prev => {
@@ -38,15 +40,17 @@ export default function App() {
         <span className="crt-glass" />
       </div>
       <ScrollProgress />
-      <Navbar theme={theme} />
-      <FilterBar
-        selectedSkills={selectedSkills}
-        onToggleSkill={toggleSkill}
-        onClear={clearAllSkills}
-        matchCounts={{ experience: expMatchCount, projects: projMatchCount }}
-      />
-      <Hero theme={theme} />
-      <main style={{ paddingTop: '56px' }}>
+      <div className="top-chrome">
+        <Navbar theme={theme} />
+        <FilterBar
+          selectedSkills={selectedSkills}
+          onToggleSkill={toggleSkill}
+          onClear={clearAllSkills}
+          matchCounts={{ experience: expMatchCount, projects: projMatchCount }}
+        />
+      </div>
+      <Hero theme={theme} chromeOffset={chromeOffset} />
+      <main style={{ paddingTop: chromeOffset }}>
         <About />
         <Skills selectedSkills={selectedSkills} onToggleSkill={toggleSkill} onClear={clearAllSkills} />
         <Experience selectedSkills={selectedSkills} onMatchCount={setExpMatchCount} />

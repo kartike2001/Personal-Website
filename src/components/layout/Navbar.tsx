@@ -27,7 +27,7 @@ export default function Navbar({ theme }: Props) {
 
   return (
     <nav
-      className="navbar-shell fixed top-0 left-0 right-0 z-50 h-14"
+      className="navbar-shell h-14"
       style={{ background: 'color-mix(in srgb, var(--bg) 82%, transparent)' }}
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14 gap-3">

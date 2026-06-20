@@ -7,6 +7,7 @@ const BASE = import.meta.env.BASE_URL
 
 interface Props {
   theme: 'dark' | 'light'
+  chromeOffset: string
 }
 
 /**
@@ -14,7 +15,7 @@ interface Props {
  * Lines reveal in sequence (staggered delays); the role line keeps
  * typing live via the rotating subtitle animation.
  */
-export default function Hero({ theme }: Props) {
+export default function Hero({ theme, chromeOffset }: Props) {
   const typed = useTypingAnimation(subtitles)
 
   const bgImage = theme === 'dark' ? `${BASE}hero-dark.gif` : `${BASE}hero-light.gif`
@@ -22,8 +23,9 @@ export default function Hero({ theme }: Props) {
 
   return (
     <header
-      className="relative flex flex-col items-center justify-center px-4 pt-28 pb-20 min-h-[100svh] overflow-hidden"
+      className="relative flex flex-col items-center justify-center px-4 pb-20 min-h-[100svh] overflow-hidden"
       style={{
+        paddingTop: `calc(${chromeOffset} + 7rem)`,
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
