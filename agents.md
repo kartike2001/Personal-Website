@@ -68,6 +68,7 @@ To deploy manually: push to main (or trigger the workflow from GitHub Actions UI
 ## Common tasks
 
 **Update resume**: Replace `public/resume.pdf`.
+Keep editable/source copies in `assets/resume/`.
 
 **Update profile photo**: Replace `public/Kartike.jpg` (dark) and/or
 `public/Kartike2.jpg` (light).
@@ -79,6 +80,12 @@ in `src/data/index.ts`.
 `skillCategories` in `src/data/index.ts`. The `key` must match the
 `data-skills` values used in Experience and Projects entries.
 
-**Add a section**: Create a new component in `src/components/`, wrap content
+**Add a section**: Create a new component in `src/components/sections/`, wrap content
 in `<Section id="...">`, add the id to `SECTION_IDS` in `App.tsx`, and add a
 nav link to the `NAV_LINKS` array in `Navbar.tsx`.
+
+**Shared UI helpers** live in `src/components/common/`.
+
+**Layout components** live in `src/components/layout/`.
+
+**Hero-specific components** live in `src/components/hero/`.

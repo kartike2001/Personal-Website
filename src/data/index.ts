@@ -1,11 +1,9 @@
-import type { SkillCategory, ExperienceEntry, ProjectEntry, LeadershipEntry, CertEntry } from '../types'
+import type { SkillCategory, ExperienceEntry, ProjectEntry, LeadershipEntry, CertEntry, ContactEntry } from '../types'
 
 export const subtitles = [
-  'Head Teaching Assistant.',
-  'Full Stack Developer.',
-  'ML/AI Developer.',
-  'Resident Advisor.',
-  'Peer Mentor.',
+  'Site Reliability Engineer @ Coinbase.',
+  'Identity & Access Management.',
+  'Reliability, authorization, and identity infrastructure.',
 ]
 
 export const awards = [
@@ -15,19 +13,29 @@ export const awards = [
   '2022 Leaders in Excellence Award',
   '2022 Emerging Student Leader – Nominee',
   '2023 Innovative Student Leader Award',
+  'Tau Beta Pi — Engineering Honor Society',
+  'Phi Beta Kappa — Academic Honor Society',
+]
+
+export const contacts: ContactEntry[] = [
+  { cmd: 'call', label: '(716) 907-3496', href: 'tel:+17169073496' },
+  { cmd: 'mail', label: 'kartike2001@gmail.com', href: 'mailto:kartike2001@gmail.com' },
+  { cmd: 'ssh', label: 'linkedin.com/in/kartike2001', href: 'https://www.linkedin.com/in/kartike2001/' },
+  { cmd: 'git', label: 'github.com/kartike2001', href: 'https://github.com/kartike2001' },
 ]
 
 export const skillCategories: SkillCategory[] = [
   {
     label: 'Programming Languages',
     items: [
-      { name: 'Java',       key: 'Java',       info: 'Algorithms and Complexity CSE331, Gamifying Learning' },
-      { name: 'Scala',      key: 'Scala',      info: 'Intro to CS II CSE116, Head Teaching Assistant' },
-      { name: 'JavaScript', key: 'Javascript', info: 'Intro to CS I CSE115, UBay, NEXT-LEVEL' },
-      { name: 'Python',     key: 'Python',     info: 'Stock Predictor, Digit Classifier, Planet Explorer, Face Detection, ML Optimization, NEXT-LEVEL, UBay' },
-      { name: 'C',          key: 'C',          info: 'Systems Programming CSE220' },
-      { name: 'Go / Golang',key: 'Golang',     info: 'Distributed Systems CSE486, Qarik Group' },
-      { name: 'HTML / CSS', key: 'HTML/CSS',   info: 'NEXT-LEVEL, UBay, Personal Portfolio' },
+      { name: 'Go / Golang',        key: 'Golang',          info: 'Coinbase, Distributed Systems CSE486, Qarik Group' },
+      { name: 'Python',             key: 'Python',          info: 'Stock Predictor, Digit Classifier, Planet Explorer, Face Detection, ML Optimization, NEXT-LEVEL, UBay' },
+      { name: 'Java',               key: 'Java',            info: 'Algorithms and Complexity CSE331, Gamifying Learning' },
+      { name: 'Scala',              key: 'Scala',           info: 'Intro to CS II CSE116, Head Teaching Assistant' },
+      { name: 'JavaScript',         key: 'Javascript',      info: 'Intro to CS I CSE115, UBay, NEXT-LEVEL' },
+      { name: 'C',                  key: 'C',               info: 'Systems Programming CSE220' },
+      { name: 'Bash / Shell',       key: 'Bash',            info: 'Coinbase, automation and scripting' },
+      { name: 'HTML / CSS',         key: 'HTML/CSS',        info: 'NEXT-LEVEL, UBay, Personal Portfolio' },
     ],
   },
   {
@@ -37,24 +45,51 @@ export const skillCategories: SkillCategory[] = [
       { name: 'FastAPI',   key: 'FastAPI',   info: 'UBay' },
       { name: 'Flask',     key: 'Flask',     info: 'NEXT-LEVEL' },
       { name: 'Gin',       key: 'Gin',       info: 'Qarik Group' },
+      { name: 'WebSocket', key: 'WebSocket', info: 'NEXT-LEVEL live scoreboard, UBay auctions' },
       { name: 'Bootstrap', key: 'Bootstrap', info: 'UBay, Qarik Group' },
     ],
   },
   {
-    label: 'Databases',
+    label: 'Infrastructure & Cloud',
     items: [
-      { name: 'PostgreSQL', key: 'PostgreSQL', info: 'UBay, Qarik Group' },
+      { name: 'Kubernetes',        key: 'Kubernetes',   info: 'Coinbase production services' },
+      { name: 'Docker',            key: 'Docker',       info: 'Coinbase, NEXT-LEVEL, UBay, Qarik Group' },
+      { name: 'Linux / Unix',      key: 'Linux/Unix',   info: 'Coinbase, Systems Programming CSE220, CSE411, Head TA' },
+      { name: 'TCP/IP Networking', key: 'TCP/IP',       info: 'Coinbase identity services' },
+      { name: 'Load Balancing',    key: 'Load Balancing', info: 'Coinbase production infrastructure' },
+      { name: 'DNS',               key: 'DNS',          info: 'Coinbase production infrastructure' },
+      { name: 'TLS',               key: 'TLS',          info: 'Coinbase identity security' },
+      { name: 'Reverse Proxies',   key: 'Reverse Proxies', info: 'Coinbase service mesh' },
+    ],
+  },
+  {
+    label: 'Databases & Storage',
+    items: [
+      { name: 'PostgreSQL', key: 'PostgreSQL', info: 'Coinbase, UBay, Qarik Group' },
       { name: 'MongoDB',    key: 'MongoDB',    info: 'NEXT-LEVEL' },
+      { name: 'Redis',      key: 'Redis',      info: 'Coinbase caching layer' },
+      { name: 'Neptune',    key: 'Neptune',    info: 'Coinbase (migrated to PostgreSQL)' },
+      { name: 'Neo4j',      key: 'Neo4j',      info: 'Graph database' },
       { name: 'MySQL',      key: 'MySQL' },
     ],
   },
   {
-    label: 'Dev Tools & Version Control',
+    label: 'Automation & CI/CD',
     items: [
-      { name: 'Git',        key: 'Git',        info: 'All projects and work experiences' },
-      { name: 'Docker',     key: 'Docker',     info: 'NEXT-LEVEL, UBay, Qarik Group' },
-      { name: 'Linux / Unix', key: 'Linux/Unix', info: 'Systems Programming CSE220, CSE411, Head TA' },
-      { name: 'Postman',    key: 'Postman',    info: 'NEXT-LEVEL, UBay, Qarik Group' },
+      { name: 'Git',                       key: 'Git',            info: 'All projects and work experiences' },
+      { name: 'GitHub Actions',            key: 'GitHub Actions', info: 'Coinbase CI/CD pipelines, Personal Website deploy' },
+      { name: 'Terraform / IaC',           key: 'Terraform',      info: 'Coinbase infrastructure provisioning' },
+      { name: 'Helm',                      key: 'Helm',           info: 'Coinbase Kubernetes deployments' },
+      { name: 'Postman',                   key: 'Postman',        info: 'NEXT-LEVEL, UBay, Qarik Group' },
+    ],
+  },
+  {
+    label: 'Testing & Quality',
+    items: [
+      { name: 'Unit Testing',              key: 'Unit Testing',         info: 'Coinbase — 5% to 90% coverage increase' },
+      { name: 'Integration Testing',       key: 'Integration Testing',  info: 'Coinbase identity services' },
+      { name: 'Load / Performance Testing',key: 'Load Testing',         info: 'Coinbase Tier-1 promotion' },
+      { name: 'Automated Smoke Tests',     key: 'Smoke Tests',          info: 'Coinbase production-readiness validation' },
     ],
   },
   {
@@ -91,6 +126,31 @@ export const skillCategories: SkillCategory[] = [
 
 export const experience: ExperienceEntry[] = [
   {
+    title: 'Site Reliability Engineer — Identity and Access Management',
+    org: 'Coinbase',
+    period: 'Sep 2024 – Present',
+    skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Neptune', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Unit Testing', 'Integration Testing', 'Load Testing', 'Smoke Tests', 'TLS', 'Bash'],
+    subsections: [
+      {
+        bullets: [
+          'Modernized a scalable authorization platform replacing a legacy LDAP-based access control system, supporting 200M+ authorization checks/month and reducing access latency by up to 88x while maintaining operational continuity',
+          'Upgraded a critical identity service from Tier-3 to Tier-1 by meeting 99.99% uptime and P99 latency <150ms targets through smoke tests, failover drills, and production-readiness validation by increasing test coverage from 5% to 90%',
+          'Automated self-healing and health monitoring workflows, preventing 7+ high-severity incidents and saving 40+ on-call engineering hours annually',
+          'Diagnosed failing production health checks by tracing logs, service probes, and configuration behavior, restoring correct restart behavior and improving service resilience',
+          'Designed and implemented a fine-grained authorization framework enabling field-level access control via JWT-based authentication, enforcing least-privilege policies across APIs and establishing a new standard for granular authorization within Coinbase services',
+          'Established a cross-IdP authentication bridge that enabled SSO applications to securely access backend services with full user-level permission enforcement, eliminating proxy-based workarounds that bypassed the authorization layer',
+          'Engineered a new Golang ingestion and client framework, reducing onboarding time for new integrations from 2 months to 1 day, eliminating 2,000+ lines of redundant code, and improving maintainability',
+          'Implemented and released a Kafka-backed real-time event stream for identity changes, enabling downstream services to consume field-level updates and migrate off a legacy event pipeline',
+          'Developed an AST-based SCIM filter parsing and query pipeline supporting complex nested queries and 50+ field mappings, enabling advanced identity search capabilities and vendor-agnostic integrations',
+          'Implemented wallet-based, cryptographically secure identity verification for self-service account and device unlocks, eliminating 650+ annual IT support tickets and reducing mean resolution time from hours to minutes',
+          'Architected secure identity lifecycle enforcement for wallet-based identity verification, automatically revoking and delinking wallets upon identity deactivation to prevent unauthorized access and reduce residual credential risk',
+          'Developed a Model Context Protocol server for a unified data service aggregating identity and HR data from SaaS providers such as Okta and Workday, leveraging the SCIM-based API to simplify cross-system data queries',
+          'Migrated the database from Neptune to PostgreSQL, simplifying local development, improving reliability, reducing operational cost, and enabling transactional consistency for identity workflows',
+        ],
+      },
+    ],
+  },
+  {
     title: 'Head Teaching Assistant — Data Structures & Algorithms',
     org: 'University at Buffalo',
     period: 'Aug 2022 – May 2024',
@@ -111,7 +171,7 @@ export const experience: ExperienceEntry[] = [
     org: 'University at Buffalo',
     period: 'Aug 2022 – May 2024',
     github: 'https://github.com/kartike2001/NextLevel',
-    skills: ['Bootstrap', 'Python', 'Javascript', 'PostgreSQL', 'Git', 'MongoDB', 'HTML/CSS', 'Docker', 'Flask', 'Postman'],
+    skills: ['Bootstrap', 'Python', 'Javascript', 'PostgreSQL', 'Git', 'MongoDB', 'HTML/CSS', 'Docker', 'Flask', 'Postman', 'WebSocket'],
     subsections: [
       {
         heading: 'Technical',

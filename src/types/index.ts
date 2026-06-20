@@ -37,3 +37,9 @@ export interface CertEntry {
   label: string
   href: string
 }
+
+export interface ContactEntry {
+  cmd: string
+  label: string
+  href: string
+}
