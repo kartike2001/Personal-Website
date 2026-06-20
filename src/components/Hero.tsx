@@ -25,8 +25,8 @@ export default function Hero({ theme }: Props) {
         <img
           src={profileImg}
           alt="Kartike Chaurasia"
-          className="hero-image w-1/4 rounded-full border-4 transition-transform duration-300 hover:scale-105"
-          style={{ borderColor: 'var(--accent)' }}
+          className="hero-image rounded-full border-4 transition-transform duration-300 hover:scale-105 object-cover"
+          style={{ borderColor: 'var(--accent)', width: 'clamp(210px, 35vw, 385px)', height: 'clamp(210px, 35vw, 385px)' }}
         />
 
         <h1
