@@ -1,37 +1,41 @@
 import { useState } from 'react'
 import Section from './Section'
+import SectionHeading from './SectionHeading'
+
+const CONTACTS = [
+  { cmd: 'mail', label: 'kartike2001@gmail.com', href: 'mailto:kartike2001@gmail.com' },
+  { cmd: 'ssh', label: 'linkedin.com/in/kartike2001', href: 'https://www.linkedin.com/in/kartike2001/' },
+  { cmd: 'git', label: 'github.com/kartike2001', href: 'https://github.com/kartike2001' },
+]
 
 export default function Contact() {
   const [open, setOpen] = useState(true)
 
   return (
     <Section id="contact">
-      <button className="section-heading" onClick={() => setOpen(o => !o)}>
-        Contact Me
-        <span className={`collapse-arrow ${open ? 'open' : 'closed'}`}>⏶</span>
-      </button>
+      <SectionHeading cmd="./contact" open={open} onToggle={() => setOpen(o => !o)} />
 
       {open && (
-        <ul className="space-y-2 list-disc list-inside" style={{ color: 'var(--text)' }}>
-          <li>
-            Email:{' '}
-            <a href="mailto:kartike2001@gmail.com">
-              kartike2001@gmail.com
-            </a>
-          </li>
-          <li>
-            LinkedIn:{' '}
-            <a href="https://www.linkedin.com/in/kartike2001/" target="_blank" rel="noopener noreferrer">
-              Kartike Chaurasia
-            </a>
-          </li>
-          <li>
-            GitHub:{' '}
-            <a href="https://github.com/kartike2001" target="_blank" rel="noopener noreferrer">
-              kartike2001
-            </a>
-          </li>
-        </ul>
+        <div className="terminal" style={{ maxWidth: '640px' }}>
+          <div className="terminal-bar">
+            <span className="term-dot r" />
+            <span className="term-dot y" />
+            <span className="term-dot g" />
+            <span className="term-title">reach me</span>
+          </div>
+          <div className="terminal-body space-y-2.5">
+            {CONTACTS.map(c => (
+              <p key={c.href}>
+                <span className="tprompt">$</span>{' '}
+                <span style={{ color: 'var(--prompt)' }}>{c.cmd}</span>{' '}
+                <a href={c.href} target="_blank" rel="noopener noreferrer">{c.label}</a>
+              </p>
+            ))}
+            <p style={{ color: 'var(--muted)' }}>
+              <span className="caret">{' '}</span>
+            </p>
+          </div>
+        </div>
       )}
     </Section>
   )

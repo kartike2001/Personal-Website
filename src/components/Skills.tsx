@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Section from './Section'
+import SectionHeading from './SectionHeading'
 import { skillCategories } from '../data'
 
 interface Props {
@@ -10,48 +11,36 @@ interface Props {
 
 export default function Skills({ selectedSkills, onToggleSkill, onClear }: Props) {
   const [open, setOpen] = useState(true)
-  const [expandedSkill, setExpandedSkill] = useState<string | null>(null)
-
-  const handleSkillClick = (key: string, hasInfo: boolean) => {
-    onToggleSkill(key)
-    if (hasInfo) {
-      setExpandedSkill(prev => (prev === key ? null : key))
-    }
-  }
 
   return (
     <Section id="skills">
-      <button className="section-heading" onClick={() => setOpen(o => !o)}>
-        Skills
-        <span className={`collapse-arrow ${open ? 'open' : 'closed'}`}>⏶</span>
-      </button>
+      <SectionHeading cmd="ls" arg="~/skills" open={open} onToggle={() => setOpen(o => !o)} />
+      <p className="text-sm mb-5" style={{ color: 'var(--muted)' }}>
+        Click any skill to filter experience &amp; projects by it.
+      </p>
 
       {open && (
         <div className="grid md:grid-cols-2 gap-4">
           {skillCategories.map(cat => (
             <div key={cat.label} className="skill-box">
-              <h5 className="font-bold mb-3 text-center" style={{ color: 'var(--accent)' }}>
-                {cat.label}
-              </h5>
+              <h5 className="skill-box-title">{cat.label}</h5>
               <ul className="space-y-1">
                 {cat.items.map(skill => {
                   const isSelected = selectedSkills.has(skill.key)
-                  const isExpanded = expandedSkill === skill.key
                   return (
                     <li key={skill.key}>
                       <button
-                        className={`skill-item w-full justify-center ${isSelected ? 'active' : ''}`}
-                        style={{ color: isSelected ? 'var(--accent)' : 'var(--text)' }}
-                        onClick={() => handleSkillClick(skill.key, !!skill.info)}
+                        className={`skill-item ${isSelected ? 'active' : ''}`}
+                        onClick={() => onToggleSkill(skill.key)}
                       >
-                        <span>{skill.name}</span>
+                        <span className="skill-name">{skill.name}</span>
                         {skill.info && (
-                          <span style={{ fontSize: '0.7rem', opacity: 0.7 }}>
-                            {isExpanded ? '⇑' : '⇓'}
+                          <span style={{ fontSize: '0.7rem', color: 'var(--muted)' }}>
+                            {isSelected ? '−' : '+'}
                           </span>
                         )}
                       </button>
-                      {skill.info && isExpanded && (
+                      {skill.info && isSelected && (
                         <div className="skill-info mt-1">
                           {skill.info}
                         </div>
@@ -66,18 +55,28 @@ export default function Skills({ selectedSkills, onToggleSkill, onClear }: Props
       )}
 
       {selectedSkills.size > 0 && (
-        <p className="mt-4 text-sm" style={{ color: 'var(--muted)' }}>
-          Filtering by:{' '}
+        <p className="mt-5 text-sm" style={{ color: 'var(--muted)' }}>
+          <span className="ph-prompt">$</span> grep{' '}
           <span style={{ color: 'var(--accent)' }}>
-            {[...selectedSkills].join(', ')}
+            {[...selectedSkills].join(' ')}
           </span>
           {' — '}
+          <button
+            className="underline hover:no-underline"
+            style={{ color: 'var(--accent)' }}
+            onClick={() =>
+              document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          >
+            jump to matches ↓
+          </button>
+          {' · '}
           <button
             className="underline hover:no-underline"
             style={{ color: 'var(--hover)' }}
             onClick={onClear}
           >
-            clear
+            reset
           </button>
         </p>
       )}

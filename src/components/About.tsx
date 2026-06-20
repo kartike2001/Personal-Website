@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Section from './Section'
+import SectionHeading from './SectionHeading'
 import { awards } from '../data'
 
 export default function About() {
@@ -7,10 +8,7 @@ export default function About() {
 
   return (
     <Section id="about">
-      <button className="section-heading" onClick={() => setOpen(o => !o)}>
-        About Me
-        <span className={`collapse-arrow ${open ? 'open' : 'closed'}`}>⏶</span>
-      </button>
+      <SectionHeading cmd="cat" arg="about.md" open={open} onToggle={() => setOpen(o => !o)} />
 
       {open && (
         <div>
@@ -30,23 +28,23 @@ export default function About() {
             students connect with opportunities across campus.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h5 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>Awards</h5>
-              <ul className="list-disc list-inside space-y-1" style={{ color: 'var(--text)' }}>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="skill-box">
+              <h5 className="skill-box-title">~/awards</h5>
+              <ul className="term-list">
                 {awards.map(a => <li key={a}>{a}</li>)}
               </ul>
             </div>
 
-            <div>
-              <h5 className="font-bold mb-2" style={{ color: 'var(--accent)' }}>Education</h5>
-              <p className="font-semibold" style={{ color: 'var(--text)' }}>University at Buffalo — May 2024</p>
-              <p style={{ color: 'var(--text)' }}>
+            <div className="skill-box">
+              <h5 className="skill-box-title">~/education</h5>
+              <p className="font-bold" style={{ color: 'var(--bright)' }}>University at Buffalo — May 2024</p>
+              <p className="text-sm" style={{ color: 'var(--text)' }}>
                 B.S. Computer Science<br />
                 Concentration: Artificial Intelligence<br />
                 Minor: Mathematics
               </p>
-              <ul className="list-disc list-inside mt-2 space-y-1" style={{ color: 'var(--text)' }}>
+              <ul className="term-list mt-2">
                 <li>GPA: 3.84 / 4.00</li>
                 <li>Tau Beta Pi — Engineering Honors Society</li>
               </ul>

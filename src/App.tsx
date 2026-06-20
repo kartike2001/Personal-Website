@@ -12,6 +12,7 @@ import Leadership from './components/Leadership'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
+import ScrollProgress from './components/ScrollProgress'
 
 const SECTION_IDS = [
   'about', 'skills', 'experience', 'projects',
@@ -40,6 +41,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollProgress />
       <Navbar activeSection={activeSection} theme={theme} />
       <FilterBar
         selectedSkills={selectedSkills}

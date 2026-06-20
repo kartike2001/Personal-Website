@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Section from './Section'
+import SectionHeading from './SectionHeading'
 import { certifications } from '../data'
 
 export default function Certifications() {
@@ -7,21 +8,25 @@ export default function Certifications() {
 
   return (
     <Section id="certifications">
-      <button className="section-heading" onClick={() => setOpen(o => !o)}>
-        Certificates &amp; Badges
-        <span className={`collapse-arrow ${open ? 'open' : 'closed'}`}>⏶</span>
-      </button>
+      <SectionHeading cmd="ls" arg="~/certs" open={open} onToggle={() => setOpen(o => !o)} />
 
       {open && (
-        <ul className="space-y-2 list-disc list-inside" style={{ color: 'var(--text)' }}>
+        <div className="grid sm:grid-cols-2 gap-2.5">
           {certifications.map(cert => (
-            <li key={cert.label}>
-              <a href={cert.href} target="_blank" rel="noopener noreferrer">
-                {cert.label}
-              </a>
-            </li>
+            <a
+              key={cert.label}
+              href={cert.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-hacker !my-0 flex items-center gap-2.5"
+              style={{ padding: '0.7rem 0.95rem' }}
+            >
+              <span style={{ color: 'var(--prompt)' }}>▸</span>
+              <span style={{ color: 'var(--text)' }}>{cert.label}</span>
+              <span className="ml-auto" style={{ color: 'var(--accent)', fontSize: '0.78rem' }}>↗</span>
+            </a>
           ))}
-        </ul>
+        </div>
       )}
     </Section>
   )

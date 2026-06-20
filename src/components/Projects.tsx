@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Section from './Section'
+import SectionHeading from './SectionHeading'
 import { projects } from '../data'
 
 interface Props {
@@ -22,32 +23,35 @@ export default function Projects({ selectedSkills, onMatchCount }: Props) {
 
   return (
     <Section id="projects">
-      <button className="section-heading" onClick={() => setOpen(o => !o)}>
-        Projects
-        {selectedSkills.size > 0 && (
-          <span className="ml-2 text-sm font-normal" style={{ color: 'var(--muted)' }}>
-            ({visibleCount}/{projects.length})
-          </span>
-        )}
-        <span className={`collapse-arrow ${open ? 'open' : 'closed'}`}>⏶</span>
-      </button>
+      <SectionHeading
+        cmd="ls"
+        arg="~/projects"
+        open={open}
+        onToggle={() => setOpen(o => !o)}
+        badge={selectedSkills.size > 0 ? `${visibleCount}/${projects.length}` : undefined}
+      />
 
       {open && (
         <div>
           {filtered.map(({ proj, visible }) => (
-            <div key={proj.title} className={`card-hacker ${!visible ? 'dimmed' : ''}`}>
-              <h5 className="font-bold" style={{ color: 'var(--accent)' }}>
-                {proj.title}
-              </h5>
-              {proj.github && (
-                <a href={proj.github} target="_blank" rel="noopener noreferrer" className="text-sm">
-                  GitHub ↗
-                </a>
-              )}
-              <p className="text-xs mt-1 mb-3" style={{ color: 'var(--accent-green)' }}>
-                {proj.skills.join(' · ')}
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-sm" style={{ color: 'var(--text)' }}>
+            <div
+              key={proj.title}
+              className={`card-hacker ${!visible ? 'dimmed' : ''} ${visible && selectedSkills.size > 0 ? 'matched' : ''}`}
+            >
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <h5 className="card-title">{proj.title}</h5>
+                {proj.github && (
+                  <a href={proj.github} target="_blank" rel="noopener noreferrer" className="link-ext">
+                    github ↗
+                  </a>
+                )}
+              </div>
+              <div className="chip-row mt-2 mb-3.5">
+                {proj.skills.map(s => (
+                  <span key={s} className={`chip ${selectedSkills.has(s) ? 'lit' : ''}`}>{s}</span>
+                ))}
+              </div>
+              <ul className="term-list" style={{ color: 'var(--text)' }}>
                 {proj.bullets.map((b, i) => <li key={i}>{b}</li>)}
               </ul>
             </div>

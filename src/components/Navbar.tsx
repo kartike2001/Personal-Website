@@ -25,11 +25,21 @@ export default function Navbar({ activeSection, theme }: Props) {
     setOpen(false)
   }
 
-  const navBg = theme === 'dark' ? 'bg-black' : 'bg-[#8cbce1]'
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 ${navBg} border-b border-[var(--border)] transition-colors duration-400`}>
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
+    <nav
+      className="navbar-shell fixed top-0 left-0 right-0 z-50 h-14"
+      style={{ background: 'color-mix(in srgb, var(--bg) 82%, transparent)' }}
+    >
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14 gap-3">
+        {/* Wordmark */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="wordmark hidden sm:inline-flex hover:opacity-90 transition-opacity"
+          aria-label="Back to top"
+        >
+          <span className="mono">KC</span>
+        </button>
+
         {/* Mobile hamburger */}
         <button
           className="md:hidden text-[var(--accent)] p-2"
@@ -42,7 +52,7 @@ export default function Navbar({ activeSection, theme }: Props) {
         </button>
 
         {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center gap-1">
+        <ul className="hidden md:flex items-center gap-0.5">
           {NAV_LINKS.map(({ label, id }) => (
             <li key={id}>
               <button
@@ -73,7 +83,10 @@ export default function Navbar({ activeSection, theme }: Props) {
 
       {/* Mobile drawer */}
       {open && (
-        <div className={`md:hidden ${navBg} border-t border-[var(--border)] px-4 pb-3`}>
+        <div
+          className="md:hidden navbar-shell border-t px-4 pb-3"
+          style={{ background: 'var(--bg)', borderColor: 'var(--border-soft)' }}
+        >
           <ul className="flex flex-col gap-1 pt-2">
             {NAV_LINKS.map(({ label, id }) => (
               <li key={id}>

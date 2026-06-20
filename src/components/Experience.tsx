@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Section from './Section'
+import SectionHeading from './SectionHeading'
 import { experience } from '../data'
 
 interface Props {
@@ -22,42 +23,43 @@ export default function Experience({ selectedSkills, onMatchCount }: Props) {
 
   return (
     <Section id="experience">
-      <button className="section-heading" onClick={() => setOpen(o => !o)}>
-        Relevant Work Experience
-        {selectedSkills.size > 0 && (
-          <span className="ml-2 text-sm font-normal" style={{ color: 'var(--muted)' }}>
-            ({visibleCount}/{experience.length})
-          </span>
-        )}
-        <span className={`collapse-arrow ${open ? 'open' : 'closed'}`}>⏶</span>
-      </button>
+      <SectionHeading
+        cmd="cat"
+        arg="experience.log"
+        open={open}
+        onToggle={() => setOpen(o => !o)}
+        badge={selectedSkills.size > 0 ? `${visibleCount}/${experience.length}` : undefined}
+      />
 
       {open && (
         <div>
           {filtered.map(({ job, visible }) => (
-            <div key={job.title} className={`card-hacker ${!visible ? 'dimmed' : ''}`}>
-              <h5 className="font-bold" style={{ color: 'var(--accent)' }}>
-                {job.title}
-              </h5>
-              <p className="text-sm mb-1" style={{ color: 'var(--muted)' }}>
+            <div
+              key={job.title}
+              className={`card-hacker ${!visible ? 'dimmed' : ''} ${visible && selectedSkills.size > 0 ? 'matched' : ''}`}
+            >
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <h5 className="card-title">{job.title}</h5>
+                {job.github && (
+                  <a href={job.github} target="_blank" rel="noopener noreferrer" className="link-ext">
+                    github ↗
+                  </a>
+                )}
+              </div>
+              <p className="card-meta mt-0.5 mb-2.5">
                 {job.org} · {job.period}
               </p>
-              {job.github && (
-                <a href={job.github} target="_blank" rel="noopener noreferrer" className="text-sm">
-                  GitHub ↗
-                </a>
-              )}
-              <p className="text-xs mt-1 mb-3" style={{ color: 'var(--accent-green)' }}>
-                {job.skills.join(' · ')}
-              </p>
+              <div className="chip-row mb-3.5">
+                {job.skills.map(s => (
+                  <span key={s} className={`chip ${selectedSkills.has(s) ? 'lit' : ''}`}>{s}</span>
+                ))}
+              </div>
               {job.subsections.map((sub, i) => (
                 <div key={i}>
                   {sub.heading && (
-                    <h6 className="font-semibold mt-2 mb-1" style={{ color: 'var(--text)' }}>
-                      {sub.heading}
-                    </h6>
+                    <h6 className="eyebrow mt-3 mb-1.5">{sub.heading}</h6>
                   )}
-                  <ul className="list-disc list-inside space-y-1 text-sm" style={{ color: 'var(--text)' }}>
+                  <ul className="term-list" style={{ color: 'var(--text)' }}>
                     {sub.bullets.map((b, j) => <li key={j}>{b}</li>)}
                   </ul>
                 </div>
