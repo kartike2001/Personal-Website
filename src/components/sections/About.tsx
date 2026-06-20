@@ -42,7 +42,7 @@ export default function About() {
               <p className="font-bold" style={{ color: 'var(--bright)' }}>University at Buffalo — May 2024</p>
               <p className="text-sm" style={{ color: 'var(--text)' }}>
                 B.S. Computer Science<br />
-                Concentration: Artificial Intelligence<br />
+                Concentration: Software Engineering<br />
                 Minor: Mathematics
               </p>
               <ul className="term-list mt-2">

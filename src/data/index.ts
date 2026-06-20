@@ -56,10 +56,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Docker',            key: 'Docker',       info: 'Coinbase, NEXT-LEVEL, UBay, Qarik Group' },
       { name: 'Linux / Unix',      key: 'Linux/Unix',   info: 'Coinbase, Systems Programming CSE220, CSE411, Head TA' },
       { name: 'TCP/IP Networking', key: 'TCP/IP',       info: 'Coinbase identity services' },
-      { name: 'Load Balancing',    key: 'Load Balancing', info: 'Coinbase production infrastructure' },
-      { name: 'DNS',               key: 'DNS',          info: 'Coinbase production infrastructure' },
-      { name: 'TLS',               key: 'TLS',          info: 'Coinbase identity security' },
-      { name: 'Reverse Proxies',   key: 'Reverse Proxies', info: 'Coinbase service mesh' },
     ],
   },
   {
@@ -69,8 +65,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'MongoDB',    key: 'MongoDB',    info: 'NEXT-LEVEL' },
       { name: 'Redis',      key: 'Redis',      info: 'Coinbase caching layer' },
       { name: 'Neptune',    key: 'Neptune',    info: 'Coinbase (migrated to PostgreSQL)' },
-      { name: 'Neo4j',      key: 'Neo4j',      info: 'Graph database' },
-      { name: 'MySQL',      key: 'MySQL' },
     ],
   },
   {
@@ -109,17 +103,6 @@ export const skillCategories: SkillCategory[] = [
     items: [
       { name: 'Peer Mentoring',    key: 'Peer Mentoring' },
       { name: 'Leadership',        key: 'Leadership' },
-      { name: 'Community Outreach',key: 'Community Outreach' },
-      { name: 'Networking',        key: 'Networking' },
-    ],
-  },
-  {
-    label: 'Languages',
-    items: [
-      { name: 'English (Full Professional)',      key: 'English' },
-      { name: 'Hindi (Native / Bilingual)',       key: 'Hindi' },
-      { name: 'Bengali (Professional Working)',   key: 'Bengali' },
-      { name: 'German (Limited Working)',         key: 'German' },
     ],
   },
 ]
@@ -129,7 +112,7 @@ export const experience: ExperienceEntry[] = [
     title: 'Site Reliability Engineer — Identity and Access Management',
     org: 'Coinbase',
     period: 'Sep 2024 – Present',
-    skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Neptune', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Unit Testing', 'Integration Testing', 'Load Testing', 'Smoke Tests', 'TLS', 'Bash'],
+    skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Neptune', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Unit Testing', 'Integration Testing', 'Load Testing', 'Smoke Tests', 'Bash'],
     subsections: [
       {
         bullets: [
