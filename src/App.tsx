@@ -34,6 +34,9 @@ export default function App() {
 
   return (
     <>
+      <div className="crt-overlay" aria-hidden>
+        <span className="crt-glass" />
+      </div>
       <ScrollProgress />
       <Navbar theme={theme} />
       <FilterBar
