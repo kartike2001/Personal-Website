@@ -112,10 +112,7 @@ export const experience: ExperienceEntry[] = [
     title: 'Site Reliability Engineer II — Identity and Access Management',
     org: 'Coinbase',
     period: 'Aug 2026 – Present',
-    roles: [
-      { title: 'Site Reliability Engineer — Identity and Access Management', period: 'Sep 2024 – Aug 2026' },
-    ],
-    skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Neptune', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Unit Testing', 'Integration Testing', 'Load Testing', 'Smoke Tests', 'Bash'],
+    skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Smoke Tests', 'Bash'],
     subsections: [
       {
         bullets: [
@@ -126,8 +123,15 @@ export const experience: ExperienceEntry[] = [
           'Developed a Model Context Protocol server for a unified data service aggregating identity and HR data from SaaS providers such as Okta and Workday, leveraging the SCIM-based API to simplify cross-system data queries',
         ],
       },
+    ],
+  },
+  {
+    title: 'Site Reliability Engineer — Identity and Access Management',
+    org: 'Coinbase',
+    period: 'Sep 2024 – Aug 2026',
+    skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Neptune', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Unit Testing', 'Integration Testing', 'Load Testing'],
+    subsections: [
       {
-        heading: 'Site Reliability Engineer — Sep 2024 – Aug 2026',
         bullets: [
           'Diagnosed failing production health checks by tracing logs, service probes, and configuration behavior, restoring correct restart behavior and improving service resilience',
           'Established a cross-IdP authentication bridge that enabled SSO applications to securely access backend services with full user-level permission enforcement, eliminating proxy-based workarounds that bypassed the authorization layer',

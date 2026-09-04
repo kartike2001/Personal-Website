@@ -13,7 +13,6 @@ export interface ExperienceEntry {
   title: string
   org: string
   period: string
-  roles?: { title: string; period: string }[]
   github?: string
   skills: string[]
   subsections: { heading?: string; bullets: string[] }[]

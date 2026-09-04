@@ -49,12 +49,9 @@ export default function Experience({ selectedSkills, onMatchCount }: Props) {
                   </a>
                 )}
               </div>
-              <div className="card-meta mt-0.5 mb-2.5">
-                <p>{job.org} · {job.period}</p>
-                {job.roles?.map((r, i) => (
-                  <p key={i} className="opacity-70">{r.title} · {r.period}</p>
-                ))}
-              </div>
+              <p className="card-meta mt-0.5 mb-2.5">
+                {job.org} · {job.period}
+              </p>
               <div className="chip-row mb-3.5">
                 {job.skills.map(s => (
                   <span key={s} className={`chip ${selectedSkills.has(s) ? 'lit' : ''}`}>{s}</span>
