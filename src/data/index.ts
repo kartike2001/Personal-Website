@@ -119,18 +119,23 @@ export const experience: ExperienceEntry[] = [
     subsections: [
       {
         bullets: [
+          'Designed and implemented a fine-grained authorization framework enabling field-level access control via JWT-based authentication, enforcing least-privilege policies across APIs and establishing a new standard for granular authorization within Coinbase services',
           'Modernized a scalable authorization platform replacing a legacy LDAP-based access control system, supporting 200M+ authorization checks/month and reducing access latency by up to 88x while maintaining operational continuity',
           'Upgraded a critical identity service from Tier-3 to Tier-1 by meeting 99.99% uptime and P99 latency <150ms targets through smoke tests, failover drills, and production-readiness validation by increasing test coverage from 5% to 90%',
           'Automated self-healing and health monitoring workflows, preventing 7+ high-severity incidents and saving 40+ on-call engineering hours annually',
+          'Developed a Model Context Protocol server for a unified data service aggregating identity and HR data from SaaS providers such as Okta and Workday, leveraging the SCIM-based API to simplify cross-system data queries',
+        ],
+      },
+      {
+        heading: 'Site Reliability Engineer — Sep 2024 – Aug 2026',
+        bullets: [
           'Diagnosed failing production health checks by tracing logs, service probes, and configuration behavior, restoring correct restart behavior and improving service resilience',
-          'Designed and implemented a fine-grained authorization framework enabling field-level access control via JWT-based authentication, enforcing least-privilege policies across APIs and establishing a new standard for granular authorization within Coinbase services',
           'Established a cross-IdP authentication bridge that enabled SSO applications to securely access backend services with full user-level permission enforcement, eliminating proxy-based workarounds that bypassed the authorization layer',
           'Engineered a new Golang ingestion and client framework, reducing onboarding time for new integrations from 2 months to 1 day, eliminating 2,000+ lines of redundant code, and improving maintainability',
           'Implemented and released a Kafka-backed real-time event stream for identity changes, enabling downstream services to consume field-level updates and migrate off a legacy event pipeline',
           'Developed an AST-based SCIM filter parsing and query pipeline supporting complex nested queries and 50+ field mappings, enabling advanced identity search capabilities and vendor-agnostic integrations',
           'Implemented wallet-based, cryptographically secure identity verification for self-service account and device unlocks, eliminating 650+ annual IT support tickets and reducing mean resolution time from hours to minutes',
           'Architected secure identity lifecycle enforcement for wallet-based identity verification, automatically revoking and delinking wallets upon identity deactivation to prevent unauthorized access and reduce residual credential risk',
-          'Developed a Model Context Protocol server for a unified data service aggregating identity and HR data from SaaS providers such as Okta and Workday, leveraging the SCIM-based API to simplify cross-system data queries',
           'Migrated the database from Neptune to PostgreSQL, simplifying local development, improving reliability, reducing operational cost, and enabling transactional consistency for identity workflows',
         ],
       },
