@@ -111,7 +111,10 @@ export const experience: ExperienceEntry[] = [
   {
     title: 'Site Reliability Engineer II — Identity and Access Management',
     org: 'Coinbase',
-    period: 'Sep 2024 – Present (Promoted to SRE II, Aug 2026)',
+    period: 'Aug 2026 – Present',
+    roles: [
+      { title: 'Site Reliability Engineer — Identity and Access Management', period: 'Sep 2024 – Aug 2026' },
+    ],
     skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Neptune', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Unit Testing', 'Integration Testing', 'Load Testing', 'Smoke Tests', 'Bash'],
     subsections: [
       {
