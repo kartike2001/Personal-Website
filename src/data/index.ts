@@ -1,7 +1,7 @@
 import type { SkillCategory, ExperienceEntry, ProjectEntry, LeadershipEntry, CertEntry, ContactEntry } from '../types'
 
 export const subtitles = [
-  'Site Reliability Engineer @ Coinbase.',
+  'Site Reliability Engineer II @ Coinbase.',
   'Identity & Access Management.',
   'Reliability, authorization, and identity infrastructure.',
 ]
@@ -109,7 +109,7 @@ export const skillCategories: SkillCategory[] = [
 
 export const experience: ExperienceEntry[] = [
   {
-    title: 'Site Reliability Engineer — Identity and Access Management',
+    title: 'Site Reliability Engineer II — Identity and Access Management',
     org: 'Coinbase',
     period: 'Sep 2024 – Present',
     skills: ['Golang', 'Python', 'Kubernetes', 'Docker', 'Linux/Unix', 'PostgreSQL', 'Redis', 'Neptune', 'Git', 'GitHub Actions', 'Terraform', 'Helm', 'Unit Testing', 'Integration Testing', 'Load Testing', 'Smoke Tests', 'Bash'],
